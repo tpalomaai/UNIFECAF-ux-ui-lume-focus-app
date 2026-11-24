@@ -9,14 +9,14 @@
 | | |
 |---|---|
 | **Fase atual** | F1 — UX (problema, persona, jornada, fluxo) |
-| **Próxima ação (≤ 30 min)** | Responder as 5 perguntas do Claude sobre a usuária e as dores dela |
-| **Bloqueios** | Nenhum |
+| **Próxima ação (≤ 30 min)** | Criar repositório `ux-ui-app-lume` no GitHub → depois responder as 5 perguntas da F1 |
+| **Bloqueios** | Repositório precisa ser criado por mim (github.com/new, Public, sem README) |
 | **Prazo final** | ____/____ (preencher) · faltam __ dias |
 | **Última atualização** | 24/11/2026 |
 
 ## 📍 Continuar daqui
-> F0 concluída e direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet).
-> Próximo: abrir o Claude Code nesta pasta e rodar o **Prompt F1** do plano.
+> F0 concluída, nome **Lume** e direção visual travados (fundo Creme lunar #FFF8EC, Lexend + Sniglet).
+> Próximo: criar o repo no GitHub e avisar o Claude para enviar os arquivos. Em seguida, rodar o **Prompt F1**.
 
 ---
 
