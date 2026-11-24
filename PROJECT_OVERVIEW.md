@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Fase atual** | F3 — Library (Variables, Text Styles, Componentes) |
-| **Próxima ação (≤ 30 min)** | F3 — Library: ativar Lexend/Sniglet no Figma e criar a coleção de Variables `Primitivos` |
+| **Próxima ação (≤ 30 min)** | F3 — criar a coleção `Tokens` (12 cores com função, apontando para `Primitivos`) |
 | **Bloqueios** | Nenhum |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 6 dias · meta interna: tudo pronto na **sex 27/11** |
 | **Última atualização** | 24/11/2026 (sessão F2) |
@@ -57,7 +57,7 @@
 | F0 Setup | Tema, direção visual, estrutura, repo | 30 min | ✅ Concluída | — |
 | F1 UX | Problema, persona, jornada, fluxo | 2 h | ✅ Concluída | Documento teórico (1,5) |
 | F2 Wireframe | 6 telas em cinza + arquivo Figma organizado | 1–2 h | ✅ Concluída | Protótipo (3,5) |
-| F3 Library | Variables, Text Styles, Componentes | 2 h | 🔵 Próxima | Protótipo — Design System |
+| F3 Library | Variables, Text Styles, Componentes | 2 h | 🔵 Em andamento | Protótipo — Design System |
 | F4 Telas + Protótipo | 6 telas finais + interações | 3 h | ⚪ | Protótipo — Navegação |
 | F5 Acessibilidade | Checklist WCAG + doc 1.4–1.5 | 1 h | ⚪ | Documento teórico |
 | F6 Textos | README + roteiro do vídeo + revisão do doc | 2 h | ⚪ | Protótipo — README |
@@ -115,13 +115,13 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 
 **Pronto quando:** as 6 telas existem, têm os nomes certos e navegam.
 
-### F3 — Library · 2 h (rígido) · ⚪
+### F3 — Library · 2 h (rígido) · 🔵
 **Objetivo:** criar todas as peças padronizadas antes das telas finais.
-- [ ] Variables, coleção `Primitivos` (cores cruas)
+- [x] Variables, coleção `Primitivos` (cores cruas) — 10 cores, ocultas dos seletores
 - [ ] Variables, coleção `Tokens` (cores com função)
 - [ ] Variables, coleção `Medidas` (espaço, raio, toque mínimo 48)
 - [ ] Text Styles (7 estilos: Display, Títulos, Corpo, Legenda, Cronômetro)
-- [ ] Instalar/ativar as fontes Lexend e Sniglet no Figma
+- [x] Instalar/ativar as fontes Lexend e Sniglet no Figma (já disponíveis via Google Fonts)
 - [ ] Seção 🎨 Fundamentos (página 🧩 Library) montada (paleta, tipografia, espaçamentos)
 - [ ] Componentes atômicos: `Botão` (variantes), `Chip/Tarefa`, `Input`
 - [ ] Componentes compostos: `Card/Tarefa`, `Card/ContinuarDaqui`, `Card/Métrica`, `Card/Lembrete`, `Cronômetro`, `Header/Saudação`, `Barra/Topo`
