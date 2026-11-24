@@ -9,15 +9,16 @@
 | | |
 |---|---|
 | **Fase atual** | F1 — UX (problema, persona, jornada, fluxo) |
-| **Próxima ação (≤ 30 min)** | Ler a F1 revisada (docs/01-teorico.md) e aprovar o novo fluxo com cronômetro progressivo |
+| **Próxima ação (≤ 30 min)** | No Claude Code: colar o prompt de retomada → aprovar F1 → iniciar F2 (criar arquivo Figma + páginas) |
 | **Bloqueios** | Nenhum |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 6 dias · meta interna: tudo pronto na **sex 27/11** |
-| **Última atualização** | 24/11/2026 |
+| **Última atualização** | 24/11/2026 14:40 |
 
 ## 📍 Continuar daqui
 > F0 concluída: nome **Lume**, direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet) e repositório no GitHub com toda a estrutura.
 > F1 revisada com a pesquisa: o app virou **cronômetro progressivo sem pressão** + histórico por tarefa + "Onde parei / Próximo passo" + "Lembrar depois".
-> Próximo: aprovar o fluxo → começar a F2 (wireframes no Figma).
+> Trabalho migrado para o **Claude Code** (terminal), com o repositório clonado no computador.
+> Próximo: aprovar a F1 no Claude Code → começar a F2 (wireframes no Figma) seguindo docs/02-fluxo.md.
 
 ---
 
@@ -230,6 +231,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 24/11 | **Cronômetro progressivo** no lugar das durações fixas 15/25/45 | Pesquisa: contagem regressiva gera ansiedade; medir o tempo e otimizar no próprio ritmo funciona melhor |
 | 24/11 | "Continuar daqui" com Onde parei + Próximo passo + botão Retomar | Retomada levava 30 min–1 h |
 | 24/11 | "Me distraí" virou "Lembrar depois" | Maior distração = outras tarefas em paralelo |
+| 24/11 | Continuar o projeto pelo Claude Code | CLAUDE.md carrega sozinho, arquivos locais, commits diretos |
 
 ---
 
@@ -238,6 +240,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 |---|---|---|
 | 24/11 | Tema, plano, direção visual, Library definida, nome, estrutura F0 | ~50 min |
 | 24/11 | F1: público, entrevista, conceito revisado (cronômetro progressivo), 1.1–1.3 | ~40 min |
+| 24/11 | Prazo e cronograma definidos; migração para o Claude Code | ~10 min |
 
 ---
 
