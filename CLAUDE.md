@@ -10,6 +10,9 @@
   3. Vídeo pitch ≤ 4 min — 2,0 pts (YouTube não listado)
 - Fontes de referência: Figma Learn, Nielsen Norman Group, Material Design, Laws of UX, WCAG.
 
+## Prazo
+Entrega: **30/11/2026**. Meta interna: tudo pronto na sex 27/11 (ver cronograma no PROJECT_OVERVIEW.md).
+
 ## Repositório
 https://github.com/tpalomaai/UNIFECAF-ux-ui-lume-focus-app
 

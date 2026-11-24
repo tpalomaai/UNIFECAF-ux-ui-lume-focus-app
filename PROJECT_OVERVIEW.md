@@ -11,13 +11,28 @@
 | **Fase atual** | F1 — UX (problema, persona, jornada, fluxo) |
 | **Próxima ação (≤ 30 min)** | Ler a F1 revisada (docs/01-teorico.md) e aprovar o novo fluxo com cronômetro progressivo |
 | **Bloqueios** | Nenhum |
-| **Prazo final** | ____/____ (preencher) · faltam __ dias |
+| **Prazo final** | **30/11/2026 (seg)** · faltam 6 dias · meta interna: tudo pronto na **sex 27/11** |
 | **Última atualização** | 24/11/2026 |
 
 ## 📍 Continuar daqui
 > F0 concluída: nome **Lume**, direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet) e repositório no GitHub com toda a estrutura.
 > F1 revisada com a pesquisa: o app virou **cronômetro progressivo sem pressão** + histórico por tarefa + "Onde parei / Próximo passo" + "Lembrar depois".
 > Próximo: aprovar o fluxo → começar a F2 (wireframes no Figma).
+
+---
+
+## 📅 Cronograma até a entrega
+> Janela de trabalho: seg–sex 8:00–14:50. Sábado = BellMart (sem projeto).
+
+| Dia | Fases | Tempo | Pronto no fim do dia |
+|---|---|---|---|
+| Ter 24/11 | F0 + F1 | ✅ feito | Conceito, pesquisa e fluxo |
+| Qua 25/11 | Aprovar F1 · F2 Wireframe · F3 Library | ~4 h | Arquivo Figma com wireframes e Library pronta |
+| Qui 26/11 | F4 Telas + Protótipo · F5 Acessibilidade | ~4 h | Protótipo navegável com link público |
+| Sex 27/11 | F6 Textos · F7 Vídeo | ~3 h | README completo e vídeo no YouTube |
+| Sáb 28/11 | — BellMart — | — | — |
+| Dom 29/11 | Folga / reserva para imprevistos | 0–2 h | — |
+| Seg 30/11 | F8 Entrega (manhã) | 30 min | Trabalho enviado 🎉 |
 
 ---
 
@@ -63,7 +78,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [x] Criar estrutura local (CLAUDE.md, README, docs/, Project Overview)
 - [x] Criar repositório `UNIFECAF-ux-ui-lume-focus-app` no GitHub
 - [x] Enviar arquivos para o GitHub e preencher o link acima
-- [ ] Preencher o prazo final
+- [x] Preencher o prazo final (30/11/2026)
 - [ ] Salvar o PDF do enunciado no Vault
 
 **Pronto quando:** repositório online com a estrutura e prazo preenchido.
