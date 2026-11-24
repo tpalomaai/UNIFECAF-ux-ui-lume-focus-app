@@ -9,14 +9,15 @@
 | | |
 |---|---|
 | **Fase atual** | F1 — UX (problema, persona, jornada, fluxo) |
-| **Próxima ação (≤ 30 min)** | Preencher o prazo final → rodar o Prompt F1 e responder as perguntas sobre a usuária |
+| **Próxima ação (≤ 30 min)** | Ler o rascunho de docs/01-teorico.md (1.1–1.3), confirmar as 4 hipóteses e aprovar o fluxo |
 | **Bloqueios** | Nenhum |
 | **Prazo final** | ____/____ (preencher) · faltam __ dias |
 | **Última atualização** | 24/11/2026 |
 
 ## 📍 Continuar daqui
 > F0 concluída: nome **Lume**, direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet) e repositório no GitHub com toda a estrutura.
-> Próximo: abrir o Claude Code na pasta do repositório e rodar o **Prompt F1**.
+> F1 em andamento: rascunho das seções 1.1–1.3 e tabela das telas prontos no GitHub. Público definido: universitários EAD, home office e estudantes de idiomas.
+> Próximo: revisar o rascunho, confirmar as hipóteses (distrações, apps abandonados, retomada, uso no celular) e aprovar o fluxo.
 
 ---
 
@@ -35,7 +36,7 @@
 | Fase | Entrega | Timebox | Status | Entregável vinculado |
 |---|---|---|---|---|
 | F0 Setup | Tema, direção visual, estrutura, repo | 30 min | ✅ Concluída | — |
-| F1 UX | Problema, persona, jornada, fluxo | 2 h | ⚪ | Documento teórico (1,5) |
+| F1 UX | Problema, persona, jornada, fluxo | 2 h | 🔵 Em andamento | Documento teórico (1,5) |
 | F2 Wireframe | 6 telas em cinza + arquivo Figma organizado | 1–2 h | ⚪ | Protótipo (3,5) |
 | F3 Library | Variables, Text Styles, Componentes | 2 h | ⚪ | Protótipo — Design System |
 | F4 Telas + Protótipo | 6 telas finais + interações | 3 h | ⚪ | Protótipo — Navegação |
@@ -67,10 +68,11 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 
 **Pronto quando:** repositório online com a estrutura e prazo preenchido.
 
-### F1 — UX · 2 h · ⚪
+### F1 — UX · 2 h · 🔵
 **Objetivo:** entender a usuária e validar o fluxo antes de desenhar qualquer coisa.
-- [ ] Rodar o Prompt F1 no Claude Code
-- [ ] Responder as até 5 perguntas sobre a usuária e as dores dela
+- [x] Rodar o Prompt F1 no Claude Code
+- [x] Definir o público (universitários EAD, home office, estudantes de idiomas)
+- [ ] Confirmar as 4 hipóteses marcadas em 🔎 no documento
 - [ ] Revisar a persona (1 persona)
 - [ ] Revisar 3 dores e 3 necessidades
 - [ ] Revisar a jornada (tabela: etapa · objetivo · ação · sentimento)
@@ -206,6 +208,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 24/11 | Lexend (texto) + Sniglet (só saudação/logo) | Lexend melhora leitura → argumento de acessibilidade |
 | 24/11 | Library no Figma antes das telas | Padronização e zero retrabalho |
 | 24/11 | Repositório `UNIFECAF-ux-ui-lume-focus-app` | Mesmo padrão de nome dos outros projetos da faculdade |
+| 24/11 | Público: universitários EAD, home office, estudantes de idiomas | Todos estudam/trabalham sozinhos, em casa, com tempo fragmentado |
 
 ---
 
@@ -213,6 +216,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | Data | O que fiz | Tempo |
 |---|---|---|
 | 24/11 | Tema, plano, direção visual, Library definida, nome, estrutura F0 | ~50 min |
+| 24/11 | F1: público definido, rascunho 1.1–1.3 e tabela das telas | ~20 min |
 
 ---
 

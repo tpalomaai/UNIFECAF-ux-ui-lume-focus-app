@@ -16,6 +16,9 @@ https://github.com/tpalomaai/UNIFECAF-ux-ui-lume-focus-app
 ## Produto
 **Lume** — app mobile de sessões curtas de foco para quem tem pouco tempo e se distrai fácil. Ajuda a começar rápido, voltar ao foco quando a mente foge e retomar de onde parou.
 
+### Público
+Universitários EAD, profissionais em home office e estudantes de idiomas — adultos que estudam ou trabalham sozinhos, em casa, com tempo fragmentado. Persona principal: Camila, 29 (ver docs/01-teorico.md).
+
 ### Diferenciais
 1. **Continuar daqui** — ao fim da sessão, 1 frase sobre onde parou; aparece na próxima.
 2. **Estacionamento de distrações** — botão "Me distraí" anota o pensamento em 1 toque e volta ao timer.
@@ -51,7 +54,7 @@ https://github.com/tpalomaai/UNIFECAF-ux-ui-lume-focus-app
 | Fase | Entrega | Timebox | Portão |
 |---|---|---|---|
 | F0 Setup | Repo e estrutura | 30 min | ✅ concluída |
-| F1 UX | docs/01-teorico.md (1.1–1.3) + docs/02-fluxo.md | 2 h | fluxo aprovado |
+| F1 UX | docs/01-teorico.md (1.1–1.3) + docs/02-fluxo.md | 2 h | 🔵 rascunho pronto — aguardando aprovação |
 | F2 Wireframe | 6 telas em cinza no Figma | 1–2 h | telas existem e navegam |
 | F3 Library | Variables, Text Styles, Componentes (docs/03-design-system.md) | 2 h | componentes prontos |
 | F4 Telas + Protótipo | 6 telas só com instâncias + interações | 3 h | fluxo clicável completo |
