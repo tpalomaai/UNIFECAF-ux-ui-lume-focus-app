@@ -61,7 +61,7 @@ Universitários EAD, profissionais em home office e estudantes de idiomas — ad
 | Fase | Entrega | Timebox | Portão |
 |---|---|---|---|
 | F0 Setup | Repo e estrutura | 30 min | ✅ concluída |
-| F1 UX | docs/01-teorico.md (1.1–1.3) + docs/02-fluxo.md | 2 h | 🔵 revisado com pesquisa — aguardando aprovação |
+| F1 UX | docs/01-teorico.md (1.1–1.3) + docs/02-fluxo.md | 2 h | ✅ concluída (fluxo aprovado) |
 | F2 Wireframe | 6 telas em cinza no Figma | 1–2 h | telas existem e navegam |
 | F3 Library | Variables, Text Styles, Componentes (docs/03-design-system.md) | 2 h | componentes prontos |
 | F4 Telas + Protótipo | 6 telas só com instâncias + interações | 3 h | fluxo clicável completo |

@@ -8,8 +8,8 @@
 ## 🧭 Agora
 | | |
 |---|---|
-| **Fase atual** | F1 — UX (problema, persona, jornada, fluxo) |
-| **Próxima ação (≤ 30 min)** | No Claude Code: colar o prompt de retomada → aprovar F1 → iniciar F2 (criar arquivo Figma + páginas) |
+| **Fase atual** | F2 — Wireframe (6 telas em cinza no Figma) |
+| **Próxima ação (≤ 30 min)** | Criar o arquivo "Lume — UX/UI" no Figma com as 6 páginas (docs/03-design-system.md) |
 | **Bloqueios** | Nenhum |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 6 dias · meta interna: tudo pronto na **sex 27/11** |
 | **Última atualização** | 24/11/2026 14:40 |
@@ -18,7 +18,8 @@
 > F0 concluída: nome **Lume**, direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet) e repositório no GitHub com toda a estrutura.
 > F1 revisada com a pesquisa: o app virou **cronômetro progressivo sem pressão** + histórico por tarefa + "Onde parei / Próximo passo" + "Lembrar depois".
 > Trabalho migrado para o **Claude Code** (terminal), com o repositório clonado no computador.
-> Próximo: aprovar a F1 no Claude Code → começar a F2 (wireframes no Figma) seguindo docs/02-fluxo.md.
+> **F1 aprovada** ✅ (fluxo com cronômetro progressivo, docs/02-fluxo.md).
+> Próximo: F2 — criar o arquivo Figma + páginas → 6 frames em cinza → navegação básica.
 
 ---
 
@@ -52,8 +53,8 @@
 | Fase | Entrega | Timebox | Status | Entregável vinculado |
 |---|---|---|---|---|
 | F0 Setup | Tema, direção visual, estrutura, repo | 30 min | ✅ Concluída | — |
-| F1 UX | Problema, persona, jornada, fluxo | 2 h | 🔵 Em andamento | Documento teórico (1,5) |
-| F2 Wireframe | 6 telas em cinza + arquivo Figma organizado | 1–2 h | ⚪ | Protótipo (3,5) |
+| F1 UX | Problema, persona, jornada, fluxo | 2 h | ✅ Concluída | Documento teórico (1,5) |
+| F2 Wireframe | 6 telas em cinza + arquivo Figma organizado | 1–2 h | 🔵 Em andamento | Protótipo (3,5) |
 | F3 Library | Variables, Text Styles, Componentes | 2 h | ⚪ | Protótipo — Design System |
 | F4 Telas + Protótipo | 6 telas finais + interações | 3 h | ⚪ | Protótipo — Navegação |
 | F5 Acessibilidade | Checklist WCAG + doc 1.4–1.5 | 1 h | ⚪ | Documento teórico |
@@ -84,7 +85,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 
 **Pronto quando:** repositório online com a estrutura e prazo preenchido.
 
-### F1 — UX · 2 h · 🔵
+### F1 — UX · 2 h · ✅
 **Objetivo:** entender a usuária e validar o fluxo antes de desenhar qualquer coisa.
 - [x] Rodar o Prompt F1 no Claude Code
 - [x] Definir o público (universitários EAD, home office, estudantes de idiomas)
@@ -95,11 +96,11 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [x] Escrever a jornada (7 etapas)
 - [x] Fluxo em Mermaid + tabela das telas e interações (docs/02-fluxo.md)
 - [x] 7 decisões de UX ligadas a princípios (Zeigarnik, Fitts, Hick, pico-fim, Jakob…)
-- [ ] **Aprovar o fluxo** (portão)
+- [x] **Aprovar o fluxo** (portão)
 
 **Pronto quando:** seções 1.1, 1.2 e 1.3 do documento teórico escritas e fluxo aprovado.
 
-### F2 — Wireframe · 1–2 h · ⚪
+### F2 — Wireframe · 1–2 h · 🔵
 **Objetivo:** validar hierarquia e navegação sem cor.
 - [ ] Criar o arquivo "Lume — UX/UI" no Figma
 - [ ] Criar as páginas: 📖 Capa · 🎨 Fundamentos · 🧩 Componentes · 🔲 Wireframes · 📱 Telas · 🗂 Arquivo
