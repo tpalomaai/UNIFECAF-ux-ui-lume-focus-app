@@ -14,18 +14,20 @@
 https://github.com/tpalomaai/UNIFECAF-ux-ui-lume-focus-app
 
 ## Produto
-**Lume** — app mobile de sessões curtas de foco para quem tem pouco tempo e se distrai fácil. Ajuda a começar rápido, voltar ao foco quando a mente foge e retomar de onde parou.
+**Lume** — app mobile de foco **sem pressão**: em vez de contagem regressiva, um cronômetro progressivo mede quanto tempo cada tarefa leva. Com o histórico, a pessoa melhora no próprio ritmo. O app guarda onde ela parou e o próximo passo, para retomar em segundos.
 
 ### Público
 Universitários EAD, profissionais em home office e estudantes de idiomas — adultos que estudam ou trabalham sozinhos, em casa, com tempo fragmentado. Persona principal: Camila, 29 (ver docs/01-teorico.md).
 
 ### Diferenciais
-1. **Continuar daqui** — ao fim da sessão, 1 frase sobre onde parou; aparece na próxima.
-2. **Estacionamento de distrações** — botão "Me distraí" anota o pensamento em 1 toque e volta ao timer.
-3. **Zero configuração** — só 3 durações (15 / 25 / 45 min) e um botão grande para começar.
+1. **Cronômetro sem pressão** — conta o tempo para cima, sem prazo nem alarme; a sessão termina quando a usuária toca em "Concluir".
+2. **Histórico por tarefa** — cada tarefa mostra "última vez: X min"; comparação gentil ao concluir.
+3. **Continuar daqui** — "Onde parei" + "Próximo passo" registrados no fim; botão "Retomar" no Início.
+4. **Lembrar depois** — anota uma tarefa paralela em 1 toque e volta para a sessão.
 
 ### Fluxo principal (6 telas)
-01 - Boas-vindas → 02 - Início → 03 - Configurar sessão → 04 - Sessão em andamento ⇄ 05 - Estacionamento de distrações → 06 - Resumo da sessão → 02 - Início
+01 - Boas-vindas → 02 - Início → 03 - Escolher tarefa → 04 - Sessão em andamento ⇄ 05 - Lembrar depois → 06 - Sessão concluída → 02 - Início
+(Atalho: 02 "Retomar" → 04)
 
 ## Decisões travadas (não reabrir sem motivo forte)
 | Decisão | Valor |
@@ -42,6 +44,8 @@ Universitários EAD, profissionais em home office e estudantes de idiomas — ad
 | Fonte principal | Lexend (criada para facilitar leitura) |
 | Fonte de destaque | Sniglet — só logo e saudação |
 | Mascote | Estrelinha simples (Feliz · Focado · Comemorando) |
+| Tempo | Cronômetro progressivo — **nunca** contagem regressiva, alarme ou cor de alerta |
+| Linguagem | Gentil, sem cobrança ("e tudo bem"); nunca "falhou" ou "atrasou" |
 
 ## 🚫 Lista do NÃO
 - Não mexer em cor/fonte fora da Library (só via Variables / Text Styles).
@@ -54,7 +58,7 @@ Universitários EAD, profissionais em home office e estudantes de idiomas — ad
 | Fase | Entrega | Timebox | Portão |
 |---|---|---|---|
 | F0 Setup | Repo e estrutura | 30 min | ✅ concluída |
-| F1 UX | docs/01-teorico.md (1.1–1.3) + docs/02-fluxo.md | 2 h | 🔵 rascunho pronto — aguardando aprovação |
+| F1 UX | docs/01-teorico.md (1.1–1.3) + docs/02-fluxo.md | 2 h | 🔵 revisado com pesquisa — aguardando aprovação |
 | F2 Wireframe | 6 telas em cinza no Figma | 1–2 h | telas existem e navegam |
 | F3 Library | Variables, Text Styles, Componentes (docs/03-design-system.md) | 2 h | componentes prontos |
 | F4 Telas + Protótipo | 6 telas só com instâncias + interações | 3 h | fluxo clicável completo |
@@ -66,8 +70,8 @@ Universitários EAD, profissionais em home office e estudantes de idiomas — ad
 ## Library Figma — resumo
 Detalhes completos em `docs/03-design-system.md`.
 - Variables: `Primitivos` → `Tokens` (telas usam só tokens) → `Medidas`.
-- Text Styles: `Display/Saudação`, `Título/Tela`, `Título/Seção`, `Corpo/Padrão`, `Corpo/Destaque`, `Legenda/Padrão`, `Timer/Número`.
-- Componentes: Botão, Botão/Grande, Input, Chip/Duração, Card/Tarefa, Card/ContinuarDaqui, Card/Métrica, Timer, Header/Saudação, Mascote, Barra/Topo.
+- Text Styles: `Display/Saudação`, `Título/Tela`, `Título/Seção`, `Corpo/Padrão`, `Corpo/Destaque`, `Legenda/Padrão`, `Cronômetro/Número`.
+- Componentes: Botão, Botão/Grande, Input, Chip/Tarefa, Card/Tarefa, Card/ContinuarDaqui, Card/Métrica, Card/Lembrete, Cronômetro, Header/Saudação, Mascote, Barra/Topo.
 - Tudo em Auto Layout. Nenhum valor solto nas telas.
 
 ## Como trabalhar comigo (Claude)

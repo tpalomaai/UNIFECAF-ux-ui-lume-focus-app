@@ -9,15 +9,15 @@
 | | |
 |---|---|
 | **Fase atual** | F1 — UX (problema, persona, jornada, fluxo) |
-| **Próxima ação (≤ 30 min)** | Ler o rascunho de docs/01-teorico.md (1.1–1.3), confirmar as 4 hipóteses e aprovar o fluxo |
+| **Próxima ação (≤ 30 min)** | Ler a F1 revisada (docs/01-teorico.md) e aprovar o novo fluxo com cronômetro progressivo |
 | **Bloqueios** | Nenhum |
 | **Prazo final** | ____/____ (preencher) · faltam __ dias |
 | **Última atualização** | 24/11/2026 |
 
 ## 📍 Continuar daqui
 > F0 concluída: nome **Lume**, direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet) e repositório no GitHub com toda a estrutura.
-> F1 em andamento: rascunho das seções 1.1–1.3 e tabela das telas prontos no GitHub. Público definido: universitários EAD, home office e estudantes de idiomas.
-> Próximo: revisar o rascunho, confirmar as hipóteses (distrações, apps abandonados, retomada, uso no celular) e aprovar o fluxo.
+> F1 revisada com a pesquisa: o app virou **cronômetro progressivo sem pressão** + histórico por tarefa + "Onde parei / Próximo passo" + "Lembrar depois".
+> Próximo: aprovar o fluxo → começar a F2 (wireframes no Figma).
 
 ---
 
@@ -72,12 +72,13 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 **Objetivo:** entender a usuária e validar o fluxo antes de desenhar qualquer coisa.
 - [x] Rodar o Prompt F1 no Claude Code
 - [x] Definir o público (universitários EAD, home office, estudantes de idiomas)
-- [ ] Confirmar as 4 hipóteses marcadas em 🔎 no documento
-- [ ] Revisar a persona (1 persona)
-- [ ] Revisar 3 dores e 3 necessidades
-- [ ] Revisar a jornada (tabela: etapa · objetivo · ação · sentimento)
-- [ ] Revisar o fluxo em Mermaid das 6 telas (docs/02-fluxo.md)
-- [ ] Revisar 3 decisões de UX com Laws of UX (Hick, Carga Cognitiva, Zeigarnik)
+- [x] Entrevista: distrações, apps anteriores, retomada, contexto de uso
+- [x] Revisar conceito com base na pesquisa (cronômetro progressivo)
+- [x] Escrever a persona (Camila, 29)
+- [x] Escrever 4 dores e 4 necessidades
+- [x] Escrever a jornada (7 etapas)
+- [x] Fluxo em Mermaid + tabela das telas e interações (docs/02-fluxo.md)
+- [x] 7 decisões de UX ligadas a princípios (Zeigarnik, Fitts, Hick, pico-fim, Jakob…)
 - [ ] **Aprovar o fluxo** (portão)
 
 **Pronto quando:** seções 1.1, 1.2 e 1.3 do documento teórico escritas e fluxo aprovado.
@@ -87,7 +88,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [ ] Criar o arquivo "Lume — UX/UI" no Figma
 - [ ] Criar as páginas: 📖 Capa · 🎨 Fundamentos · 🧩 Componentes · 🔲 Wireframes · 📱 Telas · 🗂 Arquivo
 - [ ] Rodar o Prompt F2 (tabela de elementos por tela)
-- [ ] Desenhar os 6 frames em cinza (390×844), com nomes `01 - Boas-vindas` … `06 - Resumo da sessão`
+- [ ] Desenhar os 6 frames em cinza (390×844), com nomes `01 - Boas-vindas` … `06 - Sessão concluída`
 - [ ] Ligar as telas com navegação simples (modo Prototype)
 - [ ] Testar o fluxo clicando do início ao fim
 - [ ] Colar o link do Figma acima
@@ -99,11 +100,11 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [ ] Variables, coleção `Primitivos` (cores cruas)
 - [ ] Variables, coleção `Tokens` (cores com função)
 - [ ] Variables, coleção `Medidas` (espaço, raio, toque mínimo 48)
-- [ ] Text Styles (7 estilos: Display, Títulos, Corpo, Legenda, Timer)
+- [ ] Text Styles (7 estilos: Display, Títulos, Corpo, Legenda, Cronômetro)
 - [ ] Instalar/ativar as fontes Lexend e Sniglet no Figma
 - [ ] Página 🎨 Fundamentos montada (paleta, tipografia, espaçamentos)
-- [ ] Componentes atômicos: `Botão` (variantes), `Chip/Duração`, `Input`
-- [ ] Componentes compostos: `Card/Tarefa`, `Card/ContinuarDaqui`, `Card/Métrica`, `Timer`, `Header/Saudação`, `Barra/Topo`
+- [ ] Componentes atômicos: `Botão` (variantes), `Chip/Tarefa`, `Input`
+- [ ] Componentes compostos: `Card/Tarefa`, `Card/ContinuarDaqui`, `Card/Métrica`, `Card/Lembrete`, `Cronômetro`, `Header/Saudação`, `Barra/Topo`
 - [ ] `Mascote` (Feliz · Focado · Comemorando) — versão simples
 - [ ] Tudo em Auto Layout e usando só variables
 - [ ] **Congelar a Library** (portão)
@@ -116,8 +117,9 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [ ] Substituir os elementos cinza por instâncias da Library
 - [ ] Tela 04 com fundo `bg/foco` (modo noite)
 - [ ] Interações: Começar → Início → Configurar → Sessão
-- [ ] Interação: "Me distraí" → Estacionamento → volta à Sessão
-- [ ] Interação: fim da sessão → Resumo → Início
+- [ ] Interação: "Lembrar depois" → anotação → volta à Sessão
+- [ ] Interação: Início "Retomar" → Sessão (atalho)
+- [ ] Interação: "Concluir" → Sessão concluída → Início
 - [ ] Definir o frame inicial (flow starting point)
 - [ ] Transições simples (Smart Animate ou Dissolve, 200–300 ms)
 - [ ] Testar o fluxo inteiro em modo apresentação
@@ -132,7 +134,8 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [ ] Conferir áreas de toque ≥ 48 px
 - [ ] Conferir texto do corpo ≥ 14–16 px
 - [ ] Conferir que nada depende só de cor (ícone + texto)
-- [ ] Timer com indicação textual ("restam 16 minutos")
+- [ ] Conferir linguagem gentil (nada de "falhou", "atrasou")
+- [ ] Cronômetro com números tabulares e leitura textual
 - [ ] Corrigir o que falhar (só via Library)
 - [ ] Revisar doc 1.4 (Decisões de UI) e 1.5 (Acessibilidade e Inclusão)
 
@@ -209,6 +212,9 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 24/11 | Library no Figma antes das telas | Padronização e zero retrabalho |
 | 24/11 | Repositório `UNIFECAF-ux-ui-lume-focus-app` | Mesmo padrão de nome dos outros projetos da faculdade |
 | 24/11 | Público: universitários EAD, home office, estudantes de idiomas | Todos estudam/trabalham sozinhos, em casa, com tempo fragmentado |
+| 24/11 | **Cronômetro progressivo** no lugar das durações fixas 15/25/45 | Pesquisa: contagem regressiva gera ansiedade; medir o tempo e otimizar no próprio ritmo funciona melhor |
+| 24/11 | "Continuar daqui" com Onde parei + Próximo passo + botão Retomar | Retomada levava 30 min–1 h |
+| 24/11 | "Me distraí" virou "Lembrar depois" | Maior distração = outras tarefas em paralelo |
 
 ---
 
@@ -216,7 +222,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | Data | O que fiz | Tempo |
 |---|---|---|
 | 24/11 | Tema, plano, direção visual, Library definida, nome, estrutura F0 | ~50 min |
-| 24/11 | F1: público definido, rascunho 1.1–1.3 e tabela das telas | ~20 min |
+| 24/11 | F1: público, entrevista, conceito revisado (cronômetro progressivo), 1.1–1.3 | ~40 min |
 
 ---
 

@@ -41,8 +41,8 @@
 | `texto/sobre-acao` | neutro/0 | Texto em botão primário |
 | `acao/primaria` | indigo/700 | Botão principal |
 | `acao/borda` | indigo/300 | Botão secundário |
-| `destaque/progresso` | estrela/400 | Timer, conquistas, "Me distraí" |
-| `destaque/progresso-fundo` | estrela/100 | Chips de duração |
+| `destaque/progresso` | estrela/400 | Cronômetro, conquistas, "Lembrar depois" |
+| `destaque/progresso-fundo` | estrela/100 | Chip "última vez" |
 | `destaque/retomar` | rosa/400 | Barra do "Continuar daqui" |
 | `destaque/retomar-texto` | rosa/800 | Título do "Continuar daqui" |
 
@@ -62,7 +62,7 @@
 | `Corpo/Padrão` | Lexend | 14 / Regular / 150% |
 | `Corpo/Destaque` | Lexend | 14 / SemiBold / 150% |
 | `Legenda/Padrão` | Lexend | 12 / Regular / 140% |
-| `Timer/Número` | Lexend | 38 / Medium / 100% |
+| `Cronômetro/Número` | Lexend | 38 / Medium / 100% (números tabulares) |
 
 ## Componentes
 | Componente | Propriedades / Variantes |
@@ -70,11 +70,12 @@
 | `Botão` | Tipo: Primário · Secundário · Destaque — Estado: Padrão · Pressionado · Desabilitado — Ícone: sim/não |
 | `Botão/Grande` | Ação principal "Nova sessão" |
 | `Input` | Estado: Vazio · Preenchido · Foco · Erro |
-| `Chip/Duração` | Valor: 15 · 25 · 45 — Selecionado: sim/não |
-| `Card/Tarefa` | Texto + Chip/Duração |
-| `Card/ContinuarDaqui` | Com texto · Vazio |
-| `Card/Métrica` | Tipo: Minutos · Distrações |
-| `Timer` | Progresso: 0 · 25 · 50 · 75 · 100 |
+| `Chip/Tarefa` | Tipo: Nome da tarefa · Última vez |
+| `Card/Tarefa` | Nome + "última vez: X min" — Estado: Padrão · Selecionado |
+| `Card/ContinuarDaqui` | Onde parei + Próximo passo + botão Retomar — Estado: Com conteúdo · Vazio |
+| `Card/Métrica` | Tipo: Tempo de hoje · Última vez · Lembretes |
+| `Card/Lembrete` | Texto do lembrete anotado |
+| `Cronômetro` | Estado: Rodando · Pausado (sem anel de prazo) |
 | `Header/Saudação` | Mascote + saudação + subtítulo |
 | `Mascote` | Humor: Feliz · Focado · Comemorando |
 | `Barra/Topo` | Com voltar · Sem voltar |
@@ -82,8 +83,8 @@
 ## Ordem de construção
 1. Variables (Primitivos → Tokens → Medidas)
 2. Text Styles
-3. Componentes atômicos: Botão, Chip, Input
-4. Componentes compostos: Cards, Timer, Header
+3. Componentes atômicos: Botão, Chip/Tarefa, Input
+4. Componentes compostos: Cards, Cronômetro, Header
 5. Montar as 6 telas com instâncias
 
 ## Contraste (verificar na F5)
@@ -91,5 +92,5 @@
 |---|---|
 | indigo/900 sobre creme #FFF8EC | texto principal |
 | branco sobre indigo/700 | botão primário |
-| #3D2F00 sobre estrela/400 | botão "Me distraí" |
+| #3D2F00 sobre estrela/400 | botão "Lembrar depois" |
 | rosa/800 sobre branco | título "Continuar daqui" |

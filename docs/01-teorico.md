@@ -1,65 +1,68 @@
 # Documento Teórico — Lume
 
-> Status: **rascunho F1** (seções 1.1–1.3). Seções 1.4 e 1.5 serão escritas na F5.
+> Status: **F1 revisada** com as respostas da pesquisa (seções 1.1–1.3). Seções 1.4 e 1.5 serão escritas na F5.
 
 ---
 
 ## 1.1 Problema e Usuário
 
 ### Qual problema o produto resolve?
-Pessoas que estudam ou trabalham **sozinhas e de forma remota** não têm uma estrutura externa que as ajude a manter o foco: não há professor, colega ou horário fixo que "puxe" a atenção de volta. O resultado é um ciclo conhecido: demora para começar, distração no meio da tarefa e, ao voltar, tempo perdido para lembrar onde parou.
+Pessoas que estudam ou trabalham **sozinhas e de forma remota** não têm uma estrutura externa que as ajude a manter o foco: não há professor, colega ou horário fixo que "puxe" a atenção de volta. Isso gera um ciclo conhecido: outras tarefas competem pela atenção no meio do trabalho e, depois de uma pausa, a pessoa perde **de 30 minutos a 1 hora** só para lembrar onde estava e o que precisava fazer em seguida.
 
-Os apps de foco existentes costumam piorar o cenário para iniciantes: pedem muita configuração antes da primeira sessão, punem a distração (em vez de ajudá-la) e não guardam o contexto da tarefa. Isso gera **baixa adesão e abandono nas primeiras interações** — exatamente o problema descrito pela startup.
+Os apps de foco mais conhecidos (como Forest e timers de Pomodoro) usam **contagem regressiva**: a pessoa precisa terminar algo antes do tempo acabar. Para muitos usuários, isso vira uma competição contra o relógio que gera **ansiedade e sensação de fracasso** quando a tarefa não termina a tempo. O resultado é baixa adesão e **abandono nas primeiras interações**, exatamente o problema descrito pela startup.
 
-O **Lume** resolve isso com sessões curtas que começam em poucos toques, um jeito rápido de "estacionar" distrações sem sair do foco e um registro de uma frase sobre onde a pessoa parou, que aparece na próxima sessão.
+O **Lume** inverte essa lógica: em vez de cobrar, ele **mede**. Um cronômetro progressivo registra quanto tempo a tarefa levou, sem prazo nem alarme. Com o histórico de cada tarefa, a pessoa percebe a própria evolução e melhora naturalmente. Além disso, o app guarda **onde ela parou e qual é o próximo passo**, para que a retomada leve segundos, e não uma hora.
 
 ### Quem é o usuário?
-Adultos que **aprendem ou trabalham por conta própria, em casa**, com tempo fragmentado:
+Adultos que **aprendem ou trabalham por conta própria, em casa**, com tempo fragmentado e várias tarefas em paralelo:
 
 | Perfil | Contexto |
 |---|---|
 | Universitários EAD | Assistem aulas e fazem atividades sozinhos, muitas vezes à noite, depois do trabalho |
-| Profissionais em home office | Alternam tarefas, reuniões e interrupções da casa sem a estrutura do escritório |
-| Estudantes de idiomas | Estudam em blocos curtos e frequentes (lições, flashcards, leitura), em geral sem professor ao lado |
+| Profissionais em home office | Alternam tarefas, reuniões e demandas da casa sem a estrutura do escritório |
+| Estudantes de idiomas | Repetem os mesmos tipos de tarefa (lição, flashcards, leitura) e querem ver evolução |
 
 #### Persona principal
-**Camila, 29 anos** — cursa graduação EAD e trabalha em home office. Estuda inglês no tempo livre.
-- **Rotina:** trabalha durante o dia; estuda em janelas de 20 a 40 minutos, à noite ou no começo da manhã.
+**Camila, 29 anos**, cursa graduação EAD e trabalha em home office. Estuda inglês no tempo livre.
+- **Rotina:** muitas tarefas acontecendo ao mesmo tempo; estuda quando consegue definir um objetivo claro.
 - **Ferramentas:** celular sempre por perto, notebook para trabalho e faculdade.
-- **Frase:** *"Quando finalmente sento para estudar, gasto metade do tempo tentando lembrar onde parei."*
-- **Objetivo:** usar bem as poucas janelas de tempo que tem e sentir que está avançando.
-- **Frustração:** já baixou apps de pomodoro, mas desistiu em poucos dias porque eram complicados de configurar ou faziam ela se sentir culpada quando se distraía.
+- **Frase:** *"Não quero correr contra o relógio. Quero saber quanto tempo levei e ir melhorando no meu ritmo."*
+- **Objetivo:** concluir o que começou, do início ao fim, e entender quanto tempo cada tipo de tarefa realmente leva.
+- **Frustração:** já usou Forest e Pomodoro Timer, mas a contagem regressiva a deixava ansiosa e com a sensação de ter falhado quando não terminava a tempo.
 
 ### Quais dores e necessidades existem?
 | Dores | Necessidades |
 |---|---|
-| **Dificuldade de começar:** muitas decisões antes de iniciar (quanto tempo? qual tarefa? quais configurações?) | **Começar em segundos**, com poucas escolhas |
-| **Distração sem supervisão:** celular, pensamentos soltos ("preciso responder aquela mensagem") e interrupções da casa | **Lidar com a distração sem culpa** e sem perder a ideia que surgiu |
-| **Perda de contexto ao retomar:** tempo gasto para lembrar onde parou depois de uma pausa ou de um dia para o outro | **Retomar de onde parou**, sem precisar reconstruir o raciocínio |
+| **Tarefas em paralelo:** outras coisas para fazer competem pela atenção no meio da sessão | **Tirar a outra tarefa da cabeça** sem largar a atual, com a certeza de que não será esquecida |
+| **Pressão do relógio:** a contagem regressiva gera ansiedade e sensação de fracasso | **Medir o tempo sem cobrança**: registrar quanto levou, sem prazo nem alarme |
+| **Retomada lenta:** de 30 min a 1 h para lembrar onde parou e o que fazer depois | **Retomar em segundos**, com "onde parei" e "próximo passo" registrados |
+| **Falta de referência:** não sabe se está ficando mais rápida em tarefas repetidas | **Ver o histórico da mesma tarefa** e comparar com a vez anterior, de forma gentil |
 
-> 🔎 **Hipóteses a validar com a autora (perguntas 2–5):**
-> 1. A principal fonte de distração é o celular e pensamentos soltos, mais do que ruído externo.
-> 2. Apps de foco anteriores foram abandonados por excesso de configuração ou gamificação punitiva.
-> 3. Retomar uma tarefa depois de uma interrupção custa vários minutos.
-> 4. O uso principal é no celular, em sessões de 15 a 45 minutos.
+> ✅ **Pesquisa com usuária (entrevista com a autora, que faz parte do público-alvo):**
+> - Maior distração: ter outras coisas para fazer em paralelo.
+> - Já usou Forest e Pomodoro Timer; a lógica de competir com o tempo gera ansiedade.
+> - O que funciona: medir o tempo gasto e otimizar naturalmente, sem prazo.
+> - Retomar após pausa leva de 30 min a 1 h; o problema é lembrar onde estava e o que vem depois.
+> - Uso: ao definir um objetivo para cumprir do começo ao fim, registrando o tempo para comparar na próxima vez.
 
 ---
 
 ## 1.2 Jornada do Usuário
 
 ### Fluxo principal
-Boas-vindas → Início → Configurar sessão → Sessão em andamento ⇄ Estacionamento de distrações → Resumo da sessão → Início
+Boas-vindas → Início → Escolher tarefa → Sessão em andamento ⇄ Lembrar depois → Sessão concluída → Início
+*(Atalho: no Início, "Retomar" leva direto à sessão da última tarefa.)*
 
 ### Etapas e objetivos em cada interação
 | Etapa | Objetivo da usuária | Ação no app | Tela | Sentimento | Oportunidade de design |
 |---|---|---|---|---|---|
-| 1. Primeiro acesso | Entender rápido para que serve | Lê uma frase e toca em "Começar" | 01 - Boas-vindas | Curiosa, mas impaciente 😐 | Uma tela só, sem cadastro obrigatório |
-| 2. Decidir o que fazer | Saber por onde começar | Vê o card "Continuar daqui" e toca em "Nova sessão" | 02 - Início | Aliviada por não ter que lembrar 🙂 | Ação principal grande e óbvia |
-| 3. Preparar a sessão | Definir tarefa e tempo sem pensar muito | Escreve a tarefa e escolhe 15, 25 ou 45 min | 03 - Configurar sessão | Decidida 🙂 | Só 3 opções de duração |
-| 4. Focar | Trabalhar sem interrupções | Acompanha o timer | 04 - Sessão em andamento | Concentrada 😌 | Tela escura e limpa, só o essencial |
-| 5. Distrair-se | Tirar o pensamento da cabeça sem perder o foco | Toca em "Me distraí", anota e volta | 05 - Estacionamento | Culpada → aliviada 😟→🙂 | Distração tratada como algo normal, não como erro |
-| 6. Concluir | Sentir que avançou e registrar onde parou | Vê o resumo e escreve 1 frase em "Continuar daqui" | 06 - Resumo da sessão | Orgulhosa 😄 | Final positivo, com celebração |
-| 7. Voltar outro dia | Retomar sem esforço | Abre o app e lê onde parou | 02 - Início | Confiante 🙂 | O ciclo recomeça com contexto |
+| 1. Primeiro acesso | Entender que o app não é mais um timer de pressão | Lê "Foque no seu ritmo, sem contagem regressiva" e toca em "Começar" | 01 - Boas-vindas | Desconfiada (já desistiu de outros) 😐 | Deixar claro o "sem pressão" logo na primeira frase |
+| 2. Decidir o que fazer | Lembrar onde parou | Lê o card "Continuar daqui" (onde parei + próximo passo) | 02 - Início | Aliviada 🙂 | Retomada em 1 toque: botão "Retomar" |
+| 3. Escolher a tarefa | Definir o objetivo da sessão | Escreve uma tarefa nova ou escolhe uma recente (com o último tempo) | 03 - Escolher tarefa | Decidida 🙂 | Tarefas recentes evitam redigitar e criam histórico |
+| 4. Focar | Trabalhar no próprio ritmo | Acompanha o cronômetro subindo; pode pausar | 04 - Sessão em andamento | Tranquila 😌 | Cronômetro progressivo, sem alarme nem cor de alerta |
+| 5. Lembrar de outra coisa | Não esquecer a tarefa paralela sem largar a atual | Toca em "Lembrar depois", anota e volta | 05 - Lembrar depois | Preocupada → aliviada 😟→🙂 | A tarefa paralela fica guardada, sem culpa |
+| 6. Concluir | Ver quanto levou e registrar onde parou | Toca em "Concluir", vê o tempo e a comparação com a última vez, e preenche "Onde parei" e "Próximo passo" | 06 - Sessão concluída | Orgulhosa 😄 | Comparação gentil: celebra quando melhora e acolhe quando não melhora |
+| 7. Voltar outro dia | Retomar sem esforço | Abre o app e toca em "Retomar" | 02 - Início | Confiante 🙂 | O ciclo recomeça com contexto, não do zero |
 
 ---
 
@@ -70,25 +73,28 @@ O app tem **6 telas** e um único fluxo principal, organizado em três momentos:
 
 | Momento | Telas | Papel |
 |---|---|---|
-| **Antes do foco** | 01 Boas-vindas · 02 Início · 03 Configurar sessão | Começar rápido, com contexto |
-| **Durante o foco** | 04 Sessão em andamento · 05 Estacionamento de distrações | Manter a atenção e lidar com interrupções |
-| **Depois do foco** | 06 Resumo da sessão | Fechar o ciclo e preparar a próxima vez |
+| **Antes do foco** | 01 Boas-vindas · 02 Início · 03 Escolher tarefa | Começar ou retomar rápido, com contexto |
+| **Durante o foco** | 04 Sessão em andamento · 05 Lembrar depois | Manter a atenção e guardar tarefas paralelas |
+| **Depois do foco** | 06 Sessão concluída | Ver a evolução e preparar a próxima vez |
 
 ### Lógica de navegação
 - **Linear e previsível:** cada tela tem **uma ação principal**, que leva à próxima etapa.
-- **Um único desvio:** da Sessão, o botão "Me distraí" abre o Estacionamento, que sempre volta para a mesma sessão, com o timer preservado.
-- **Ciclo fechado:** o Resumo sempre leva de volta ao Início, onde o "Continuar daqui" mostra a frase registrada.
-- **Sem menus escondidos:** não há abas, menu lateral ou configurações obrigatórias no fluxo principal.
+- **Um atalho:** no Início, "Retomar" pula a escolha da tarefa e abre a sessão da última tarefa.
+- **Um único desvio:** na Sessão, "Lembrar depois" abre uma anotação rápida que sempre volta para a mesma sessão, com o cronômetro pausado e preservado.
+- **Fim controlado pela usuária:** a sessão termina quando ela toca em "Concluir", não quando um tempo acaba.
+- **Ciclo fechado:** a tela Sessão concluída sempre leva ao Início, onde aparecem "onde parei" e "próximo passo".
+- **Sem menus escondidos:** nenhuma aba, menu lateral ou configuração obrigatória no fluxo principal.
 
 ### Decisões tomadas para facilitar o uso
-| Decisão | Princípio (Laws of UX) | Como aparece no Lume |
+| Decisão | Princípio | Como aparece no Lume |
 |---|---|---|
-| Só 3 durações fixas | **Lei de Hick:** quanto mais opções, mais tempo para decidir | Chips de 15, 25 e 45 min, sem campo de minutos livre |
-| Botão "Nova sessão" grande e na parte de baixo da tela | **Lei de Fitts:** alvos grandes e próximos são mais rápidos de tocar | Botão de destaque ao alcance do polegar |
-| "Continuar daqui" | **Efeito Zeigarnik:** tarefas inacabadas ficam na mente; registrá-las alivia essa carga e facilita a retomada | Frase registrada no fim da sessão aparece no Início |
-| "Me distraí" em vez de bloquear ou punir | **Carga cognitiva:** tirar o pensamento da cabeça libera atenção para a tarefa | Anotação rápida e volta imediata ao timer |
-| Celebração no Resumo | **Regra do pico-fim:** as pessoas lembram de uma experiência pelo seu ponto alto e pelo final | Resumo com tempo focado, mascote comemorando e tom positivo |
-| Timer circular e botões conhecidos (Pausar/Play) | **Lei de Jakob:** usuários preferem padrões que já conhecem de outros apps | Nada a aprender: o timer funciona como os outros |
+| Cronômetro progressivo em vez de contagem regressiva | **Design emocional / redução de ansiedade:** sem prazo, não existe "falhar" | O tempo sobe a partir de 00:00; sem alarme e sem cor de alerta |
+| "Continuar daqui" com 2 campos | **Efeito Zeigarnik:** tarefas inacabadas ocupam a mente; registrá-las libera atenção e acelera a retomada | "Onde parei" + "Próximo passo", mostrados no Início |
+| Botão "Retomar" no Início | **Lei de Fitts e redução de passos:** a ação mais frequente fica grande, próxima e a um toque | Retomada em 1 toque, em vez de 30 min a 1 h |
+| "Lembrar depois" | **Carga cognitiva:** tirar a tarefa paralela da cabeça libera memória de trabalho | Anotação rápida durante a sessão, guardada em uma lista |
+| Tarefas recentes com o último tempo | **Lei de Hick:** escolher em uma lista curta é mais rápido do que criar do zero | Até 3 tarefas recentes, cada uma com "última vez: 42 min" |
+| Comparação gentil com a última vez | **Regra do pico-fim:** o final da experiência define como ela é lembrada | "3 min a menos que da última vez ✦" ou "Levou mais tempo hoje, e tudo bem" |
+| Cronômetro e botões conhecidos (Pausar/Play) | **Lei de Jakob:** usuários preferem padrões que já conhecem | Nada a aprender: funciona como o cronômetro do celular |
 
 ---
 
