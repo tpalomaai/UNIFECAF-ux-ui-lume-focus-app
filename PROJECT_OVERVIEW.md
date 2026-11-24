@@ -104,8 +104,8 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 **Objetivo:** validar hierarquia e navegação sem cor.
 - [x] Criar o arquivo "Lume — UX/UI" no Figma
 - [x] Criar as páginas (Starter = 3): 🧩 Library · 🔲 Wireframes · 📱 Telas, com seções (docs/03-design-system.md)
-- [ ] Rodar o Prompt F2 (tabela de elementos por tela)
-- [ ] Desenhar os 6 frames em cinza (390×844), com nomes `01 - Boas-vindas` … `06 - Sessão concluída`
+- [x] Rodar o Prompt F2 (tabela de elementos por tela)
+- [x] Desenhar os 6 frames em cinza (390×844), com nomes `01 - Boas-vindas` … `06 - Sessão concluída`
 - [ ] Ligar as telas com navegação simples (modo Prototype)
 - [ ] Testar o fluxo clicando do início ao fim
 - [x] Colar o link do Figma acima
