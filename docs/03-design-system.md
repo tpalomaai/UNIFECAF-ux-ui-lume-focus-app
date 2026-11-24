@@ -65,7 +65,9 @@ Capa (nome, versão, link do README) e Arquivo (versões descartadas) ficam para
 | `Corpo/Padrão` | Lexend | 14 / Regular / 150% |
 | `Corpo/Destaque` | Lexend | 14 / SemiBold / 150% |
 | `Legenda/Padrão` | Lexend | 12 / Regular / 140% |
-| `Cronômetro/Número` | Lexend | 38 / Medium / 100% (números tabulares) |
+| `Cronômetro/Número` | Lexend | 38 / Medium / 100% |
+
+> **Números tabulares:** a Lexend não tem tabular numbers (dígitos de 19,9 a 24,2 px; "00:11:11" = 146 px, "00:00:00" = 162 px). Solução: no componente `Cronômetro`, o número fica numa caixa de **largura fixa 180 px, texto centralizado** — qualquer tempo ocupa o mesmo espaço e nada ao redor se mexe.
 
 ## Componentes
 | Componente | Propriedades / Variantes |
@@ -78,7 +80,7 @@ Capa (nome, versão, link do README) e Arquivo (versões descartadas) ficam para
 | `Card/ContinuarDaqui` | Onde parei + Próximo passo + botão Retomar — Estado: Com conteúdo · Vazio |
 | `Card/Métrica` | Tipo: Tempo de hoje · Última vez · Lembretes |
 | `Card/Lembrete` | Texto do lembrete anotado |
-| `Cronômetro` | Estado: Rodando · Pausado (sem anel de prazo) |
+| `Cronômetro` | Estado: Rodando · Pausado (sem anel de prazo) — número em caixa fixa 180 px, centralizado |
 | `Header/Saudação` | Mascote + saudação + subtítulo |
 | `Mascote` | Humor: Feliz · Focado · Comemorando |
 | `Barra/Topo` | Com voltar · Sem voltar |

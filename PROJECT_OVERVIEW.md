@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Fase atual** | F3 — Library (Variables, Text Styles, Componentes) |
-| **Próxima ação (≤ 30 min)** | F3 — números tabulares no `Cronômetro/Número` (manual, 2 min) → montar a seção 🎨 Fundamentos |
+| **Próxima ação (≤ 30 min)** | F3 — montar a seção 🎨 Fundamentos (página 🧩 Library) |
 | **Bloqueios** | Nenhum |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 6 dias · meta interna: tudo pronto na **sex 27/11** |
 | **Última atualização** | 24/11/2026 (sessão F2) |
@@ -121,7 +121,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [x] Variables, coleção `Tokens` (cores com função) — 12 aliases, cada um no seletor certo
 - [x] Variables, coleção `Medidas` (espaço, raio, toque mínimo 48) — 10 medidas
 - [x] Text Styles (7 estilos: Display, Títulos, Corpo, Legenda, Cronômetro)
-- [ ] Ativar números tabulares no `Cronômetro/Número` (manual no Figma: a API não permite)
+- [x] Números estáveis no cronômetro: Lexend não tem tabulares → caixa fixa 180 px centralizada no componente `Cronômetro`
 - [x] Instalar/ativar as fontes Lexend e Sniglet no Figma (já disponíveis via Google Fonts)
 - [ ] Seção 🎨 Fundamentos (página 🧩 Library) montada (paleta, tipografia, espaçamentos)
 - [ ] Componentes atômicos: `Botão` (variantes), `Chip/Tarefa`, `Input`
@@ -243,6 +243,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 24/11 | Figma com 3 páginas + seções (Library · Wireframes · Telas) | Plano Starter limita a 3 páginas |
 | 24/11 | Retomar como botão primário no Início | Doc 1.3: retomar é a ação mais importante (Fitts; retomada levava 30 min–1 h) |
 | 24/11 | `estrela/900` #3D2F00 + token `texto/sobre-destaque` | Texto do botão "Lembrar depois" estava fora da Library |
+| 24/11 | Cronômetro em caixa fixa 180 px (Lexend sem números tabulares) | Mantém a fonte travada e evita o número "pular" |
 | 24/11 | Pausa como estado da tela 04 (04b no wireframe; Change to na F4) | Pausar não troca de contexto; componente interativo conta em "componentes reutilizáveis" |
 
 ---
