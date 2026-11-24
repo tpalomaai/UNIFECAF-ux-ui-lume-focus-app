@@ -30,7 +30,8 @@ Universitários EAD, profissionais em home office e estudantes de idiomas — ad
 
 ### Fluxo principal (6 telas)
 01 - Boas-vindas → 02 - Início → 03 - Escolher tarefa → 04 - Sessão em andamento ⇄ 05 - Lembrar depois → 06 - Sessão concluída → 02 - Início
-(Atalho: 02 "Retomar" → 04)
+(Atalho: 02 "Retomar" → 04 — **Retomar é o botão primário do Início**)
+(Pausa: 04 "Pausar" ⇄ "Continuar" — estado da tela 04; no wireframe é o frame 04b - Sessão pausada, na F4 vira interactive component)
 
 ## Decisões travadas (não reabrir sem motivo forte)
 | Decisão | Valor |
@@ -62,7 +63,7 @@ Universitários EAD, profissionais em home office e estudantes de idiomas — ad
 |---|---|---|---|
 | F0 Setup | Repo e estrutura | 30 min | ✅ concluída |
 | F1 UX | docs/01-teorico.md (1.1–1.3) + docs/02-fluxo.md | 2 h | ✅ concluída (fluxo aprovado) |
-| F2 Wireframe | 6 telas em cinza no Figma | 1–2 h | telas existem e navegam |
+| F2 Wireframe | 6 telas em cinza no Figma | 1–2 h | ✅ concluída (revisada) |
 | F3 Library | Variables, Text Styles, Componentes (docs/03-design-system.md) | 2 h | componentes prontos |
 | F4 Telas + Protótipo | 6 telas só com instâncias + interações | 3 h | fluxo clicável completo |
 | F5 Acessibilidade | Checklist WCAG + doc 1.4–1.5 | 1 h | checklist 100% |

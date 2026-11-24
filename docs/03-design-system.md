@@ -12,8 +12,10 @@
 | Página | Seções | Conteúdo |
 |---|---|---|
 | 🧩 Library | 🎨 Fundamentos · 🧩 Componentes | Paleta, tipografia, espaçamento, raios, ícones · todos os componentes com variantes |
-| 🔲 Wireframes | — | 6 telas em cinza |
-| 📱 Telas | 📖 Capa · 📱 Telas finais · 🗂 Arquivo | Nome, versão, link do README · 6 telas finais · versões descartadas |
+| 🔲 Wireframes | — | 6 telas + 04b (pausada) em cinza |
+| 📱 Telas | 📱 Telas finais | 6 telas finais |
+
+Capa (nome, versão, link do README) e Arquivo (versões descartadas) ficam para a **F8**, como seções na página 📱 Telas.
 
 ## Variables — `Primitivos`
 | Variável | Valor |
@@ -66,8 +68,8 @@
 ## Componentes
 | Componente | Propriedades / Variantes |
 |---|---|
-| `Botão` | Tipo: Primário · Secundário · Destaque — Estado: Padrão · Pressionado · Desabilitado — Ícone: sim/não |
-| `Botão/Grande` | Ação principal "Nova sessão" |
+| `Botão` | Tipo: Primário · Secundário · Destaque — Estado: Padrão · Pressionado · Desabilitado — Ícone: sim/não — Ação de sessão: Pausar · Continuar |
+| `Botão/Grande` | "Nova sessão" no Início (secundário; o primário é Retomar, no Card/ContinuarDaqui) |
 | `Input` | Estado: Vazio · Preenchido · Foco · Erro |
 | `Chip/Tarefa` | Tipo: Nome da tarefa · Última vez |
 | `Card/Tarefa` | Nome + "última vez: X min" — Estado: Padrão · Selecionado |
@@ -78,6 +80,8 @@
 | `Header/Saudação` | Mascote + saudação + subtítulo |
 | `Mascote` | Humor: Feliz · Focado · Comemorando |
 | `Barra/Topo` | Com voltar · Sem voltar |
+
+> Na F4, a pausa vira **interactive component** (Change to): `Botão` Pausar ⇄ Continuar e `Cronômetro` Rodando ⇄ Pausado, sem trocar de tela.
 
 ## Ordem de construção
 1. Variables (Primitivos → Tokens → Medidas)

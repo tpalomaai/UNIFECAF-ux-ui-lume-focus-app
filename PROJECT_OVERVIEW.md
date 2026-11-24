@@ -8,8 +8,8 @@
 ## 🧭 Agora
 | | |
 |---|---|
-| **Fase atual** | F2 — Wireframe (6 telas em cinza no Figma) |
-| **Próxima ação (≤ 30 min)** | Testar o fluxo no Figma (▶ Present, do 01 ao 06) → fechar a F2 → iniciar a F3 (Variables `Primitivos`) |
+| **Fase atual** | F3 — Library (Variables, Text Styles, Componentes) |
+| **Próxima ação (≤ 30 min)** | F3 — Library: ativar Lexend/Sniglet no Figma e criar a coleção de Variables `Primitivos` |
 | **Bloqueios** | Nenhum |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 6 dias · meta interna: tudo pronto na **sex 27/11** |
 | **Última atualização** | 24/11/2026 (sessão F2) |
@@ -19,8 +19,9 @@
 > F1 revisada com a pesquisa: o app virou **cronômetro progressivo sem pressão** + histórico por tarefa + "Onde parei / Próximo passo" + "Lembrar depois".
 > Trabalho migrado para o **Claude Code** (terminal), com o repositório clonado no computador.
 > **F1 aprovada** ✅ (fluxo com cronômetro progressivo, docs/02-fluxo.md).
-> **F2 quase pronta:** arquivo [Lume — UX/UI](https://www.figma.com/design/z7C1XSWQhlIpYry549Ba3Q) com 3 páginas + seções (limite do Starter), 6 wireframes em cinza e 10 conexões ligadas (Dissolve 250 ms, ponto de partida no 01).
-> Falta só: testar o fluxo clicando do 01 ao 06 (▶ Present). Depois: F3 Library.
+> **F2 concluída** ✅: arquivo [Lume — UX/UI](https://www.figma.com/design/z7C1XSWQhlIpYry549Ba3Q) com 3 páginas + seções (limite do Starter), 6 wireframes + 04b (pausada) em cinza e 14 ligações no Prototype.
+> Revisão aplicada (docs/revisoes/f2-wireframes.md): Retomar virou primário no Início, rótulos visíveis nos campos, pausa como estado da tela 04.
+> Próximo: **F3 — Library** (docs/03-design-system.md), começando pelas Variables `Primitivos`.
 
 ---
 
@@ -55,8 +56,8 @@
 |---|---|---|---|---|
 | F0 Setup | Tema, direção visual, estrutura, repo | 30 min | ✅ Concluída | — |
 | F1 UX | Problema, persona, jornada, fluxo | 2 h | ✅ Concluída | Documento teórico (1,5) |
-| F2 Wireframe | 6 telas em cinza + arquivo Figma organizado | 1–2 h | 🔵 Em andamento | Protótipo (3,5) |
-| F3 Library | Variables, Text Styles, Componentes | 2 h | ⚪ | Protótipo — Design System |
+| F2 Wireframe | 6 telas em cinza + arquivo Figma organizado | 1–2 h | ✅ Concluída | Protótipo (3,5) |
+| F3 Library | Variables, Text Styles, Componentes | 2 h | 🔵 Próxima | Protótipo — Design System |
 | F4 Telas + Protótipo | 6 telas finais + interações | 3 h | ⚪ | Protótipo — Navegação |
 | F5 Acessibilidade | Checklist WCAG + doc 1.4–1.5 | 1 h | ⚪ | Documento teórico |
 | F6 Textos | README + roteiro do vídeo + revisão do doc | 2 h | ⚪ | Protótipo — README |
@@ -101,14 +102,15 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 
 **Pronto quando:** seções 1.1, 1.2 e 1.3 do documento teórico escritas e fluxo aprovado.
 
-### F2 — Wireframe · 1–2 h · 🔵
+### F2 — Wireframe · 1–2 h · ✅
 **Objetivo:** validar hierarquia e navegação sem cor.
 - [x] Criar o arquivo "Lume — UX/UI" no Figma
 - [x] Criar as páginas (Starter = 3): 🧩 Library · 🔲 Wireframes · 📱 Telas, com seções (docs/03-design-system.md)
 - [x] Rodar o Prompt F2 (tabela de elementos por tela)
 - [x] Desenhar os 6 frames em cinza (390×844), com nomes `01 - Boas-vindas` … `06 - Sessão concluída`
-- [x] Ligar as telas com navegação simples (modo Prototype) — 10 conexões + ponto de partida "Fluxo principal"
-- [ ] Testar o fluxo clicando do início ao fim
+- [x] Ligar as telas com navegação simples (modo Prototype) — 14 ligações + ponto de partida "Fluxo principal"
+- [x] Testar o fluxo clicando do início ao fim (Prototype Preview)
+- [x] Revisão da F2 aplicada: hierarquia do Início, rótulos visíveis, frame 04b - Sessão pausada (docs/revisoes/f2-wireframes.md)
 - [x] Colar o link do Figma acima
 
 **Pronto quando:** as 6 telas existem, têm os nomes certos e navegam.
@@ -138,6 +140,8 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [ ] Interação: "Lembrar depois" → anotação → volta à Sessão
 - [ ] Interação: Início "Retomar" → Sessão (atalho)
 - [ ] Interação: "Concluir" → Sessão concluída → Início
+- [ ] Pausa como interactive component (Change to): Pausar ⇄ Continuar, Cronômetro Rodando ⇄ Pausado
+- [ ] Trocar frames "Espaço" por Auto Layout (espaçamento/alinhamento)
 - [ ] Definir o frame inicial (flow starting point)
 - [ ] Transições simples (Smart Animate ou Dissolve, 200–300 ms)
 - [ ] Testar o fluxo inteiro em modo apresentação
@@ -236,6 +240,8 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 24/11 | Continuar o projeto pelo Claude Code | CLAUDE.md carrega sozinho, arquivos locais, commits diretos |
 | 24/11 | F1 aprovada | Fluxo com cronômetro progressivo validado |
 | 24/11 | Figma com 3 páginas + seções (Library · Wireframes · Telas) | Plano Starter limita a 3 páginas |
+| 24/11 | Retomar como botão primário no Início | Doc 1.3: retomar é a ação mais importante (Fitts; retomada levava 30 min–1 h) |
+| 24/11 | Pausa como estado da tela 04 (04b no wireframe; Change to na F4) | Pausar não troca de contexto; componente interativo conta em "componentes reutilizáveis" |
 
 ---
 
@@ -246,6 +252,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 24/11 | F1: público, entrevista, conceito revisado (cronômetro progressivo), 1.1–1.3 | ~40 min |
 | 24/11 | Prazo e cronograma definidos; migração para o Claude Code | ~10 min |
 | 24/11 | F1 aprovada · F2: arquivo Figma (3 páginas), 6 wireframes em cinza, navegação ligada | ~30 min |
+| 24/11 | Revisão F2: Retomar primário, rótulos nos campos, 04b pausada, 14 ligações · F2 ✅ | ~20 min |
 
 ---
 
