@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Fase atual** | F3 — Library (Variables, Text Styles, Componentes) |
-| **Próxima ação (≤ 30 min)** | F3 — criar os 7 Text Styles (Lexend + Sniglet) |
+| **Próxima ação (≤ 30 min)** | F3 — números tabulares no `Cronômetro/Número` (manual, 2 min) → montar a seção 🎨 Fundamentos |
 | **Bloqueios** | Nenhum |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 6 dias · meta interna: tudo pronto na **sex 27/11** |
 | **Última atualização** | 24/11/2026 (sessão F2) |
@@ -120,7 +120,8 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [x] Variables, coleção `Primitivos` (cores cruas) — 10 cores, ocultas dos seletores
 - [x] Variables, coleção `Tokens` (cores com função) — 12 aliases, cada um no seletor certo
 - [x] Variables, coleção `Medidas` (espaço, raio, toque mínimo 48) — 10 medidas
-- [ ] Text Styles (7 estilos: Display, Títulos, Corpo, Legenda, Cronômetro)
+- [x] Text Styles (7 estilos: Display, Títulos, Corpo, Legenda, Cronômetro)
+- [ ] Ativar números tabulares no `Cronômetro/Número` (manual no Figma: a API não permite)
 - [x] Instalar/ativar as fontes Lexend e Sniglet no Figma (já disponíveis via Google Fonts)
 - [ ] Seção 🎨 Fundamentos (página 🧩 Library) montada (paleta, tipografia, espaçamentos)
 - [ ] Componentes atômicos: `Botão` (variantes), `Chip/Tarefa`, `Input`
