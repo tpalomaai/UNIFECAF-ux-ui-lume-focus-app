@@ -7,14 +7,13 @@
 - Nomes em português, padrão `Categoria/Nome`.
 
 ## Páginas do arquivo
-| Página | Conteúdo |
-|---|---|
-| 📖 Capa | Nome, versão, link do README |
-| 🎨 Fundamentos | Paleta, tipografia, espaçamento, raios, ícones |
-| 🧩 Componentes | Todos os componentes com variantes |
-| 🔲 Wireframes | 6 telas em cinza |
-| 📱 Telas | 6 telas finais |
-| 🗂 Arquivo | Versões descartadas |
+> O plano Starter do Figma permite só 3 páginas: o conteúdo é dividido em **seções** dentro delas.
+
+| Página | Seções | Conteúdo |
+|---|---|---|
+| 🧩 Library | 🎨 Fundamentos · 🧩 Componentes | Paleta, tipografia, espaçamento, raios, ícones · todos os componentes com variantes |
+| 🔲 Wireframes | — | 6 telas em cinza |
+| 📱 Telas | 📖 Capa · 📱 Telas finais · 🗂 Arquivo | Nome, versão, link do README · 6 telas finais · versões descartadas |
 
 ## Variables — `Primitivos`
 | Variável | Valor |

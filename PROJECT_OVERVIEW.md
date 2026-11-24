@@ -42,7 +42,7 @@
 | Item | Link | Status |
 |---|---|---|
 | 🐙 Repositório GitHub | [UNIFECAF-ux-ui-lume-focus-app](https://github.com/tpalomaai/UNIFECAF-ux-ui-lume-focus-app) | ✅ |
-| 🎨 Arquivo Figma | (a criar na F2) | ⏳ |
+| 🎨 Arquivo Figma | [Lume — UX/UI](https://www.figma.com/design/z7C1XSWQhlIpYry549Ba3Q) | ✅ |
 | 🔗 Protótipo (link público) | (a gerar na F4) | ⏳ |
 | 🎬 Vídeo pitch | (a gravar na F7) | ⏳ |
 | 📄 Enunciado do trabalho | (salvar PDF no Vault) | ⏳ |
@@ -102,13 +102,13 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 
 ### F2 — Wireframe · 1–2 h · 🔵
 **Objetivo:** validar hierarquia e navegação sem cor.
-- [ ] Criar o arquivo "Lume — UX/UI" no Figma
-- [ ] Criar as páginas: 📖 Capa · 🎨 Fundamentos · 🧩 Componentes · 🔲 Wireframes · 📱 Telas · 🗂 Arquivo
+- [x] Criar o arquivo "Lume — UX/UI" no Figma
+- [x] Criar as páginas (Starter = 3): 🧩 Library · 🔲 Wireframes · 📱 Telas, com seções (docs/03-design-system.md)
 - [ ] Rodar o Prompt F2 (tabela de elementos por tela)
 - [ ] Desenhar os 6 frames em cinza (390×844), com nomes `01 - Boas-vindas` … `06 - Sessão concluída`
 - [ ] Ligar as telas com navegação simples (modo Prototype)
 - [ ] Testar o fluxo clicando do início ao fim
-- [ ] Colar o link do Figma acima
+- [x] Colar o link do Figma acima
 
 **Pronto quando:** as 6 telas existem, têm os nomes certos e navegam.
 
@@ -119,14 +119,14 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [ ] Variables, coleção `Medidas` (espaço, raio, toque mínimo 48)
 - [ ] Text Styles (7 estilos: Display, Títulos, Corpo, Legenda, Cronômetro)
 - [ ] Instalar/ativar as fontes Lexend e Sniglet no Figma
-- [ ] Página 🎨 Fundamentos montada (paleta, tipografia, espaçamentos)
+- [ ] Seção 🎨 Fundamentos (página 🧩 Library) montada (paleta, tipografia, espaçamentos)
 - [ ] Componentes atômicos: `Botão` (variantes), `Chip/Tarefa`, `Input`
 - [ ] Componentes compostos: `Card/Tarefa`, `Card/ContinuarDaqui`, `Card/Métrica`, `Card/Lembrete`, `Cronômetro`, `Header/Saudação`, `Barra/Topo`
 - [ ] `Mascote` (Feliz · Focado · Comemorando) — versão simples
 - [ ] Tudo em Auto Layout e usando só variables
 - [ ] **Congelar a Library** (portão)
 
-**Pronto quando:** todos os componentes existem na página 🧩 Componentes.
+**Pronto quando:** todos os componentes existem na seção 🧩 Componentes (página 🧩 Library).
 
 ### F4 — Telas finais + Protótipo · 3 h · ⚪
 **Objetivo:** protótipo navegável completo, montado só com instâncias.
@@ -233,6 +233,8 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 24/11 | "Continuar daqui" com Onde parei + Próximo passo + botão Retomar | Retomada levava 30 min–1 h |
 | 24/11 | "Me distraí" virou "Lembrar depois" | Maior distração = outras tarefas em paralelo |
 | 24/11 | Continuar o projeto pelo Claude Code | CLAUDE.md carrega sozinho, arquivos locais, commits diretos |
+| 24/11 | F1 aprovada | Fluxo com cronômetro progressivo validado |
+| 24/11 | Figma com 3 páginas + seções (Library · Wireframes · Telas) | Plano Starter limita a 3 páginas |
 
 ---
 
