@@ -25,6 +25,7 @@ Capa (nome, versão, link do README) e Arquivo (versões descartadas) ficam para
 | `indigo/300` | #6E69D6 |
 | `estrela/400` | #FFD43B |
 | `estrela/100` | #FFF3BF |
+| `estrela/900` | #3D2F00 |
 | `rosa/400` | #EC6FA8 |
 | `rosa/800` | #A3215F |
 | `neutro/0` | #FFFFFF |
@@ -46,6 +47,7 @@ Capa (nome, versão, link do README) e Arquivo (versões descartadas) ficam para
 | `destaque/progresso-fundo` | estrela/100 | Chip "última vez" |
 | `destaque/retomar` | rosa/400 | Barra do "Continuar daqui" |
 | `destaque/retomar-texto` | rosa/800 | Título do "Continuar daqui" |
+| `texto/sobre-destaque` | estrela/900 | Texto sobre amarelo (botão "Lembrar depois") |
 
 ## Variables — `Medidas`
 | Variável | Valores |
@@ -95,5 +97,5 @@ Capa (nome, versão, link do README) e Arquivo (versões descartadas) ficam para
 |---|---|
 | indigo/900 sobre creme #FFF8EC | texto principal |
 | branco sobre indigo/700 | botão primário |
-| #3D2F00 sobre estrela/400 | botão "Lembrar depois" |
+| estrela/900 (#3D2F00) sobre estrela/400 | botão "Lembrar depois" |
 | rosa/800 sobre branco | título "Continuar daqui" |

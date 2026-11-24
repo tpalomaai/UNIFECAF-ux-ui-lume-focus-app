@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Fase atual** | F3 — Library (Variables, Text Styles, Componentes) |
-| **Próxima ação (≤ 30 min)** | F3 — criar a coleção `Medidas` (espaço, raio, toque mínimo 48) |
+| **Próxima ação (≤ 30 min)** | F3 — criar os 7 Text Styles (Lexend + Sniglet) |
 | **Bloqueios** | Nenhum |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 6 dias · meta interna: tudo pronto na **sex 27/11** |
 | **Última atualização** | 24/11/2026 (sessão F2) |
@@ -119,7 +119,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 **Objetivo:** criar todas as peças padronizadas antes das telas finais.
 - [x] Variables, coleção `Primitivos` (cores cruas) — 10 cores, ocultas dos seletores
 - [x] Variables, coleção `Tokens` (cores com função) — 12 aliases, cada um no seletor certo
-- [ ] Variables, coleção `Medidas` (espaço, raio, toque mínimo 48)
+- [x] Variables, coleção `Medidas` (espaço, raio, toque mínimo 48) — 10 medidas
 - [ ] Text Styles (7 estilos: Display, Títulos, Corpo, Legenda, Cronômetro)
 - [x] Instalar/ativar as fontes Lexend e Sniglet no Figma (já disponíveis via Google Fonts)
 - [ ] Seção 🎨 Fundamentos (página 🧩 Library) montada (paleta, tipografia, espaçamentos)
@@ -241,6 +241,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 24/11 | F1 aprovada | Fluxo com cronômetro progressivo validado |
 | 24/11 | Figma com 3 páginas + seções (Library · Wireframes · Telas) | Plano Starter limita a 3 páginas |
 | 24/11 | Retomar como botão primário no Início | Doc 1.3: retomar é a ação mais importante (Fitts; retomada levava 30 min–1 h) |
+| 24/11 | `estrela/900` #3D2F00 + token `texto/sobre-destaque` | Texto do botão "Lembrar depois" estava fora da Library |
 | 24/11 | Pausa como estado da tela 04 (04b no wireframe; Change to na F4) | Pausar não troca de contexto; componente interativo conta em "componentes reutilizáveis" |
 
 ---
