@@ -9,10 +9,10 @@
 | | |
 |---|---|
 | **Fase atual** | F3 — Library (Variables, Text Styles, Componentes) |
-| **Próxima ação (≤ 30 min)** | F3 — montar a seção 🎨 Fundamentos (página 🧩 Library) |
-| **Bloqueios** | Limite de chamadas do Figma MCP no plano Starter atingido → Claude não edita mais o Figma até o limite renovar ou o plano mudar (ex.: Figma Education) |
+| **Próxima ação (≤ 30 min)** | Abrir **PONTO-DE-RETOMADA.md** → Fundamentos, Etapa 3 (Tipografia) à mão no Figma |
+| **Bloqueios** | Limite do Figma MCP (Starter, ~20 chamadas/mês) atingido → trabalho no Figma segue **à mão**, guiado pelo Claude. Collab não resolve; só vaga Dev/Full em plano pago |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 6 dias · meta interna: tudo pronto na **sex 27/11** |
-| **Última atualização** | 24/11/2026 (sessão F2) |
+| **Última atualização** | 24/11/2026 (fim do dia — F3 em andamento) |
 
 ## 📍 Continuar daqui
 > F0 concluída: nome **Lume**, direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet) e repositório no GitHub com toda a estrutura.
@@ -22,8 +22,9 @@
 > **F2 concluída** ✅: arquivo [Lume — UX/UI](https://www.figma.com/design/z7C1XSWQhlIpYry549Ba3Q) com 3 páginas + seções (limite do Starter), 6 wireframes + 04b (pausada) em cinza e 14 ligações no Prototype.
 > Revisão aplicada (docs/revisoes/f2-wireframes.md): Retomar virou primário no Início, rótulos visíveis nos campos, pausa como estado da tela 04.
 > **F3 em andamento:** Variables prontas (`Primitivos` 11 · `Tokens` 13 · `Medidas` 10) e 7 Text Styles. Lexend sem números tabulares → cronômetro em caixa fixa 180 px.
-> ⚠️ Limite do Figma MCP (Starter) atingido ao montar a seção 🎨 Fundamentos — ela ainda está vazia.
-> Próximo: montar 🎨 Fundamentos (manual ou via Claude, se o limite liberar) → componentes atômicos (Botão, Chip/Tarefa, Input).
+> ⚠️ Limite do Figma MCP (Starter) atingido → Fundamentos sendo montados **à mão**: Etapa 1 (frame + título) ✅ · Etapa 2 (13 cores) ✅.
+> **Parei na Etapa 3 (Tipografia).** Passo a passo completo das Etapas 3–5 e dicas do Figma em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
+> Depois: componentes atômicos (Botão, Chip/Tarefa, Input).
 
 ---
 
@@ -125,7 +126,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [x] Text Styles (7 estilos: Display, Títulos, Corpo, Legenda, Cronômetro)
 - [x] Números estáveis no cronômetro: Lexend não tem tabulares → caixa fixa 180 px centralizada no componente `Cronômetro`
 - [x] Instalar/ativar as fontes Lexend e Sniglet no Figma (já disponíveis via Google Fonts)
-- [ ] Seção 🎨 Fundamentos (página 🧩 Library) montada (paleta, tipografia, espaçamentos)
+- [ ] Seção 🎨 Fundamentos (página 🧩 Library) montada (paleta, tipografia, espaçamentos) — 🔵 cores prontas; falta tipografia, medidas e conferência (PONTO-DE-RETOMADA.md)
 - [ ] Componentes atômicos: `Botão` (variantes), `Chip/Tarefa`, `Input`
 - [ ] Componentes compostos: `Card/Tarefa`, `Card/ContinuarDaqui`, `Card/Métrica`, `Card/Lembrete`, `Cronômetro`, `Header/Saudação`, `Barra/Topo`
 - [ ] `Mascote` (Feliz · Focado · Comemorando) — versão simples
@@ -246,6 +247,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 24/11 | Retomar como botão primário no Início | Doc 1.3: retomar é a ação mais importante (Fitts; retomada levava 30 min–1 h) |
 | 24/11 | `estrela/900` #3D2F00 + token `texto/sobre-destaque` | Texto do botão "Lembrar depois" estava fora da Library |
 | 24/11 | Cronômetro em caixa fixa 180 px (Lexend sem números tabulares) | Mantém a fonte travada e evita o número "pular" |
+| 24/11 | Figma à mão (sem MCP) até o fim do projeto | Limite do Starter; plano pago só para isso não compensa |
 | 24/11 | Pausa como estado da tela 04 (04b no wireframe; Change to na F4) | Pausar não troca de contexto; componente interativo conta em "componentes reutilizáveis" |
 
 ---
@@ -259,6 +261,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 24/11 | F1 aprovada · F2: arquivo Figma (3 páginas), 6 wireframes em cinza, navegação ligada | ~30 min |
 | 24/11 | Revisão F2: Retomar primário, rótulos nos campos, 04b pausada, 14 ligações · F2 ✅ | ~20 min |
 | 24/11 | F3: Variables (3 coleções), 7 Text Styles, solução do cronômetro · parou no limite do Figma MCP | ~25 min |
+| 24/11 | F3 à mão: Fundamentos Etapas 1–2 (frame, título, 13 cores) · criado PONTO-DE-RETOMADA.md | ~1 h |
 
 ---
 
