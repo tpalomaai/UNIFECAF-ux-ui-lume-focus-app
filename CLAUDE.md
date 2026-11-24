@@ -47,7 +47,7 @@
 ## Fases
 | Fase | Entrega | Timebox | Portão |
 |---|---|---|---|
-| F0 Setup | Repo e estrutura | 30 min | ✅ concluída |
+| F0 Setup | Repo e estrutura | 30 min | 🔵 falta GitHub |
 | F1 UX | docs/01-teorico.md (1.1–1.3) + docs/02-fluxo.md | 2 h | fluxo aprovado |
 | F2 Wireframe | 6 telas em cinza no Figma | 1–2 h | telas existem e navegam |
 | F3 Library | Variables, Text Styles, Componentes (docs/03-design-system.md) | 2 h | componentes prontos |
@@ -55,6 +55,7 @@
 | F5 Acessibilidade | Checklist WCAG + doc 1.4–1.5 | 1 h | checklist 100% |
 | F6 Textos | README + roteiro do vídeo (reaproveitar doc teórico) | 2 h | revisado |
 | F7 Vídeo | Gravação ≤ 4 min | 1 h | link público |
+| F8 Entrega | Conferência final + envio no portal | 30 min | trabalho enviado |
 
 ## Library Figma — resumo
 Detalhes completos em `docs/03-design-system.md`.
