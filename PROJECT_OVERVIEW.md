@@ -10,7 +10,7 @@
 |---|---|
 | **Fase atual** | F3 — Library (Variables, Text Styles, Componentes) |
 | **Próxima ação (≤ 30 min)** | F3 — montar a seção 🎨 Fundamentos (página 🧩 Library) |
-| **Bloqueios** | Nenhum |
+| **Bloqueios** | Limite de chamadas do Figma MCP no plano Starter atingido → Claude não edita mais o Figma até o limite renovar ou o plano mudar (ex.: Figma Education) |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 6 dias · meta interna: tudo pronto na **sex 27/11** |
 | **Última atualização** | 24/11/2026 (sessão F2) |
 
@@ -21,7 +21,9 @@
 > **F1 aprovada** ✅ (fluxo com cronômetro progressivo, docs/02-fluxo.md).
 > **F2 concluída** ✅: arquivo [Lume — UX/UI](https://www.figma.com/design/z7C1XSWQhlIpYry549Ba3Q) com 3 páginas + seções (limite do Starter), 6 wireframes + 04b (pausada) em cinza e 14 ligações no Prototype.
 > Revisão aplicada (docs/revisoes/f2-wireframes.md): Retomar virou primário no Início, rótulos visíveis nos campos, pausa como estado da tela 04.
-> Próximo: **F3 — Library** (docs/03-design-system.md), começando pelas Variables `Primitivos`.
+> **F3 em andamento:** Variables prontas (`Primitivos` 11 · `Tokens` 13 · `Medidas` 10) e 7 Text Styles. Lexend sem números tabulares → cronômetro em caixa fixa 180 px.
+> ⚠️ Limite do Figma MCP (Starter) atingido ao montar a seção 🎨 Fundamentos — ela ainda está vazia.
+> Próximo: montar 🎨 Fundamentos (manual ou via Claude, se o limite liberar) → componentes atômicos (Botão, Chip/Tarefa, Input).
 
 ---
 
@@ -256,6 +258,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 24/11 | Prazo e cronograma definidos; migração para o Claude Code | ~10 min |
 | 24/11 | F1 aprovada · F2: arquivo Figma (3 páginas), 6 wireframes em cinza, navegação ligada | ~30 min |
 | 24/11 | Revisão F2: Retomar primário, rótulos nos campos, 04b pausada, 14 ligações · F2 ✅ | ~20 min |
+| 24/11 | F3: Variables (3 coleções), 7 Text Styles, solução do cronômetro · parou no limite do Figma MCP | ~25 min |
 
 ---
 
