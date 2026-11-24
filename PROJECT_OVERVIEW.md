@@ -8,22 +8,22 @@
 ## 🧭 Agora
 | | |
 |---|---|
-| **Fase atual** | F0 — Setup (falta só o GitHub) |
-| **Próxima ação (≤ 30 min)** | Criar repositório `ux-ui-app-lume` no GitHub → avisar o Claude |
-| **Bloqueios** | Repositório precisa ser criado por mim (github.com/new, Public, sem README) |
+| **Fase atual** | F1 — UX (problema, persona, jornada, fluxo) |
+| **Próxima ação (≤ 30 min)** | Preencher o prazo final → rodar o Prompt F1 e responder as perguntas sobre a usuária |
+| **Bloqueios** | Nenhum |
 | **Prazo final** | ____/____ (preencher) · faltam __ dias |
 | **Última atualização** | 24/11/2026 |
 
 ## 📍 Continuar daqui
-> Nome **Lume** e direção visual travados (fundo Creme lunar #FFF8EC, Lexend + Sniglet). Estrutura local pronta com commit.
-> Próximo: criar o repo no GitHub e pedir ao Claude para enviar os arquivos. Depois, começar a F1.
+> F0 concluída: nome **Lume**, direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet) e repositório no GitHub com toda a estrutura.
+> Próximo: abrir o Claude Code na pasta do repositório e rodar o **Prompt F1**.
 
 ---
 
 ## 🔗 Links de acesso
 | Item | Link | Status |
 |---|---|---|
-| 🐙 Repositório GitHub | (a criar) | ⏳ |
+| 🐙 Repositório GitHub | [UNIFECAF-ux-ui-lume-focus-app](https://github.com/tpalomaai/UNIFECAF-ux-ui-lume-focus-app) | ✅ |
 | 🎨 Arquivo Figma | (a criar na F2) | ⏳ |
 | 🔗 Protótipo (link público) | (a gerar na F4) | ⏳ |
 | 🎬 Vídeo pitch | (a gravar na F7) | ⏳ |
@@ -34,7 +34,7 @@
 ## 🗺️ Visão geral das etapas
 | Fase | Entrega | Timebox | Status | Entregável vinculado |
 |---|---|---|---|---|
-| F0 Setup | Tema, direção visual, estrutura, repo | 30 min | 🔵 Quase pronta | — |
+| F0 Setup | Tema, direção visual, estrutura, repo | 30 min | ✅ Concluída | — |
 | F1 UX | Problema, persona, jornada, fluxo | 2 h | ⚪ | Documento teórico (1,5) |
 | F2 Wireframe | 6 telas em cinza + arquivo Figma organizado | 1–2 h | ⚪ | Protótipo (3,5) |
 | F3 Library | Variables, Text Styles, Componentes | 2 h | ⚪ | Protótipo — Design System |
@@ -51,7 +51,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 
 ## 📋 Etapas detalhadas
 
-### F0 — Setup · 30 min · 🔵
+### F0 — Setup · 30 min · ✅
 **Objetivo:** projeto definido e pronto para trabalhar sem reabrir decisões.
 - [x] Ler o enunciado e listar os 3 entregáveis
 - [x] Escolher o tema (app de sessão de foco)
@@ -60,8 +60,8 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [x] Definir estrutura da Library do Figma
 - [x] Definir o nome (Lume)
 - [x] Criar estrutura local (CLAUDE.md, README, docs/, Project Overview)
-- [ ] Criar repositório `ux-ui-app-lume` no GitHub (Public, sem README)
-- [ ] Enviar arquivos para o GitHub e preencher o link acima
+- [x] Criar repositório `UNIFECAF-ux-ui-lume-focus-app` no GitHub
+- [x] Enviar arquivos para o GitHub e preencher o link acima
 - [ ] Preencher o prazo final
 - [ ] Salvar o PDF do enunciado no Vault
 
@@ -205,6 +205,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 24/11 | Direção "Céu de estrelas" + fundo Creme lunar #FFF8EC | Lúdico, acolhedor, bom contraste |
 | 24/11 | Lexend (texto) + Sniglet (só saudação/logo) | Lexend melhora leitura → argumento de acessibilidade |
 | 24/11 | Library no Figma antes das telas | Padronização e zero retrabalho |
+| 24/11 | Repositório `UNIFECAF-ux-ui-lume-focus-app` | Mesmo padrão de nome dos outros projetos da faculdade |
 
 ---
 

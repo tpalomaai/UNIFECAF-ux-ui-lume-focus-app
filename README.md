@@ -5,6 +5,7 @@
 | 🎨 Protótipo no Figma | (link público) |
 | 🎬 Vídeo pitch | (link não listado) |
 | 📄 Documento teórico | [docs/01-teorico.md](docs/01-teorico.md) |
+| 🐙 Repositório | [https://github.com/tpalomaai/UNIFECAF-ux-ui-lume-focus-app](https://github.com/tpalomaai/UNIFECAF-ux-ui-lume-focus-app) |
 
 > Projeto acadêmico — UniFECAF · Design de Interação e Interface UX/UI
 
