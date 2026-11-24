@@ -9,17 +9,18 @@
 | | |
 |---|---|
 | **Fase atual** | F2 — Wireframe (6 telas em cinza no Figma) |
-| **Próxima ação (≤ 30 min)** | Criar o arquivo "Lume — UX/UI" no Figma com as 6 páginas (docs/03-design-system.md) |
+| **Próxima ação (≤ 30 min)** | Testar o fluxo no Figma (▶ Present, do 01 ao 06) → fechar a F2 → iniciar a F3 (Variables `Primitivos`) |
 | **Bloqueios** | Nenhum |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 6 dias · meta interna: tudo pronto na **sex 27/11** |
-| **Última atualização** | 24/11/2026 14:40 |
+| **Última atualização** | 24/11/2026 (sessão F2) |
 
 ## 📍 Continuar daqui
 > F0 concluída: nome **Lume**, direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet) e repositório no GitHub com toda a estrutura.
 > F1 revisada com a pesquisa: o app virou **cronômetro progressivo sem pressão** + histórico por tarefa + "Onde parei / Próximo passo" + "Lembrar depois".
 > Trabalho migrado para o **Claude Code** (terminal), com o repositório clonado no computador.
 > **F1 aprovada** ✅ (fluxo com cronômetro progressivo, docs/02-fluxo.md).
-> Próximo: F2 — criar o arquivo Figma + páginas → 6 frames em cinza → navegação básica.
+> **F2 quase pronta:** arquivo [Lume — UX/UI](https://www.figma.com/design/z7C1XSWQhlIpYry549Ba3Q) com 3 páginas + seções (limite do Starter), 6 wireframes em cinza e 10 conexões ligadas (Dissolve 250 ms, ponto de partida no 01).
+> Falta só: testar o fluxo clicando do 01 ao 06 (▶ Present). Depois: F3 Library.
 
 ---
 
@@ -106,7 +107,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [x] Criar as páginas (Starter = 3): 🧩 Library · 🔲 Wireframes · 📱 Telas, com seções (docs/03-design-system.md)
 - [x] Rodar o Prompt F2 (tabela de elementos por tela)
 - [x] Desenhar os 6 frames em cinza (390×844), com nomes `01 - Boas-vindas` … `06 - Sessão concluída`
-- [ ] Ligar as telas com navegação simples (modo Prototype)
+- [x] Ligar as telas com navegação simples (modo Prototype) — 10 conexões + ponto de partida "Fluxo principal"
 - [ ] Testar o fluxo clicando do início ao fim
 - [x] Colar o link do Figma acima
 
@@ -244,6 +245,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 24/11 | Tema, plano, direção visual, Library definida, nome, estrutura F0 | ~50 min |
 | 24/11 | F1: público, entrevista, conceito revisado (cronômetro progressivo), 1.1–1.3 | ~40 min |
 | 24/11 | Prazo e cronograma definidos; migração para o Claude Code | ~10 min |
+| 24/11 | F1 aprovada · F2: arquivo Figma (3 páginas), 6 wireframes em cinza, navegação ligada | ~30 min |
 
 ---
 
