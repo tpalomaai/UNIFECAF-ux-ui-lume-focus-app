@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Fase atual** | F3 — Library (Variables, Text Styles, Componentes) |
-| **Próxima ação (≤ 30 min)** | F3 — criar a coleção `Tokens` (12 cores com função, apontando para `Primitivos`) |
+| **Próxima ação (≤ 30 min)** | F3 — criar a coleção `Medidas` (espaço, raio, toque mínimo 48) |
 | **Bloqueios** | Nenhum |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 6 dias · meta interna: tudo pronto na **sex 27/11** |
 | **Última atualização** | 24/11/2026 (sessão F2) |
@@ -118,7 +118,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 ### F3 — Library · 2 h (rígido) · 🔵
 **Objetivo:** criar todas as peças padronizadas antes das telas finais.
 - [x] Variables, coleção `Primitivos` (cores cruas) — 10 cores, ocultas dos seletores
-- [ ] Variables, coleção `Tokens` (cores com função)
+- [x] Variables, coleção `Tokens` (cores com função) — 12 aliases, cada um no seletor certo
 - [ ] Variables, coleção `Medidas` (espaço, raio, toque mínimo 48)
 - [ ] Text Styles (7 estilos: Display, Títulos, Corpo, Legenda, Cronômetro)
 - [x] Instalar/ativar as fontes Lexend e Sniglet no Figma (já disponíveis via Google Fonts)
