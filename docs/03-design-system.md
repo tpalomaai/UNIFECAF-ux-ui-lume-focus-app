@@ -31,6 +31,7 @@ Capa (nome, versão, link do README) e Arquivo (versões descartadas) ficam para
 | `neutro/0` | #FFFFFF |
 | `neutro/500` | #5A5784 |
 | `fundo/creme-lunar` | #FFF8EC |
+| `vermelho/600` | #D23C3C |
 
 ## Variables — `Tokens` (as telas usam SÓ estes)
 | Token | Aponta para | Uso |
@@ -48,6 +49,7 @@ Capa (nome, versão, link do README) e Arquivo (versões descartadas) ficam para
 | `destaque/retomar` | rosa/400 | Barra do "Continuar daqui" |
 | `destaque/retomar-texto` | rosa/800 | Título do "Continuar daqui" |
 | `texto/sobre-destaque` | estrela/900 | Texto sobre amarelo (botão "Lembrar depois") |
+| `destaque/erro` | vermelho/600 | Borda + texto do Input em Estado=Erro — **criado na F3, conferir contraste AA na F5** |
 
 ## Variables — `Medidas`
 | Variável | Valores |

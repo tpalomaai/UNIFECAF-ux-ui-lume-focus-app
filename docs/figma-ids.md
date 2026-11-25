@@ -13,7 +13,7 @@
 | Seção | ID | Status |
 |---|---|---|
 | 🎨 Fundamentos | `2:4` | Paleta pronta; tipografia/medidas pendentes |
-| 🧩 Componentes | `2:5` | Vazia — nenhum componente criado ainda |
+| 🧩 Componentes | `2:5` | Botão, Chip/Tarefa e Input prontos (1490×1000) |
 
 ## 🎨 Fundamentos
 | Elemento | ID |
@@ -22,6 +22,16 @@
 | Frame `Paleta` (13 cores) | `22:12` |
 
 > As 13 cores individuais têm IDs de `22:13` a `22:145` (ver metadata completa se precisar editar uma cor pontual) — não listadas aqui porque a próxima edição em lote será criar Tipografia/Medidas do zero, não reabrir a Paleta.
+
+## 🧩 Componentes (criados via MCP em 25/11)
+| Componente | ID | Variantes |
+|---|---|---|
+| `Botão` | `25:47` | Tipo × Estado × Ícone (18) — property `Label` |
+| `Chip/Tarefa` | `27:6` | Tipo (2) — properties `Label` e `Legenda` |
+| `Input` | `27:15` | Estado (4) — properties `Placeholder` e `Valor` |
+
+> **Atenção para o próximo lote de componentes:** dar nomes de property DIFERENTES quando o texto padrão deve diferir entre variantes (ex. `Label` vs `Legenda`). Mesmo nome em variantes diferentes funde a property e todas passam a mostrar o mesmo texto padrão — foi o bug corrigido nesta sessão.
+> Token novo criado para o Input Estado=Erro: `destaque/erro` (vermelho/600, #D23C3C) — ver docs/03-design-system.md. Conferir contraste na F5.
 
 ## 🔲 Wireframes / 📱 Telas — telas 01–06 e 04b
 Ainda não lido (Etapa 2 restringiu a leitura só à página 🧩 Library). Ler e preencher na sessão que iniciar a F4.

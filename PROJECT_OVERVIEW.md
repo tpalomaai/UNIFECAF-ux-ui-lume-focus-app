@@ -136,7 +136,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [x] Números estáveis no cronômetro: Lexend não tem tabulares → caixa fixa 180 px centralizada no componente `Cronômetro`
 - [x] Instalar/ativar as fontes Lexend e Sniglet no Figma (já disponíveis via Google Fonts)
 - [ ] Seção 🎨 Fundamentos (página 🧩 Library) montada (paleta, tipografia, espaçamentos) — 🔵 cores prontas; falta tipografia, medidas e conferência (PONTO-DE-RETOMADA.md)
-- [ ] Componentes atômicos: `Botão` (variantes), `Chip/Tarefa`, `Input`
+- [x] Componentes atômicos via MCP: `Botão` (18 variantes), `Chip/Tarefa` (2), `Input` (4) — token `destaque/erro` criado (conferir contraste na F5)
 - [ ] Componentes compostos: `Card/Tarefa`, `Card/ContinuarDaqui`, `Card/Métrica`, `Card/Lembrete`, `Cronômetro`, `Header/Saudação`, `Barra/Topo`
 - [ ] `Mascote` (Feliz · Focado · Comemorando) — versão simples
 - [ ] Tudo em Auto Layout e usando só variables
@@ -274,6 +274,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 24/11 | F3: Variables (3 coleções), 7 Text Styles, solução do cronômetro · parou no limite do Figma MCP | ~25 min |
 | 24/11 | F3 à mão: Fundamentos Etapas 1–2 (frame, título, 13 cores) · criado PONTO-DE-RETOMADA.md | ~1 h |
 | 25/11 | Upgrade Figma Professional confirmado (whoami) · política de uso do MCP registrada no CLAUDE.md · diagnóstico F3 via metadata (Componentes vazia) · docs/figma-ids.md criado · plano recalibrado até 30/11 aprovado | ~25 min |
+| 25/11 | Componentes atômicos via MCP: `Botão` (18 var.), `Chip/Tarefa` (2), `Input` (4) · corrigido bug de property fundida entre variantes · token `destaque/erro` criado · 10 chamadas Figma MCP usadas | ~40 min |
 
 ---
 
