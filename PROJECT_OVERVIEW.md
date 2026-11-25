@@ -23,8 +23,10 @@
 > Revisão aplicada (docs/revisoes/f2-wireframes.md): Retomar virou primário no Início, rótulos visíveis nos campos, pausa como estado da tela 04.
 > **F3 em andamento:** Variables prontas (`Primitivos` 11 · `Tokens` 13 · `Medidas` 10) e 7 Text Styles. Lexend sem números tabulares → cronômetro em caixa fixa 180 px.
 > Fundamentos à mão: Etapa 1 (frame + título) ✅ · Etapa 2 (13 cores, grid conferido por metadata — sem sobreposição) ✅.
-> **25/11:** assinado **Figma Professional** (vaga Full) → MCP de volta, com política de uso (lote, leitura barata, IDs em docs/figma-ids.md, aviso de custo, placar, limite 40/dia). Diagnóstico feito via metadata (página 🧩 Library): seção 🧩 Componentes ainda vazia. Plano recalibrado até 30/11 aprovado (ver 📅 Cronograma).
-> **Parei na Etapa 3 (Tipografia)**, agora à mão enquanto o Claude prepara os componentes via MCP. Passo a passo completo das Etapas 3–5 e dicas do Figma em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
+> **25/11:** assinado **Figma Professional** (vaga Full) → MCP de volta, com política de uso (lote, leitura barata, IDs em docs/figma-ids.md, aviso de custo, placar, limite 40/dia). Plano recalibrado até 30/11 aprovado (ver 📅 Cronograma).
+> **F3 concluída e congelada** ✅ 25/11: Fundamentos (paleta, tipografia, medidas), 4 componentes atômicos, 7 compostos e Mascote — tudo via MCP, auditoria limpa (254 nós). Screenshots em docs/screenshots/.
+> **F4 iniciada** 25/11: os 7 wireframes foram duplicados para a página 📱 Telas (wireframes originais intactos). Telas **04** e **04b** já montadas com instâncias reais (Chip, Cronômetro, Botão) e os frames "Espaço" trocados por spacers flexíveis (Auto Layout FILL). No processo, corrigi um bug de contraste no componente `Cronômetro` (já congelado — exceção documentada).
+> **Parei aqui:** faltam as telas 01, 02, 03, 05 e 06 (mesmo método das 04/04b), depois as interações do protótipo e o link público. Histórico completo e detalhado em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
 
 ---
 
@@ -70,7 +72,7 @@
 | F1 UX | Problema, persona, jornada, fluxo | 2 h | ✅ Concluída | Documento teórico (1,5) |
 | F2 Wireframe | 6 telas em cinza + arquivo Figma organizado | 1–2 h | ✅ Concluída | Protótipo (3,5) |
 | F3 Library | Variables, Text Styles, Componentes | 2 h | ✅ Concluída | Protótipo — Design System |
-| F4 Telas + Protótipo | 6 telas finais + interações | 3 h | ⚪ | Protótipo — Navegação |
+| F4 Telas + Protótipo | 6 telas finais + interações | 3 h | 🔵 Em andamento (04, 04b prontas) | Protótipo — Navegação |
 | F5 Acessibilidade | Checklist WCAG + doc 1.4–1.5 | 1 h | ⚪ | Documento teórico |
 | F6 Textos | README + roteiro do vídeo + revisão do doc | 2 h | ⚪ | Protótipo — README |
 | F7 Vídeo | Gravação ≤ 4 min + upload | 1 h | ⚪ | Vídeo pitch (2,0) |
@@ -144,17 +146,16 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 
 **Pronto quando:** todos os componentes existem na seção 🧩 Componentes (página 🧩 Library).
 
-### F4 — Telas finais + Protótipo · 3 h · ⚪
+### F4 — Telas finais + Protótipo · 3 h · 🔵
 **Objetivo:** protótipo navegável completo, montado só com instâncias.
 - [x] Duplicar os wireframes para a página 📱 Telas (via MCP, wireframes originais intactos)
-- [ ] Substituir os elementos cinza por instâncias da Library
-- [ ] Tela 04 com fundo `bg/foco` (modo noite)
+- [x] Tela 04 e 04b: instâncias de Chip/Tarefa, Cronômetro (Rodando/Pausado) e Botão (Secundário, Destaque, Primário) + fundo `bg/foco` + "Espaço" trocado por spacer flexível (Auto Layout FILL)
+- [ ] Telas 01, 02, 03, 05, 06: substituir os elementos cinza por instâncias da Library (mesmo método das 04/04b)
 - [ ] Interações: Começar → Início → Configurar → Sessão
 - [ ] Interação: "Lembrar depois" → anotação → volta à Sessão
 - [ ] Interação: Início "Retomar" → Sessão (atalho)
 - [ ] Interação: "Concluir" → Sessão concluída → Início
-- [ ] Pausa como interactive component (Change to): Pausar ⇄ Continuar, Cronômetro Rodando ⇄ Pausado
-- [ ] Trocar frames "Espaço" por Auto Layout (espaçamento/alinhamento)
+- [ ] Pausa como interactive component (Change to) entre as telas 04 (Rodando) e 04b (Pausado), já montadas como instâncias — falta só ligar a interação Pausar/Continuar com Smart Animate
 - [ ] Definir o frame inicial (flow starting point)
 - [ ] Transições simples (Smart Animate ou Dissolve, 200–300 ms)
 - [ ] Testar o fluxo inteiro em modo apresentação
