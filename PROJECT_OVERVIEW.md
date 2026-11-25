@@ -63,7 +63,7 @@
 |---|---|---|
 | 🐙 Repositório GitHub | [UNIFECAF-ux-ui-lume-focus-app](https://github.com/tpalomaai/UNIFECAF-ux-ui-lume-focus-app) | ✅ |
 | 🎨 Arquivo Figma | [Lume — UX/UI](https://www.figma.com/design/z7C1XSWQhlIpYry549Ba3Q) | ✅ |
-| 🔗 Protótipo (link público) | ([Protótipo - Preview](https://www.figma.com/proto/z7C1XSWQhlIpYry549Ba3Q/Lume-%E2%80%94-UX-UI?node-id=43-3&p=f&viewport=217%2C273%2C0.21&t=U2qWueE7FQUYMI9P-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=43%3A3&page-id=2%3A3)) | ⏳ |
+| 🔗 Protótipo (link público) | [Protótipo - Preview](https://www.figma.com/proto/z7C1XSWQhlIpYry549Ba3Q/Lume-%E2%80%94-UX-UI?node-id=43-3&p=f&viewport=217%2C273%2C0.21&t=U2qWueE7FQUYMI9P-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=43%3A3&page-id=2%3A3))| ⏳ |
 | 🎬 Vídeo pitch | (a gravar na F7) | ⏳ |
 | 📄 Enunciado do trabalho | (salvar PDF no Vault) | ⏳ |
 
