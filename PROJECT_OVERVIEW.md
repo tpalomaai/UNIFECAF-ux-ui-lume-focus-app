@@ -8,11 +8,11 @@
 ## 🧭 Agora
 | | |
 |---|---|
-| **Fase atual** | F4 — Telas + Protótipo (telas e interações prontas; falta só o teste manual) |
-| **Próxima ação** | Paloma: testar o fluxo no Present/Preview e gerar o link público (ver 📋 F4 abaixo) |
-| **Bloqueios** | Nenhum — upgrade para **Figma Professional** (vaga Full) liberou o MCP de volta, com política de uso (ver CLAUDE.md) |
+| **Fase atual** | F4 ✅ concluída — próxima: F5 Acessibilidade |
+| **Próxima ação** | Rodar a auditoria de acessibilidade (contraste AA, toque ≥ 48px) e escrever doc 1.4–1.5 |
+| **Bloqueios** | Nenhum |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 5 dias · meta interna: tudo pronto na **sex 27/11** |
-| **Última atualização** | 25/11/2026 (F4: as 7 telas + todas as interações do protótipo prontas) |
+| **Última atualização** | 25/11/2026 (F4 concluída: fluxo aprovado por Paloma, link público gerado) |
 
 ## 📍 Continuar daqui
 > F0 concluída: nome **Lume**, direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet) e repositório no GitHub com toda a estrutura.
@@ -30,7 +30,9 @@
 > **F4 — protótipo ligado** ✅ 25/11: 14 interações criadas (navegação entre as 7 telas, Pausar/Continuar como Change to com Smart Animate entre 04 e 04b, botões "voltar" com ação Back), ponto de partida do fluxo definido na tela 01. Conferido lendo as reactions de volta — tudo salvo certo.
 > **Correção na página 📱 Telas:** as 7 telas tinham sido duplicadas soltas no canvas (nunca filhas de nenhuma *section*), sobrepondo a section "📖 Capa". Corrigido: agora são filhas de fato da section "📱 Telas finais" (redimensionada), lado a lado, sem sobrepor nada.
 > Paloma testou no Present e perguntou se dá pra digitar de verdade nos Inputs — expliquei que o Figma não suporta teclado real em prototipagem (limitação da ferramenta) e propus simular com Change to entre os estados Vazio/Foco/Preenchido do componente `Input`. Decisão: **não fazer agora** (ficou pra "Estacionamento de ideias").
-> **Parei aqui:** só falta Paloma testar o fluxo completo no Present/Preview e gerar o link público (ver checklist da F4). Depois disso a F4 fecha e seguimos para a F5. Histórico completo e detalhado em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
+> Na tela 03, adicionei navegação direta: clicar num Card/Tarefa de "Tarefas recentes" leva pra tela 04, igual ao botão "Começar".
+> **F4 concluída** ✅ 25/11: Paloma testou o fluxo completo no Present, aprovou, e gerou o link público do protótipo (colado em 🔗 Links de acesso).
+> **Parei aqui:** próxima fase é a **F5 — Acessibilidade** (contraste AA, toque ≥ 48px, doc 1.4–1.5). Histórico completo e detalhado em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
 
 ---
 
@@ -63,7 +65,7 @@
 |---|---|---|
 | 🐙 Repositório GitHub | [UNIFECAF-ux-ui-lume-focus-app](https://github.com/tpalomaai/UNIFECAF-ux-ui-lume-focus-app) | ✅ |
 | 🎨 Arquivo Figma | [Lume — UX/UI](https://www.figma.com/design/z7C1XSWQhlIpYry549Ba3Q) | ✅ |
-| 🔗 Protótipo (link público) | ([Protótipo - Preview](https://www.figma.com/proto/z7C1XSWQhlIpYry549Ba3Q/Lume-%E2%80%94-UX-UI?node-id=43-3&p=f&viewport=217%2C273%2C0.21&t=U2qWueE7FQUYMI9P-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=43%3A3&page-id=2%3A3)) | ⏳ |
+| 🔗 Protótipo (link público) | [Protótipo - Preview](https://www.figma.com/proto/z7C1XSWQhlIpYry549Ba3Q/Lume-%E2%80%94-UX-UI?node-id=43-3&p=f&viewport=217%2C273%2C0.21&t=U2qWueE7FQUYMI9P-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=43%3A3&page-id=2%3A3) | ✅ |
 | 🎬 Vídeo pitch | (a gravar na F7) | ⏳ |
 | 📄 Enunciado do trabalho | (salvar PDF no Vault) | ⏳ |
 
@@ -76,7 +78,7 @@
 | F1 UX | Problema, persona, jornada, fluxo | 2 h | ✅ Concluída | Documento teórico (1,5) |
 | F2 Wireframe | 6 telas em cinza + arquivo Figma organizado | 1–2 h | ✅ Concluída | Protótipo (3,5) |
 | F3 Library | Variables, Text Styles, Componentes | 2 h | ✅ Concluída | Protótipo — Design System |
-| F4 Telas + Protótipo | 6 telas finais + interações | 3 h | 🔵 Quase pronta (telas + interações prontas; falta Paloma testar e gerar o link) | Protótipo — Navegação |
+| F4 Telas + Protótipo | 6 telas finais + interações | 3 h | ✅ Concluída (fluxo aprovado, link público gerado) | Protótipo — Navegação |
 | F5 Acessibilidade | Checklist WCAG + doc 1.4–1.5 | 1 h | ⚪ | Documento teórico |
 | F6 Textos | README + roteiro do vídeo + revisão do doc | 2 h | ⚪ | Protótipo — README |
 | F7 Vídeo | Gravação ≤ 4 min + upload | 1 h | ⚪ | Vídeo pitch (2,0) |
@@ -150,7 +152,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 
 **Pronto quando:** todos os componentes existem na seção 🧩 Componentes (página 🧩 Library).
 
-### F4 — Telas finais + Protótipo · 3 h · 🔵
+### F4 — Telas finais + Protótipo · 3 h · ✅
 **Objetivo:** protótipo navegável completo, montado só com instâncias.
 - [x] Duplicar os wireframes para a página 📱 Telas (via MCP, wireframes originais intactos)
 - [x] Tela 04 e 04b: instâncias de Chip/Tarefa, Cronômetro (Rodando/Pausado) e Botão (Secundário, Destaque, Primário) + fundo `bg/foco` + "Espaço" trocado por spacer flexível (Auto Layout FILL)
@@ -162,10 +164,11 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [x] Pausa como interactive component: Pausar (04→04b) e Continuar (04b→04) ligados com **Smart Animate** (200 ms)
 - [x] Definido o frame inicial (flow starting point): tela 01, fluxo "Fluxo principal"
 - [x] Transições: Dissolve 300 ms nas navegações normais, Smart Animate 200 ms só na pausa (conferido lendo as reactions de volta — tudo salvo certo)
-- [ ] **Paloma à mão:** testar o fluxo inteiro em modo apresentação (Present/Preview)
-- [ ] **Paloma à mão:** gerar o link público do protótipo e colar na tabela 🔗 Links de acesso acima
+- [x] **Paloma à mão:** testar o fluxo inteiro em modo apresentação (Present/Preview) — aprovado
+- [x] **Paloma à mão:** gerar o link público do protótipo e colar na tabela 🔗 Links de acesso acima
+- [x] Tela 03: cards de "Tarefas recentes" navegam direto pra tela 04 (Sessão), além do botão "Começar"
 
-**Pronto quando:** o fluxo principal funciona do início ao fim pelo link público.
+**Pronto quando:** o fluxo principal funciona do início ao fim pelo link público. ✅
 
 ### F5 — Acessibilidade · 1 h · ⚪
 **Objetivo:** garantir e documentar acessibilidade e inclusão.
@@ -226,11 +229,11 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [ ] 1.5 Acessibilidade e Inclusão
 
 **Protótipo Figma (3,5)**
-- [ ] 4–6 telas com fluxo principal completo
-- [ ] Interações configuradas e navegação funcional
-- [ ] Design system: cores, tipografia, componentes reutilizáveis
-- [ ] Telas nomeadas e arquivo organizado
-- [ ] Link público + README (objetivo, fluxo, decisões)
+- [x] 4–6 telas com fluxo principal completo
+- [x] Interações configuradas e navegação funcional
+- [x] Design system: cores, tipografia, componentes reutilizáveis
+- [x] Telas nomeadas e arquivo organizado
+- [ ] Link público + README (objetivo, fluxo, decisões) — link ✅, README ainda falta (F6)
 
 **Vídeo pitch (2,0)**
 - [ ] Problema e usuário
@@ -270,6 +273,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | Botões "voltar" (Barra/Topo e "Guardar e voltar") usam a ação **Back** do Figma, não um destino fixo | Telas 05 e 03 são acessadas a partir de mais de um ponto do fluxo (04 ou 04b); Back volta sempre pra tela de origem, sem precisar duplicar lógica |
 | 25/11 | As 7 telas reparentadas pra dentro da section "📱 Telas finais" (antes soltas no canvas) | Sobrepunham a section "📖 Capa"; `clone()` + `page.appendChild()` nunca posiciona dentro de uma section |
 | 25/11 | Não simular digitação nos Inputs (Change to Vazio→Foco→Preenchido) por enquanto | Exigiria editar o componente `Input`, já congelado; Paloma decidiu que não precisa agora |
+| 25/11 | **F4 concluída** — fluxo aprovado por Paloma no Present, link público gerado | Portão antes da F5; critério "fluxo clicável completo" atendido |
 
 ---
 
@@ -294,6 +298,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | Retomado após pausa · telas 01, 02, 03, 05 e 06 montadas com instâncias reais (Mascote, Header/Saudação, Card/ContinuarDaqui, Card/Tarefa×5, Card/Lembrete×2, Card/Métrica×3, Input×4, Barra/Topo×2, Botão×5) · **F4: as 7 telas concluídas** · 2 bugs corrigidos (ordem do layoutSizing FILL; property errada no Card/Métrica) · ~28 chamadas nesta sessão | ~35 min |
 | 25/11 | 14 interações do protótipo ligadas (navegação entre as 7 telas, pausa como Change to/Smart Animate, botões voltar com ação Back) + frame inicial definido na tela 01 · conferido lendo as reactions de volta · **F4 praticamente concluída**, falta só Paloma testar e gerar o link público · ~10 chamadas neste bloco | ~15 min |
 | 25/11 | Corrigidas as 7 telas pra dentro da section "Telas finais" (estavam soltas, sobrepondo a Capa) · Paloma testou no Present, perguntou sobre digitar nos Inputs — expliquei a limitação do Figma e a opção de simular com Change to; decidiu não fazer agora | ~10 min |
+| 25/11 | Cards de "Tarefas recentes" na tela 03 ganharam navegação direta pra tela 04 · Paloma aprovou o fluxo completo no Present e gerou o link público · **F4 concluída** ✅ | ~10 min |
 
 ---
 
