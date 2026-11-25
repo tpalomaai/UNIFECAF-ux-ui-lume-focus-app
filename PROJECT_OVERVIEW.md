@@ -9,10 +9,10 @@
 | | |
 |---|---|
 | **Fase atual** | F3 — Library (Variables, Text Styles, Componentes) |
-| **Próxima ação (≤ 30 min)** | Paloma: Fundamentos Etapas 3–5 (Tipografia, Medidas, Conferência) à mão, em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**. Claude: componentes atômicos via MCP |
+| **Próxima ação (≤ 30 min)** | Amanhã (qui 26/11): componentes compostos via MCP (Cards, Cronômetro, Header/Saudação, Barra/Topo) + congelar a Library |
 | **Bloqueios** | Nenhum — upgrade para **Figma Professional** (vaga Full) liberou o MCP de volta, com política de uso (ver CLAUDE.md) |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 5 dias · meta interna: tudo pronto na **sex 27/11** |
-| **Última atualização** | 25/11/2026 (diagnóstico F3 + plano recalibrado aprovado) |
+| **Última atualização** | 25/11/2026 (Fundamentos à mão + atômicos e Mascote via MCP) |
 
 ## 📍 Continuar daqui
 > F0 concluída: nome **Lume**, direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet) e repositório no GitHub com toda a estrutura.
@@ -138,7 +138,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [ ] Seção 🎨 Fundamentos (página 🧩 Library) montada (paleta, tipografia, espaçamentos) — 🔵 cores prontas; falta tipografia, medidas e conferência (PONTO-DE-RETOMADA.md)
 - [x] Componentes atômicos via MCP: `Botão` (18 variantes), `Chip/Tarefa` (2), `Input` (4) — token `destaque/erro` criado (conferir contraste na F5)
 - [ ] Componentes compostos: `Card/Tarefa`, `Card/ContinuarDaqui`, `Card/Métrica`, `Card/Lembrete`, `Cronômetro`, `Header/Saudação`, `Barra/Topo`
-- [ ] `Mascote` (Feliz · Focado · Comemorando) — versão simples
+- [x] `Mascote` (Feliz · Focado · Comemorando) via MCP — estrela + olhos + boca, geometria fixa (ícone)
 - [ ] Tudo em Auto Layout e usando só variables
 - [ ] **Congelar a Library** (portão)
 
@@ -275,6 +275,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 24/11 | F3 à mão: Fundamentos Etapas 1–2 (frame, título, 13 cores) · criado PONTO-DE-RETOMADA.md | ~1 h |
 | 25/11 | Upgrade Figma Professional confirmado (whoami) · política de uso do MCP registrada no CLAUDE.md · diagnóstico F3 via metadata (Componentes vazia) · docs/figma-ids.md criado · plano recalibrado até 30/11 aprovado | ~25 min |
 | 25/11 | Componentes atômicos via MCP: `Botão` (18 var.), `Chip/Tarefa` (2), `Input` (4) · corrigido bug de property fundida entre variantes · token `destaque/erro` criado · 10 chamadas Figma MCP usadas | ~40 min |
+| 25/11 | `Mascote` via MCP (3 variantes Humor) · 12 chamadas Figma MCP usadas na sessão | ~10 min |
 
 ---
 
