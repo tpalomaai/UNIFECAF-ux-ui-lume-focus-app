@@ -4,11 +4,11 @@
 > Arquivo Figma: [Lume — UX/UI](https://www.figma.com/design/z7C1XSWQhlIpYry549Ba3Q)
 
 ## 🧭 Onde parei exatamente
-**F4 e F5 concluídas.** As 7 telas estão prontas, o protótipo tem todas as interações ligadas, Paloma testou no Present, aprovou e gerou o link público. A F5 (acessibilidade) também fechou: contraste recalculado (vermelho corrigido), auditoria das 7 telas feita, `Barra/Topo` corrigido pro toque mínimo, e as seções 1.4/1.5 do documento teórico escritas.
+**F4 e F5 concluídas. F6 quase pronta.** As 7 telas e o protótipo estão prontos e aprovados, com link público gerado. A F5 (acessibilidade) fechou: contraste corrigido, toque mínimo corrigido, docs 1.4/1.5 escritos. Na F6, o README está completo (com 3 screenshots das telas) e o roteiro do vídeo está escrito e calibrado pros 4 minutos.
 
-**Próxima fase: F6 — Textos.** README (reaproveitando docs/01-teorico.md) + roteiro do vídeo pitch (tabela tempo · fala · tela, ≤ 4 min). Sem uso do Figma MCP.
+**Falta só:** Paloma ler o roteiro (`docs/04-roteiro-video.md`) em voz alta e cronometrar — se passar de 4 min, ajustar o texto (não a estrutura dos blocos de tempo). Depois disso, F6 fecha e começa a F7 (gravar o vídeo, à mão).
 
-**Chamadas do Figma MCP usadas hoje (25/11), somando todas as sessões: ~85.** Passou bem da meta própria de 40/dia (o limite real do plano Professional é 200/dia — ainda há folga real).
+**Chamadas do Figma MCP usadas hoje (25/11), somando todas as sessões: ~88.** Passou bem da meta própria de 40/dia (o limite real do plano Professional é 200/dia — ainda há folga real).
 
 ---
 
@@ -58,7 +58,12 @@
 - **Parte C:** corrigido `Barra/Topo` (ambas as variantes) de 47px pra 48px via padding +0,5px cada lado — conferido por metadata (altura exata 48 nas instâncias das telas 03 e 05, sem overflow).
 - **Parte D:** escritas as seções 1.4 (Decisões de Interface) e 1.5 (Acessibilidade e Inclusão) em docs/01-teorico.md, no mesmo estilo das seções 1.1–1.3. Atualizada a tabela de Contraste em docs/03-design-system.md com os valores finais.
 - **Parte E:** criado docs/prompts.md com o prompt de cada fase (F0–F4 reconstruídos a partir do histórico, F5 verbatim, F6–F8 como rascunho).
-- **F5 concluída** ✅. Próxima fase: F6 — Textos.
+- **F5 concluída** ✅.
+
+### 25/11 (continuação) — F6: Textos
+- **README.md** reescrito: tabela de links (protótipo público já preenchido), objetivo do produto, fluxo principal (com diagrama em texto), decisões de design (cores por função, tipografia, design system único, linguagem gentil, acessibilidade), e 3 screenshots reais das telas (Início, Sessão em andamento, Sessão concluída) — peguei via MCP (3 chamadas, só leitura) e salvei em `docs/screenshots/`.
+- **docs/04-roteiro-video.md** escrito por completo: a fala de cada bloco de tempo (0:00–0:40 problema/usuário, 0:40–2:20 navegação no protótipo, 2:20–3:20 decisões de UX/UI, 3:20–4:00 diferenciais), calibrada pra um ritmo de leitura confortável dentro de 4 minutos.
+- **F6 quase concluída** — falta só Paloma cronometrar lendo em voz alta.
 
 ---
 
@@ -67,9 +72,10 @@
 - **F3 (Library): concluída e congelada.** Variables (3 coleções, incluindo `vermelho/600` e `destaque/erro`), 7 Text Styles, Fundamentos completos (paleta + tipografia + medidas), 4 componentes atômicos + 7 compostos + Mascote, auditoria limpa.
 - **F4 — as 7 telas e o protótipo: concluídos.** Telas organizadas dentro da section correta, 14 interações ligadas e conferidas, frame inicial definido, fluxo aprovado por Paloma, link público gerado.
 - **F5 — Acessibilidade: concluída.** `vermelho/600` corrigido (#C23434), `Barra/Topo` corrigido (48px), auditoria das 7 telas 100% conforme, seções 1.4 e 1.5 escritas, docs/prompts.md criado.
+- **F6 — Textos: quase concluída.** README completo com screenshots, roteiro do vídeo escrito e calibrado.
 
 ## ⏭️ O que falta (nesta ordem)
-1. **F6 — Textos:** README (reaproveitando docs/01-teorico.md) + roteiro do vídeo pitch (tabela tempo · fala · tela, ≤ 4 min).
+1. **Paloma à mão:** ler `docs/04-roteiro-video.md` em voz alta e cronometrar (≤ 4 min); ajustar o texto se passar. Isso fecha a F6.
 2. **F7 — Vídeo pitch** (à mão, Paloma grava e sobe no YouTube não listado).
 3. **F8 — Entrega** (à mão) — nesse ponto também preencher as sections "Capa" e "Arquivo" do Figma (se houver algo a arquivar).
 
@@ -91,4 +97,4 @@ Cronograma detalhado com estimativas de tempo e chamadas: ver `PROJECT_OVERVIEW.
 - **Um script de auditoria que percorre toda a árvore de nós (incluindo dentro de instâncias) é muito mais barato que vários `get_metadata`** — dá pra pegar Text Style, conteúdo de texto, fills vinculados e nós com reactions (toque) tudo de uma vez, numa chamada só.
 
 ## Prompt para retomar no Claude Code
-> Leia CLAUDE.md, PROJECT_OVERVIEW.md e PONTO-DE-RETOMADA.md. A F4 e a F5 estão concluídas. Preciso começar a F6 (Textos): escrever o README reaproveitando docs/01-teorico.md, e montar o roteiro do vídeo pitch (tabela tempo · fala · tela, ≤ 4 min). Sem uso do Figma MCP nesta fase.
+> Leia CLAUDE.md, PROJECT_OVERVIEW.md e PONTO-DE-RETOMADA.md. README e roteiro do vídeo já estão escritos (F6 quase pronta). Eu cronometrei o roteiro em voz alta — [resultado]. Me ajude a ajustar o texto se precisar, e depois vamos pra F7 (preparar a gravação do vídeo).

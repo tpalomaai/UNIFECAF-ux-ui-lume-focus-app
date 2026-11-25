@@ -8,11 +8,11 @@
 ## 🧭 Agora
 | | |
 |---|---|
-| **Fase atual** | F5 ✅ concluída — próxima: F6 Textos (README + roteiro do vídeo) |
-| **Próxima ação** | Escrever o README (reaproveitando docs/01-teorico.md) e o roteiro do vídeo pitch |
+| **Fase atual** | F6 — Textos (README e roteiro prontos; falta só Paloma cronometrar) |
+| **Próxima ação** | Paloma: ler o roteiro em voz alta e cronometrar (≤ 4 min); depois F7 (gravar o vídeo) |
 | **Bloqueios** | Nenhum |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 5 dias · meta interna: tudo pronto na **sex 27/11** |
-| **Última atualização** | 25/11/2026 (F5 concluída: contraste corrigido, toque mínimo corrigido, docs 1.4–1.5 escritos) |
+| **Última atualização** | 25/11/2026 (F6: README e roteiro do vídeo escritos) |
 
 ## 📍 Continuar daqui
 > F0 concluída: nome **Lume**, direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet) e repositório no GitHub com toda a estrutura.
@@ -33,7 +33,8 @@
 > Na tela 03, adicionei navegação direta: clicar num Card/Tarefa de "Tarefas recentes" leva pra tela 04, igual ao botão "Começar".
 > **F4 concluída** ✅ 25/11: Paloma testou o fluxo completo no Present, aprovou, e gerou o link público do protótipo (colado em 🔗 Links de acesso).
 > **F5 concluída** ✅ 25/11: contraste recalculado via WCAG fora do Figma — `vermelho/600` corrigido (#D23C3C → #C23434, falhava sobre `bg/app`). Auditoria das 7 telas finais: zero valor solto, zero palavra não-gentil, único problema real foi `Barra/Topo` com 47px (corrigido pra 48px). Seções 1.4 e 1.5 escritas em docs/01-teorico.md. Prompts de todas as fases registrados em docs/prompts.md.
-> **Parei aqui:** próxima fase é a **F6 — Textos** (README + roteiro do vídeo). Histórico completo e detalhado em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
+> **F6 em andamento** 25/11: README completo (links, objetivo, fluxo, decisões de design, 3 screenshots das telas) e roteiro do vídeo escrito (docs/04-roteiro-video.md), calibrado pros 4 minutos.
+> **Parei aqui:** falta só Paloma ler o roteiro em voz alta e cronometrar — se passar de 4 min, ajustar o texto (não a estrutura). Depois disso, F7 (gravar o vídeo). Histórico completo e detalhado em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
 
 ---
 
@@ -81,7 +82,7 @@
 | F3 Library | Variables, Text Styles, Componentes | 2 h | ✅ Concluída | Protótipo — Design System |
 | F4 Telas + Protótipo | 6 telas finais + interações | 3 h | ✅ Concluída (fluxo aprovado, link público gerado) | Protótipo — Navegação |
 | F5 Acessibilidade | Checklist WCAG + doc 1.4–1.5 | 1 h | ✅ Concluída | Documento teórico |
-| F6 Textos | README + roteiro do vídeo + revisão do doc | 2 h | ⚪ | Protótipo — README |
+| F6 Textos | README + roteiro do vídeo + revisão do doc | 2 h | 🔵 Quase pronta (falta só Paloma cronometrar o roteiro) | Protótipo — README |
 | F7 Vídeo | Gravação ≤ 4 min + upload | 1 h | ⚪ | Vídeo pitch (2,0) |
 | F8 Entrega | Conferência final + envio no portal | 30 min | ⚪ | Todos |
 
@@ -185,16 +186,16 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 
 **Pronto quando:** checklist 100% e seções 1.4 e 1.5 escritas. ✅
 
-### F6 — Textos · 2 h · ⚪
+### F6 — Textos · 2 h · 🔵
 **Objetivo:** reaproveitar o documento teórico para o README e o vídeo.
-- [ ] Revisão final do documento teórico (1.1 a 1.5)
+- [x] Documento teórico completo (1.1 a 1.5) — revisado na F5
 - [ ] Exportar o documento teórico no formato pedido pelo portal
-- [ ] Rodar o Prompt F6
-- [ ] README: links em tabela no topo, objetivo, fluxo, decisões de design
-- [ ] Adicionar 2–3 imagens das telas no README
-- [ ] Roteiro do vídeo em tabela (tempo · fala · tela)
-- [ ] Ler o roteiro em voz alta e cronometrar (≤ 4 min)
-- [ ] Enviar tudo para o GitHub
+- [x] Prompt usado: ver [docs/prompts.md](docs/prompts.md)
+- [x] README: links em tabela no topo, objetivo, fluxo, decisões de design
+- [x] Adicionar 2–3 imagens das telas no README (02 Início, 04 Sessão, 06 Concluída)
+- [x] Roteiro do vídeo em tabela (tempo · fala · tela) — docs/04-roteiro-video.md
+- [ ] **Paloma à mão:** ler o roteiro em voz alta e cronometrar (≤ 4 min) — ajustar o texto se passar
+- [x] Enviar tudo para o GitHub
 
 **Pronto quando:** README completo no GitHub e roteiro dentro do tempo.
 
@@ -304,6 +305,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | Corrigidas as 7 telas pra dentro da section "Telas finais" (estavam soltas, sobrepondo a Capa) · Paloma testou no Present, perguntou sobre digitar nos Inputs — expliquei a limitação do Figma e a opção de simular com Change to; decidiu não fazer agora | ~10 min |
 | 25/11 | Cards de "Tarefas recentes" na tela 03 ganharam navegação direta pra tela 04 · Paloma aprovou o fluxo completo no Present e gerou o link público · **F4 concluída** ✅ | ~10 min |
 | 25/11 | F5: proposto e aprovado novo hex pro `vermelho/600` (#C23434, calculado via WCAG fora do Figma) · auditoria das 7 telas finais (1 chamada) · corrigido `Barra/Topo` (47→48px) · docs 1.4–1.5 escritos · docs/prompts.md criado · **F5 concluída** ✅ · ~4 chamadas Figma MCP neste bloco | ~40 min |
+| 25/11 | F6: README completo (objetivo, fluxo, decisões, 3 screenshots das telas) · roteiro do vídeo escrito e calibrado pra 4 min (docs/04-roteiro-video.md) · 3 chamadas Figma MCP (só screenshots) | ~20 min |
 
 ---
 
