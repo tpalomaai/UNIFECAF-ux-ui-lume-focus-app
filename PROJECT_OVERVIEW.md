@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Fase atual** | F3 — Library (Variables, Text Styles, Componentes) |
-| **Próxima ação (≤ 30 min)** | Amanhã (qui 26/11): componentes compostos via MCP (Cards, Cronômetro, Header/Saudação, Barra/Topo) + congelar a Library |
+| **Próxima ação (≤ 30 min)** | Congelar a Library (portão da F3) — falta só sua aprovação para eu fazer a auditoria final via MCP |
 | **Bloqueios** | Nenhum — upgrade para **Figma Professional** (vaga Full) liberou o MCP de volta, com política de uso (ver CLAUDE.md) |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 5 dias · meta interna: tudo pronto na **sex 27/11** |
 | **Última atualização** | 25/11/2026 (Fundamentos à mão + atômicos e Mascote via MCP) |
@@ -137,7 +137,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [x] Instalar/ativar as fontes Lexend e Sniglet no Figma (já disponíveis via Google Fonts)
 - [x] Seção 🎨 Fundamentos (página 🧩 Library) montada: paleta, tipografia (7 estilos) e medidas (espaço/raio/toque) — via MCP, padding/gap do frame corrigido para `espaco/xl`
 - [x] Componentes atômicos via MCP: `Botão` (18 variantes), `Chip/Tarefa` (2), `Input` (4) — token `destaque/erro` criado (conferir contraste na F5)
-- [ ] Componentes compostos: `Card/Tarefa`, `Card/ContinuarDaqui`, `Card/Métrica`, `Card/Lembrete`, `Cronômetro`, `Header/Saudação`, `Barra/Topo`
+- [x] Componentes compostos via MCP: `Card/Tarefa`, `Card/ContinuarDaqui` (com instância de Botão), `Card/Métrica`, `Card/Lembrete`, `Cronômetro`, `Header/Saudação` (com instância de Mascote), `Barra/Topo` — 2 bugs de sizing encontrados e corrigidos (ver docs/figma-ids.md)
 - [x] `Mascote` (Feliz · Focado · Comemorando) — placeholder vetorial trocado por imagens PNG geradas no ChatGPT, upload via MCP
 - [ ] Tudo em Auto Layout e usando só variables
 - [ ] **Congelar a Library** (portão)
@@ -278,6 +278,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | `Mascote` via MCP (3 variantes Humor) · 12 chamadas Figma MCP usadas na sessão | ~10 min |
 | 25/11 | Mascote trocado por imagens PNG (Paloma gerou no ChatGPT; uma reprovada e refeita como "Determinada") · upload via MCP · 15 chamadas na sessão | ~15 min |
 | 25/11 | Fundamentos Etapas 3–5 via MCP (a pedido da Paloma, mudando a divisão original): Tipografia (7 linhas) + Medidas (espaço/raio/toque) + correção do padding/gap para `espaco/xl` · F3 Library = Fundamentos 100% completo · 16 chamadas na sessão | ~10 min |
+| 25/11 | 7 componentes compostos via MCP (Cards, Cronômetro, Header/Saudação, Barra/Topo) · 2 bugs de sizing encontrados e corrigidos no self-refine (texto cortado, número deslocado) · 30 chamadas na sessão | ~35 min |
 
 ---
 
