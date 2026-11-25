@@ -90,6 +90,9 @@ Ponto de partida do fluxo: tela **01** (`43:3`), flow "Fluxo principal".
 | 05 Botão "Guardar e voltar" (`48:29`) | **Back** | (origem: 04 ou 04b) | — |
 | 05 Barra/Topo (`48:20`) | **Back** | (origem: 04 ou 04b) | — |
 | 03 Barra/Topo (`50:38`) | **Back** | (origem: 02) | — |
+| 03 Card/Tarefa "Estatística — cap. 3" (`50:43`) | Navigate | 04 (`43:53`) | Dissolve 300ms |
+| 03 Card/Tarefa "Inglês — listening" (`50:46`) | Navigate | 04 (`43:53`) | Dissolve 300ms |
+| 03 Card/Tarefa "Relatório do trabalho" (`50:49`) | Navigate | 04 (`43:53`) | Dissolve 300ms |
 
 > Nota técnica: `node.setReactionsAsync([...])` substitui a API antiga `node.reactions` (read-only). Ação `BACK` não leva `destinationId` — o Figma resolve pra tela de onde a navegação partiu, por isso é melhor que um destino fixo quando uma tela é acessada de mais de um lugar (caso das telas 03 e 05). ID de filho dentro de uma instância usa o formato `I<idDaInstância>;<idOriginalNoComponente>` (ex. `I49:29;39:6`) e funciona normalmente em `getNodeByIdAsync`.
 
