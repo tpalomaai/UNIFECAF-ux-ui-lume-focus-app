@@ -9,10 +9,10 @@
 | | |
 |---|---|
 | **Fase atual** | F3 — Library (Variables, Text Styles, Componentes) |
-| **Próxima ação (≤ 30 min)** | Abrir **PONTO-DE-RETOMADA.md** → Fundamentos, Etapa 3 (Tipografia) à mão no Figma |
-| **Bloqueios** | Limite do Figma MCP (Starter, ~20 chamadas/mês) atingido → trabalho no Figma segue **à mão**, guiado pelo Claude. Collab não resolve; só vaga Dev/Full em plano pago |
-| **Prazo final** | **30/11/2026 (seg)** · faltam 6 dias · meta interna: tudo pronto na **sex 27/11** |
-| **Última atualização** | 24/11/2026 (fim do dia — F3 em andamento) |
+| **Próxima ação (≤ 30 min)** | Paloma: Fundamentos Etapas 3–5 (Tipografia, Medidas, Conferência) à mão, em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**. Claude: componentes atômicos via MCP |
+| **Bloqueios** | Nenhum — upgrade para **Figma Professional** (vaga Full) liberou o MCP de volta, com política de uso (ver CLAUDE.md) |
+| **Prazo final** | **30/11/2026 (seg)** · faltam 5 dias · meta interna: tudo pronto na **sex 27/11** |
+| **Última atualização** | 25/11/2026 (diagnóstico F3 + plano recalibrado aprovado) |
 
 ## 📍 Continuar daqui
 > F0 concluída: nome **Lume**, direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet) e repositório no GitHub com toda a estrutura.
@@ -22,24 +22,33 @@
 > **F2 concluída** ✅: arquivo [Lume — UX/UI](https://www.figma.com/design/z7C1XSWQhlIpYry549Ba3Q) com 3 páginas + seções (limite do Starter), 6 wireframes + 04b (pausada) em cinza e 14 ligações no Prototype.
 > Revisão aplicada (docs/revisoes/f2-wireframes.md): Retomar virou primário no Início, rótulos visíveis nos campos, pausa como estado da tela 04.
 > **F3 em andamento:** Variables prontas (`Primitivos` 11 · `Tokens` 13 · `Medidas` 10) e 7 Text Styles. Lexend sem números tabulares → cronômetro em caixa fixa 180 px.
-> ⚠️ Limite do Figma MCP (Starter) atingido → Fundamentos sendo montados **à mão**: Etapa 1 (frame + título) ✅ · Etapa 2 (13 cores) ✅.
-> **Parei na Etapa 3 (Tipografia).** Passo a passo completo das Etapas 3–5 e dicas do Figma em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
-> Depois: componentes atômicos (Botão, Chip/Tarefa, Input).
+> Fundamentos à mão: Etapa 1 (frame + título) ✅ · Etapa 2 (13 cores, grid conferido por metadata — sem sobreposição) ✅.
+> **25/11:** assinado **Figma Professional** (vaga Full) → MCP de volta, com política de uso (lote, leitura barata, IDs em docs/figma-ids.md, aviso de custo, placar, limite 40/dia). Diagnóstico feito via metadata (página 🧩 Library): seção 🧩 Componentes ainda vazia. Plano recalibrado até 30/11 aprovado (ver 📅 Cronograma).
+> **Parei na Etapa 3 (Tipografia)**, agora à mão enquanto o Claude prepara os componentes via MCP. Passo a passo completo das Etapas 3–5 e dicas do Figma em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
 
 ---
 
 ## 📅 Cronograma até a entrega
-> Janela de trabalho: seg–sex 8:00–14:50. Sábado = BellMart (sem projeto).
+> Janela de trabalho: seg–sex 8:00–14:50. Sábado = BellMart (sem projeto). Nenhum dia passa de 40 chamadas de Figma MCP. Plano recalibrado e aprovado em 25/11 após o diagnóstico da F3.
 
-| Dia | Fases | Tempo | Pronto no fim do dia |
-|---|---|---|---|
-| Ter 24/11 | F0 + F1 | ✅ feito | Conceito, pesquisa e fluxo |
-| Qua 25/11 | Aprovar F1 · F2 Wireframe · F3 Library | ~4 h | Arquivo Figma com wireframes e Library pronta |
-| Qui 26/11 | F4 Telas + Protótipo · F5 Acessibilidade | ~4 h | Protótipo navegável com link público |
-| Sex 27/11 | F6 Textos · F7 Vídeo | ~3 h | README completo e vídeo no YouTube |
-| Sáb 28/11 | — BellMart — | — | — |
-| Dom 29/11 | Folga / reserva para imprevistos | 0–2 h | — |
-| Seg 30/11 | F8 Entrega (manhã) | 30 min | Trabalho enviado 🎉 |
+| Dia | Tarefas | Tempo | Quem faz | Chamadas est. | Critério de pronto |
+|---|---|---|---|---|---|
+| Ter 24/11 | F0 + F1 | ✅ feito | — | — | Conceito, pesquisa e fluxo |
+| Qua 25/11 | Fundamentos Etapas 3–5 (Tipografia, Medidas, Conferência) | 25 min | Paloma à mão | 0 | Seção Fundamentos completa |
+| Qua 25/11 | Componentes atômicos: `Botão`, `Chip/Tarefa`, `Input` | ~1 h | Claude MCP (1 lote) | ~12 | 3 componentes com variantes, Auto Layout, só tokens |
+| Qua 25/11 | `Mascote` (Feliz · Focado · Comemorando) | ~30 min | Claude MCP (1 lote) | ~6 | 3 variantes simples, Auto Layout |
+| Qui 26/11 | Componentes compostos: 4 Cards + `Cronômetro` + `Header/Saudação` + `Barra/Topo` | ~1h30 | Claude MCP (1 lote) | ~20 | 7 componentes compostos usando os atômicos |
+| Qui 26/11 | Auditoria rápida + **congelar Library** (portão F3) | ~20 min | Claude MCP | ~3 | Sem tokens soltos, nomes padronizados |
+| Qui 26/11 | F4: duplicar wireframes → 📱 Telas, montar com instâncias, trocar "Espaço" por Auto Layout, pausa como interactive component | ~2h30 | Claude MCP (lotes ≤15, com aviso) | ~25 | 6 telas finais só com instâncias |
+| Qui 26/11 | F4: interações do protótipo | ~1 h | Claude MCP | ~15 | Fluxo clicável completo |
+| Qui 26/11 | Testar no Present/Preview + gerar link público | ~20 min | Paloma à mão | 0 | Link público funcionando |
+| Sex 27/11 | F5: auditoria de contraste/toque via MCP + correções | ~45 min | Claude MCP | ~8 | Checklist 100% |
+| Sex 27/11 | Doc 1.4–1.5 (texto com apoio do Claude) | ~45 min | Paloma + Claude | 0 | Seções escritas |
+| Sex 27/11 | F6: README + roteiro do vídeo | ~1h30 | Paloma + Claude (texto) | 0 | README completo, roteiro ≤ 4 min |
+| Sex 27/11 | F7: gravar vídeo pitch | ~1 h | Paloma à mão | 0 | Vídeo ≤ 4 min, YouTube não listado |
+| Sáb 28/11 | — BellMart — | — | — | — | — |
+| Dom 29/11 | Reserva para imprevistos | 0–2 h | — | — | — |
+| Seg 30/11 | F8 Entrega (manhã) | 30 min | Paloma à mão | 0 | Trabalho enviado 🎉 |
 
 ---
 
@@ -249,6 +258,8 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 24/11 | Cronômetro em caixa fixa 180 px (Lexend sem números tabulares) | Mantém a fonte travada e evita o número "pular" |
 | 24/11 | Figma à mão (sem MCP) até o fim do projeto | Limite do Starter; plano pago só para isso não compensa |
 | 24/11 | Pausa como estado da tela 04 (04b no wireframe; Change to na F4) | Pausar não troca de contexto; componente interativo conta em "componentes reutilizáveis" |
+| 25/11 | Upgrade para **Figma Professional** (vaga Full) | Créditos do MCP no Starter acabaram; Professional libera volume suficiente para fechar F3–F4 no prazo |
+| 25/11 | **Política de uso do MCP:** lote por tarefa, leitura barata antes de screenshot, IDs salvos em docs/figma-ids.md, aviso de custo acima de 15 chamadas, placar por sessão, limite 40/dia, parar na hora em 429 | Evitar reincidir no limite e manter o trabalho repetitivo (componentes, telas, interações) com o Claude, deixando ajustes pontuais para Paloma à mão |
 
 ---
 
@@ -262,6 +273,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 24/11 | Revisão F2: Retomar primário, rótulos nos campos, 04b pausada, 14 ligações · F2 ✅ | ~20 min |
 | 24/11 | F3: Variables (3 coleções), 7 Text Styles, solução do cronômetro · parou no limite do Figma MCP | ~25 min |
 | 24/11 | F3 à mão: Fundamentos Etapas 1–2 (frame, título, 13 cores) · criado PONTO-DE-RETOMADA.md | ~1 h |
+| 25/11 | Upgrade Figma Professional confirmado (whoami) · política de uso do MCP registrada no CLAUDE.md · diagnóstico F3 via metadata (Componentes vazia) · docs/figma-ids.md criado · plano recalibrado até 30/11 aprovado | ~25 min |
 
 ---
 

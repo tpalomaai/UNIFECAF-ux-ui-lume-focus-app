@@ -1,10 +1,10 @@
 # 📍 Ponto de retomada — Lume
 
-> Parei em: **F3 — Library · seção 🎨 Fundamentos · Etapa 3 (Tipografia)**, em 24/11/2026.
+> Parei em: **F3 — Library · seção 🎨 Fundamentos · Etapa 3 (Tipografia)**, em 25/11/2026.
 > Abra este arquivo, faça a Etapa 3 e siga em ordem. Arquivo Figma: [Lume — UX/UI](https://www.figma.com/design/z7C1XSWQhlIpYry549Ba3Q) → página **🧩 Library** → seção **🎨 Fundamentos**.
 
 ## Por que estou fazendo à mão
-O Figma MCP (Claude editando o Figma direto) atingiu o limite do plano **Starter** (~20 chamadas/mês, renova no ciclo mensal). Vaga Collab não resolve; só vaga **Dev/Full** num plano pago, com o arquivo nesse time. Decisão: seguir à mão com o guia do Claude.
+Desde 25/11, o plano é **Figma Professional** (vaga Full) — o MCP voltou a funcionar. A divisão agora é por tipo de tarefa, não por limite: Etapas 3–5 dos Fundamentos (Tipografia, Medidas, Conferência) são poucos cliques e ajuste pontual, então ficam comigo à mão enquanto o Claude usa o MCP nas tarefas em lote (componentes com variantes, telas finais, interações). Regras completas em CLAUDE.md, seção "💳 Política de uso do Figma MCP".
 
 ## ✅ Já pronto no Figma
 - [x] Variables: `Primitivos` (11) · `Tokens` (13) · `Medidas` (10)

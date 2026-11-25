@@ -16,6 +16,10 @@ Entrega: **30/11/2026**. Meta interna: tudo pronto na sex 27/11 (ver cronograma 
 ## Repositório
 https://github.com/tpalomaai/UNIFECAF-ux-ui-lume-focus-app
 
+## Ferramentas
+- **Figma:** plano **Professional**, vaga **Full** (não Starter) — MCP liberado para edição direta no arquivo "Lume — UX/UI".
+- Política de uso do Figma MCP (limites, lote, custo, placar): ver "💳 Política de uso do Figma MCP" em "Como trabalhar comigo" abaixo.
+
 ## Produto
 **Lume** — app mobile de foco **sem pressão**: em vez de contagem regressiva, um cronômetro progressivo mede quanto tempo cada tarefa leva. Com o histórico, a pessoa melhora no próprio ritmo. O app guarda onde ela parou e o próximo passo, para retomar em segundos.
 
