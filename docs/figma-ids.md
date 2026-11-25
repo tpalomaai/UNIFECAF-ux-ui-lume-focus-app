@@ -15,13 +15,15 @@
 | 🎨 Fundamentos | `2:4` | Paleta pronta; tipografia/medidas pendentes |
 | 🧩 Componentes | `2:5` | Botão, Chip/Tarefa e Input prontos (1490×1000) |
 
-## 🎨 Fundamentos
+## 🎨 Fundamentos (completo — Etapas 1 a 5 ✅)
 | Elemento | ID |
 |---|---|
-| Frame `Fundamentos` | `20:4` |
+| Frame `Fundamentos` | `20:4` (padding/gap agora ligados a `espaco/xl`) |
 | Frame `Paleta` (13 cores) | `22:12` |
+| Frame `Tipografia` | `36:2` |
+| Frame `Medidas` | `36:41` |
 
-> As 13 cores individuais têm IDs de `22:13` a `22:145` (ver metadata completa se precisar editar uma cor pontual) — não listadas aqui porque a próxima edição em lote será criar Tipografia/Medidas do zero, não reabrir a Paleta.
+> As 13 cores individuais têm IDs de `22:13` a `22:145` (ver metadata completa se precisar editar uma cor pontual).
 
 ## 🧩 Componentes (criados via MCP em 25/11)
 | Componente | ID | Variantes |

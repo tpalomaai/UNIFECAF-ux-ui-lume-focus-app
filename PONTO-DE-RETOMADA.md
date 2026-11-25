@@ -1,16 +1,19 @@
 # 📍 Ponto de retomada — Lume
 
-> Parei em: **F3 — Library · seção 🎨 Fundamentos · Etapa 3 (Tipografia)**, em 25/11/2026.
-> Abra este arquivo, faça a Etapa 3 e siga em ordem. Arquivo Figma: [Lume — UX/UI](https://www.figma.com/design/z7C1XSWQhlIpYry549Ba3Q) → página **🧩 Library** → seção **🎨 Fundamentos**.
+> **Seção 🎨 Fundamentos concluída** ✅ em 25/11/2026 — Etapas 1 a 5 todas prontas (as Etapas 3–5, Tipografia/Medidas/Conferência, acabaram indo via MCP a pedido da Paloma, não à mão como planejado originalmente).
+> Este arquivo guiava só os Fundamentos — a partir daqui, o `PROJECT_OVERVIEW.md` é a referência para a próxima etapa (componentes compostos, F4 em diante). Arquivo Figma: [Lume — UX/UI](https://www.figma.com/design/z7C1XSWQhlIpYry549Ba3Q).
 
-## Por que estou fazendo à mão
-Desde 25/11, o plano é **Figma Professional** (vaga Full) — o MCP voltou a funcionar. A divisão agora é por tipo de tarefa, não por limite: Etapas 3–5 dos Fundamentos (Tipografia, Medidas, Conferência) são poucos cliques e ajuste pontual, então ficam comigo à mão enquanto o Claude usa o MCP nas tarefas em lote (componentes com variantes, telas finais, interações). Regras completas em CLAUDE.md, seção "💳 Política de uso do Figma MCP".
+## Como ficou a divisão MCP + à mão
+Desde 25/11, o plano é **Figma Professional** (vaga Full) — o MCP voltou a funcionar. A divisão é por tipo de tarefa, não por limite: tarefas em lote (componentes com variantes, listas repetitivas como Tipografia/Medidas, telas finais, interações) ficam com o Claude via MCP; ajustes pontuais de poucos cliques (renomear, trocar 1 texto/cor/ícone, testar o protótipo, gerar o link público) ficam com a Paloma à mão. Regras completas em CLAUDE.md, seção "💳 Política de uso do Figma MCP".
 
 ## ✅ Já pronto no Figma
-- [x] Variables: `Primitivos` (11) · `Tokens` (13) · `Medidas` (10)
+- [x] Variables: `Primitivos` (12, incluindo `vermelho/600`) · `Tokens` (14, incluindo `destaque/erro`) · `Medidas` (10)
 - [x] 7 Text Styles (Sniglet + Lexend)
 - [x] Fundamentos — Etapa 1: frame **Fundamentos** (1320 × Hug, Auto Layout vertical, fill `bg/app`, gap e padding `espaco/xl`) + título e subtítulo
 - [x] Fundamentos — Etapa 2: título **Cores (Tokens)** + frame **Paleta** (Wrap) com as **13 cores**
+- [x] Fundamentos — Etapas 3–5: Tipografia (7 linhas), Medidas (Espaço/Raio/Toque mínimo) e conferência — via MCP em 25/11
+- [x] Componentes atômicos: `Botão` (18 variantes), `Chip/Tarefa` (2), `Input` (4)
+- [x] `Mascote` (Feliz/Focado/Comemorando, imagens finais)
 
 ## ⏭️ Etapa 3 — Tipografia (~10 min) ← COMEÇAR AQUI
 1. **Bloco:** dentro de *Fundamentos*, abaixo da Paleta, crie um Frame **Tipografia**: **Shift + A**, flow **Vertical**, gap `espaco/md`, sem fill, **Fill × Hug**.

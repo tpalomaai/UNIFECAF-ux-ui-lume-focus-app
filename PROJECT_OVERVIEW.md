@@ -135,7 +135,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [x] Text Styles (7 estilos: Display, Títulos, Corpo, Legenda, Cronômetro)
 - [x] Números estáveis no cronômetro: Lexend não tem tabulares → caixa fixa 180 px centralizada no componente `Cronômetro`
 - [x] Instalar/ativar as fontes Lexend e Sniglet no Figma (já disponíveis via Google Fonts)
-- [ ] Seção 🎨 Fundamentos (página 🧩 Library) montada (paleta, tipografia, espaçamentos) — 🔵 cores prontas; falta tipografia, medidas e conferência (PONTO-DE-RETOMADA.md)
+- [x] Seção 🎨 Fundamentos (página 🧩 Library) montada: paleta, tipografia (7 estilos) e medidas (espaço/raio/toque) — via MCP, padding/gap do frame corrigido para `espaco/xl`
 - [x] Componentes atômicos via MCP: `Botão` (18 variantes), `Chip/Tarefa` (2), `Input` (4) — token `destaque/erro` criado (conferir contraste na F5)
 - [ ] Componentes compostos: `Card/Tarefa`, `Card/ContinuarDaqui`, `Card/Métrica`, `Card/Lembrete`, `Cronômetro`, `Header/Saudação`, `Barra/Topo`
 - [x] `Mascote` (Feliz · Focado · Comemorando) — placeholder vetorial trocado por imagens PNG geradas no ChatGPT, upload via MCP
@@ -277,6 +277,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | Componentes atômicos via MCP: `Botão` (18 var.), `Chip/Tarefa` (2), `Input` (4) · corrigido bug de property fundida entre variantes · token `destaque/erro` criado · 10 chamadas Figma MCP usadas | ~40 min |
 | 25/11 | `Mascote` via MCP (3 variantes Humor) · 12 chamadas Figma MCP usadas na sessão | ~10 min |
 | 25/11 | Mascote trocado por imagens PNG (Paloma gerou no ChatGPT; uma reprovada e refeita como "Determinada") · upload via MCP · 15 chamadas na sessão | ~15 min |
+| 25/11 | Fundamentos Etapas 3–5 via MCP (a pedido da Paloma, mudando a divisão original): Tipografia (7 linhas) + Medidas (espaço/raio/toque) + correção do padding/gap para `espaco/xl` · F3 Library = Fundamentos 100% completo · 16 chamadas na sessão | ~10 min |
 
 ---
 
