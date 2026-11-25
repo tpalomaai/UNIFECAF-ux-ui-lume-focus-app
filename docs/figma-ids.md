@@ -45,5 +45,26 @@
 > 2. `resize()` sempre reseta `primaryAxisSizingMode`/`counterAxisSizingMode` para `FIXED` — só restaurar `AUTO` (hug) **depois** do `resize()`, nunca antes. Dois bugs desta sessão (Card/Tarefa, Card/Métrica com texto cortado; Cronômetro com número deslocado) vieram dessa ordem errada ou de esquecer de setar `counterAxisSizingMode='AUTO'` num frame-wrapper sem `resize()` (o padrão novo do Figma é 100×100 fixo, não hug).
 > Token novo criado para o Input Estado=Erro: `destaque/erro` (vermelho/600, #D23C3C) — ver docs/03-design-system.md. Conferir contraste na F5.
 
-## 🔲 Wireframes / 📱 Telas — telas 01–06 e 04b
-Ainda não lido (Etapa 2 restringiu a leitura só à página 🧩 Library). Ler e preencher na sessão que iniciar a F4.
+## 🔲 Wireframes (intactos, não editar)
+| Tela | ID |
+|---|---|
+| 01 - Boas-vindas | `3:2` |
+| 02 - Início | `3:10` |
+| 03 - Escolher tarefa | `3:30` |
+| 04 - Sessão em andamento | `3:50` |
+| 04b - Sessão pausada | `10:8` |
+| 05 - Lembrar depois | `3:66` |
+| 06 - Sessão concluída | `3:81` |
+
+## 📱 Telas (F4 em andamento)
+> Duplicadas dos wireframes em 25/11 — ainda em cinza, placeholders. Próximo passo: trocar por instâncias dos componentes da Library, trocar frames "Espaço" por Auto Layout real, interações, link público.
+
+| Tela | ID (cópia em Telas) |
+|---|---|
+| 01 - Boas-vindas | `43:3` |
+| 02 - Início | `43:11` |
+| 03 - Escolher tarefa | `43:31` |
+| 04 - Sessão em andamento | `43:53` |
+| 04b - Sessão pausada | `43:69` |
+| 05 - Lembrar depois | `43:85` |
+| 06 - Sessão concluída | `43:100` |

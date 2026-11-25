@@ -8,8 +8,8 @@
 ## 🧭 Agora
 | | |
 |---|---|
-| **Fase atual** | F3 — Library ✅ concluída e congelada → próxima é F4 (Telas + Protótipo) |
-| **Próxima ação** | F4: duplicar wireframes para 📱 Telas, montar com instâncias, trocar "Espaço" por Auto Layout |
+| **Fase atual** | F4 — Telas + Protótipo (iniciada) |
+| **Próxima ação** | Montar as 7 telas com instâncias da Library (trocar placeholders cinza) + trocar "Espaço" por Auto Layout |
 | **Bloqueios** | Nenhum — upgrade para **Figma Professional** (vaga Full) liberou o MCP de volta, com política de uso (ver CLAUDE.md) |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 5 dias · meta interna: tudo pronto na **sex 27/11** |
 | **Última atualização** | 25/11/2026 (F3 Library concluída e congelada) |
@@ -146,7 +146,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 
 ### F4 — Telas finais + Protótipo · 3 h · ⚪
 **Objetivo:** protótipo navegável completo, montado só com instâncias.
-- [ ] Duplicar os wireframes para a página 📱 Telas
+- [x] Duplicar os wireframes para a página 📱 Telas (via MCP, wireframes originais intactos)
 - [ ] Substituir os elementos cinza por instâncias da Library
 - [ ] Tela 04 com fundo `bg/foco` (modo noite)
 - [ ] Interações: Começar → Início → Configurar → Sessão
@@ -281,6 +281,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | Fundamentos Etapas 3–5 via MCP (a pedido da Paloma, mudando a divisão original): Tipografia (7 linhas) + Medidas (espaço/raio/toque) + correção do padding/gap para `espaco/xl` · F3 Library = Fundamentos 100% completo · 16 chamadas na sessão | ~10 min |
 | 25/11 | 7 componentes compostos via MCP (Cards, Cronômetro, Header/Saudação, Barra/Topo) · 2 bugs de sizing encontrados e corrigidos no self-refine (texto cortado, número deslocado) · 30 chamadas na sessão | ~35 min |
 | 25/11 | Auditoria completa (254 nós) + **Library congelada** ✅ · F3 concluída · screenshots salvos em docs/screenshots/ · 32 chamadas na sessão | ~10 min |
+| 25/11 | F4 iniciada: 7 telas duplicadas dos wireframes para a página 📱 Telas (wireframes intactos) · 34 chamadas na sessão — parado no limite de hoje, continua amanhã | ~5 min |
 
 ---
 
