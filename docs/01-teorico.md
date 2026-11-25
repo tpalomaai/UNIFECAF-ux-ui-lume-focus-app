@@ -13,6 +13,11 @@ Os apps de foco mais conhecidos (como Forest e timers de Pomodoro) usam **contag
 
 O **Lume** inverte essa lógica: em vez de cobrar, ele **mede**. Um cronômetro progressivo registra quanto tempo a tarefa levou, sem prazo nem alarme. Com o histórico de cada tarefa, a pessoa percebe a própria evolução e melhora naturalmente. Além disso, o app guarda **onde ela parou e qual é o próximo passo**, para que a retomada leve segundos, e não uma hora.
 
+#### Problem Statement
+> **Universitários EAD, profissionais em home office e estudantes de idiomas** que estudam ou trabalham sozinhos, com tempo fragmentado, **precisam de uma forma de manter o foco e retomar o trabalho em segundos, sem a pressão de um prazo**, **para** concluir as tarefas no próprio ritmo em vez de abandonar o app nas primeiras tentativas.
+
+*(Modelo: [usuário] precisa de [necessidade] para [objetivo] — a declaração fala do problema, não da solução.)*
+
 ### Quem é o usuário?
 Adultos que **aprendem ou trabalham por conta própria, em casa**, com tempo fragmentado e várias tarefas em paralelo:
 
@@ -38,12 +43,35 @@ Adultos que **aprendem ou trabalham por conta própria, em casa**, com tempo fra
 | **Retomada lenta:** de 30 min a 1 h para lembrar onde parou e o que fazer depois | **Retomar em segundos**, com "onde parei" e "próximo passo" registrados |
 | **Falta de referência:** não sabe se está ficando mais rápida em tarefas repetidas | **Ver o histórico da mesma tarefa** e comparar com a vez anterior, de forma gentil |
 
-> ✅ **Pesquisa com usuária (entrevista com a autora, que faz parte do público-alvo):**
+> ✅ **Pesquisa com usuária (entrevista em profundidade com a autora, que faz parte do público-alvo):**
 > - Maior distração: ter outras coisas para fazer em paralelo.
 > - Já usou Forest e Pomodoro Timer; a lógica de competir com o tempo gera ansiedade.
 > - O que funciona: medir o tempo gasto e otimizar naturalmente, sem prazo.
 > - Retomar após pausa leva de 30 min a 1 h; o problema é lembrar onde estava e o que vem depois.
 > - Uso: ao definir um objetivo para cumprir do começo ao fim, registrando o tempo para comparar na próxima vez.
+
+### Como estruturamos esse entendimento
+
+#### Matriz CSD (Certezas, Suposições e Dúvidas)
+| ✅ Certezas | 🤔 Suposições | ❓ Dúvidas |
+|---|---|---|
+| A maior distração de Camila é ter outras tarefas em paralelo (entrevista) | Outros universitários EAD e profissionais em home office sentem a mesma ansiedade com contagem regressiva | Pessoas fora do perfil de Camila (ex.: quem não estuda, só trabalha remoto) sentem essa dor com a mesma intensidade? |
+| A contagem regressiva gera ansiedade e sensação de fracasso nela (entrevista) | "Lembrar depois" é suficiente pra resolver a distração de tarefas paralelas, pra qualquer usuário | As pessoas vão querer só anotar, ou vão querer voltar de fato pra tarefa paralela? |
+| Retomar após uma pausa leva de 30 min a 1 h pra ela (entrevista) | Ver o histórico de tempo motiva a pessoa a continuar usando o app | Qual o tamanho real do público que já abandonou um app de foco por causa da contagem regressiva? |
+| Medir o tempo sem prazo é o que funciona pra ela (entrevista) | O cronômetro progressivo por si só já reduz a ansiedade, sem precisar de outros recursos | — |
+
+> [!note] Transparência sobre o método
+> Esta pesquisa usou uma **entrevista em profundidade com uma única pessoa** (a autora, que faz parte do público-alvo) — um método qualitativo válido para gerar hipóteses (Jakob Nielsen defende que poucos participantes já revelam os problemas principais em testes de usabilidade), mas as colunas de **Suposições** e **Dúvidas** acima deixam explícito onde um projeto real ainda precisaria validar com mais usuários antes de decidir com total confiança.
+
+#### Mapa de Empatia — Camila
+| Quadrante | O que foi levantado |
+|---|---|
+| 💭 **Pensa e sente** | "Será que vou dar conta de trabalhar e estudar?"; medo de começar algo e não terminar |
+| 👀 **Vê** | Colegas de EAD desistindo no meio do curso; apps de produtividade com temporizadores agressivos |
+| 👂 **Ouve** | Amigos recomendando técnica Pomodoro; conteúdos de produtividade vendendo "disciplina" e "foco absoluto" |
+| 🗣️ **Fala e faz** | Diz "hoje eu me organizo", mas troca de tarefa toda vez que surge uma distração nova |
+| 😣 **Dores** | Tarefas em paralelo competindo pela atenção; pressão do relógio; retomada lenta; falta de referência de evolução |
+| 🌟 **Ganhos** | Terminar o que começou; saber quanto tempo cada tarefa realmente leva; sentir que está melhorando, não competindo |
 
 ---
 
@@ -63,6 +91,46 @@ Boas-vindas → Início → Escolher tarefa → Sessão em andamento ⇄ Lembrar
 | 5. Lembrar de outra coisa | Não esquecer a tarefa paralela sem largar a atual | Toca em "Lembrar depois", anota e volta | 05 - Lembrar depois | Preocupada → aliviada 😟→🙂 | A tarefa paralela fica guardada, sem culpa |
 | 6. Concluir | Ver quanto levou e registrar onde parou | Toca em "Concluir", vê o tempo e a comparação com a última vez, e preenche "Onde parei" e "Próximo passo" | 06 - Sessão concluída | Orgulhosa 😄 | Comparação gentil: celebra quando melhora e acolhe quando não melhora |
 | 7. Voltar outro dia | Retomar sem esforço | Abre o app e toca em "Retomar" | 02 - Início | Confiante 🙂 | O ciclo recomeça com contexto, não do zero |
+
+### Journey Map (curva de emoção)
+> Não existe uma versão "estado atual" do Lume (é um produto novo, não um redesign) — o mapa abaixo já representa o **estado futuro**: a jornada completa *com* a solução.
+
+```mermaid
+journey
+    title Jornada de Camila com o Lume
+    section Primeiro acesso
+      Abre o app pela primeira vez: 2: Camila
+      Lê "sem contagem regressiva": 3: Camila
+    section Decidir o que fazer
+      Vê o card Continuar daqui: 4: Camila
+    section Escolher a tarefa
+      Escolhe uma tarefa recente: 4: Camila
+    section Focar
+      Acompanha o cronômetro subindo: 5: Camila
+    section Lembrar de outra coisa
+      Anota a tarefa paralela e volta: 3: Camila
+    section Concluir
+      Vê o tempo e a comparação gentil: 5: Camila
+    section Voltar outro dia
+      Toca em Retomar: 4: Camila
+```
+O ponto mais baixo da curva é o **primeiro acesso** (desconfiança natural de quem já abandonou outros apps) — por isso a tela 01 investe a primeira frase inteira em deixar claro o "sem pressão", antes de qualquer outra informação.
+
+### Pain Points (priorização por impacto × frequência)
+| Dor | Tipo | Impacto | Frequência | Prioridade |
+|---|---|---|---|---|
+| Pressão do relógio (contagem regressiva) | Emocional | Alto | Alta | 🔴 Prioridade máxima |
+| Retomada lenta (30 min a 1 h) | De produtividade | Alto | Alta | 🔴 Prioridade máxima |
+| Tarefas em paralelo competindo pela atenção | Emocional / de processo | Alto | Média | 🔴 Prioridade máxima |
+| Falta de referência de evolução | De processo | Médio | Média | 🟡 Melhoria importante |
+
+### Como poderíamos...? (de cada dor para uma decisão de design)
+| Pergunta "Como poderíamos...?" | Decisão de design que respondeu |
+|---|---|
+| ...medir o tempo de uma tarefa sem fazer a pessoa se sentir cobrada? | Cronômetro **progressivo**, sem alarme nem cor de alerta |
+| ...fazer a retomada levar segundos em vez de até 1 hora? | Card **"Continuar daqui"** + botão **Retomar** como ação primária do Início |
+| ...tirar uma tarefa paralela da cabeça sem a pessoa perder o contexto da sessão atual? | **"Lembrar depois"**: anotação de 1 toque que sempre volta pra mesma sessão |
+| ...mostrar a evolução da pessoa sem parecer uma cobrança? | **Comparação gentil** ao concluir ("3 min a menos que da última vez" / "levou mais tempo hoje, e tudo bem") |
 
 ---
 
@@ -95,6 +163,47 @@ O app tem **6 telas** e um único fluxo principal, organizado em três momentos:
 | Tarefas recentes com o último tempo | **Lei de Hick:** escolher em uma lista curta é mais rápido do que criar do zero | Até 3 tarefas recentes, cada uma com "última vez: 42 min" |
 | Comparação gentil com a última vez | **Regra do pico-fim:** o final da experiência define como ela é lembrada | "3 min a menos que da última vez ✦" ou "Levou mais tempo hoje, e tudo bem" |
 | Cronômetro e botões conhecidos (Pausar/Play) | **Lei de Jakob:** usuários preferem padrões que já conhecem | Nada a aprender: funciona como o cronômetro do celular |
+
+### Processo de design usado
+O projeto seguiu a lógica do **Duplo Diamante** (Design Council), equivalente às 5 etapas do Design Thinking (Empatizar/Definir/Idear/Prototipar/Testar):
+
+| Diamante | Fase | O que fizemos | Ferramentas / entregáveis |
+|---|---|---|---|
+| 1º — Descobrir | F0–F1 (início) | Entrevista em profundidade (autoetnografia) e desk research informal sobre apps concorrentes (Forest, Pomodoro) | Entrevista, comparação informal com concorrentes |
+| 1º — Definir | F1 | Organizar os achados num problema único e numa persona | Matriz CSD, Mapa de Empatia, **Problem Statement**, Persona, Pain Points |
+| 2º — Desenvolver | F1–F2 | Gerar e escolher as funcionalidades; desenhar a navegação e as telas em baixa fidelidade | Perguntas **HMW**, Matriz de Impacto × Esforço, User Flow, Wireframes (F2) |
+| 2º — Entregar | F3–F6 | Construir o design system, montar as telas finais, ligar o protótipo, testar e documentar | Library (F3), Protótipo navegável (F4), auditoria de acessibilidade (F5), este documento |
+
+### Arquitetura da Informação
+- **Sistema de organização:** hierárquico e **linear** — decisão deliberada. O Lume resolve **uma tarefa por vez** (focar), não uma coleção de conteúdos que precisaria de categorias e menu; por isso não existe uma aba ou menu lateral com várias seções.
+- **Sistema de rotulagem:** os nomes vêm da fala da própria usuária entrevistada — "Continuar daqui", "Lembrar depois" — em vez de termos técnicos como "sessão pendente" ou "anotação rápida".
+- **Sistema de navegação:** sem navegação global (abas/menu); cada tela tem **uma única ação principal** (Princípio da Navegação Focada, Dan Brown). O card "Continuar daqui" funciona como **porta de entrada** fixa no Início, sempre visível e sempre levando direto ao ponto onde a pessoa parou (Princípio das Portas de Entrada).
+- **Mapa do site (sitemap):** estrutura **larga e rasa** de propósito — poucas telas, sem profundidade de menus, porque cada clique extra custa caro para quem já tem pouco tempo (ver [[Hierarquia Taxonômica]] nos resumos da disciplina).
+
+```mermaid
+flowchart TD
+    A[01 Boas-vindas] --> B[02 Início]
+    B --> C[03 Escolher tarefa]
+    B --> D[04 Sessão em andamento]
+    C --> D
+    D --> E[05 Lembrar depois]
+    D --> F[06 Sessão concluída]
+```
+
+### User Flow
+O fluxo completo, com o caminho feliz **e** o ponto de decisão real do produto, está em [docs/02-fluxo.md](02-fluxo.md). A decisão "☐ Tem uma sessão anterior salva?" no Início é o que diferencia este diagrama de um simples *Task Flow* linear: ela define se a usuária vê o card "Continuar daqui" preenchido (Estado = Com conteúdo) ou vazio (Estado = Vazio) — ambos construídos como variantes do mesmo componente na Library (F3).
+
+### Matriz de Impacto × Esforço (priorização de funcionalidades)
+| Ideia | Impacto | Esforço | Quadrante | Decisão |
+|---|---|---|---|---|
+| Cronômetro progressivo (sem contagem regressiva) | Alto | Baixo | ⚡ Ganho rápido | ✅ Entrou — resolve a dor de maior impacto |
+| "Continuar daqui" (onde parei + próximo passo + Retomar) | Alto | Médio | 🎯 Grande aposta | ✅ Entrou — retomada era a dor mais citada na pesquisa |
+| "Lembrar depois" | Alto | Baixo | ⚡ Ganho rápido | ✅ Entrou |
+| Comparação gentil com a última vez | Médio | Baixo | 🧩 Tarefa menor | ✅ Entrou |
+| Animação do mascote ao concluir a sessão | Baixo (por ora) | Médio | 🧩 Tarefa menor | ⏸️ Estacionada para depois da entrega |
+| Modo escuro completo (além da tela de foco) | Baixo (fora do modo foco) | Alto | 🚫 Evitar por ora | ⏸️ Estacionada para depois da entrega |
+
+> As duas ideias estacionadas estão registradas em 🅿️ Estacionamento de ideias do `PROJECT_OVERVIEW.md` — não foram descartadas, só adiadas por terem esforço desproporcional ao impacto nesta entrega.
 
 ---
 

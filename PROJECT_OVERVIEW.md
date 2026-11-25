@@ -34,6 +34,7 @@
 > **F4 concluída** ✅ 25/11: Paloma testou o fluxo completo no Present, aprovou, e gerou o link público do protótipo (colado em 🔗 Links de acesso).
 > **F5 concluída** ✅ 25/11: contraste recalculado via WCAG fora do Figma — `vermelho/600` corrigido (#D23C3C → #C23434, falhava sobre `bg/app`). Auditoria das 7 telas finais: zero valor solto, zero palavra não-gentil, único problema real foi `Barra/Topo` com 47px (corrigido pra 48px). Seções 1.4 e 1.5 escritas em docs/01-teorico.md. Prompts de todas as fases registrados em docs/prompts.md.
 > **F6 em andamento** 25/11: README completo (links, objetivo, fluxo, decisões de design, 3 screenshots das telas) e roteiro do vídeo escrito (docs/04-roteiro-video.md), calibrado pros 4 minutos.
+> **Reforço do documento teórico** 25/11: Paloma revisou o enunciado do trabalho — ele pede pra **estruturar a experiência do usuário**, não só entregar a interface pronta. Li todos os resumos de aula dela no Obsidian (Matriz CSD, Mapa de Empatia, Persona, Journey Map, Pain Points, HMW, Duplo Diamante, Arquitetura da Informação, User Flow, Matriz de Impacto×Esforço) e incorporei essas ferramentas formais nas seções 1.1–1.3 do `docs/01-teorico.md` e no `docs/02-fluxo.md` (que ganhou um ponto de decisão real, virando um User Flow de verdade).
 > **Parei aqui:** falta só Paloma ler o roteiro em voz alta e cronometrar — se passar de 4 min, ajustar o texto (não a estrutura). Depois disso, F7 (gravar o vídeo). Histórico completo e detalhado em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
 
 ---
@@ -121,6 +122,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [x] Fluxo em Mermaid + tabela das telas e interações (docs/02-fluxo.md)
 - [x] 7 decisões de UX ligadas a princípios (Zeigarnik, Fitts, Hick, pico-fim, Jakob…)
 - [x] **Aprovar o fluxo** (portão)
+- [x] **Reforço 25/11** (a pedido da Paloma, revisando o enunciado — ele pede pra estruturar a UX, não só desenhar a UI): Problem Statement, Matriz CSD, Mapa de Empatia, Journey Map formal (curva de emoção), Pain Points (impacto × frequência), perguntas HMW, processo mapeado no Duplo Diamante, Arquitetura da Informação, User Flow com ponto de decisão real, Matriz de Impacto × Esforço — tudo baseado nos resumos de aula da Paloma (Obsidian) e incorporado em docs/01-teorico.md e docs/02-fluxo.md
 
 **Pronto quando:** seções 1.1, 1.2 e 1.3 do documento teórico escritas e fluxo aprovado.
 
@@ -275,7 +277,10 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | Botões "voltar" (Barra/Topo e "Guardar e voltar") usam a ação **Back** do Figma, não um destino fixo | Telas 05 e 03 são acessadas a partir de mais de um ponto do fluxo (04 ou 04b); Back volta sempre pra tela de origem, sem precisar duplicar lógica |
 | 25/11 | As 7 telas reparentadas pra dentro da section "📱 Telas finais" (antes soltas no canvas) | Sobrepunham a section "📖 Capa"; `clone()` + `page.appendChild()` nunca posiciona dentro de uma section |
 | 25/11 | Não simular digitação nos Inputs (Change to Vazio→Foco→Preenchido) por enquanto | Exigiria editar o componente `Input`, já congelado; Paloma decidiu que não precisa agora |
+| 25/11 | Documento teórico reforçado com o processo formal de UX estudado na disciplina (CSD, Mapa de Empatia, Journey Map, Pain Points, HMW, Duplo Diamante, IA, User Flow, Matriz de Impacto×Esforço) | O enunciado pede pra estruturar a UX, não só entregar a UI pronta — o documento precisa mostrar o processo |
+| 25/11 | Arquitetura da informação do app: sem menu global/abas, navegação linear e rasa | O app resolve uma tarefa por vez; cada clique extra custa caro pra quem já tem pouco tempo (Princípio das Escolhas e da Navegação Focada, Dan Brown) |
 | 25/11 | **F4 concluída** — fluxo aprovado por Paloma no Present, link público gerado | Portão antes da F5; critério "fluxo clicável completo" atendido |
+| 25/11 | Reforçado o documento teórico (1.1–1.3) com as ferramentas formais de UX estudadas na disciplina (Matriz CSD, Mapa de Empatia, Problem Statement, Journey Map, Pain Points, HMW, Duplo Diamante, Arquitetura da Informação, User Flow com decisão, Matriz de Impacto × Esforço) | Paloma revisou o enunciado: ele pede pra **estruturar a UX**, não só entregar a interface pronta — o documento precisa mostrar o processo, não só o resultado |
 | 25/11 | `vermelho/600` corrigido de #D23C3C pra #C23434 (contraste AA) | O valor antigo falhava sobre `bg/app` (4,47); novo valor passa nos dois fundos usados pelo `destaque/erro` com folga (≥5,0) |
 | 25/11 | `Barra/Topo` corrigido de 47px pra 48px de altura | Único problema real da auditoria da F5 — abaixo do toque mínimo e é clicável (ação Back) nas telas 03 e 05 |
 | 25/11 | **F5 concluída** — checklist 100%, docs 1.4 e 1.5 escritos | Portão antes da F6; nenhuma pendência de acessibilidade restante |
@@ -306,6 +311,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | Cards de "Tarefas recentes" na tela 03 ganharam navegação direta pra tela 04 · Paloma aprovou o fluxo completo no Present e gerou o link público · **F4 concluída** ✅ | ~10 min |
 | 25/11 | F5: proposto e aprovado novo hex pro `vermelho/600` (#C23434, calculado via WCAG fora do Figma) · auditoria das 7 telas finais (1 chamada) · corrigido `Barra/Topo` (47→48px) · docs 1.4–1.5 escritos · docs/prompts.md criado · **F5 concluída** ✅ · ~4 chamadas Figma MCP neste bloco | ~40 min |
 | 25/11 | F6: README completo (objetivo, fluxo, decisões, 3 screenshots das telas) · roteiro do vídeo escrito e calibrado pra 4 min (docs/04-roteiro-video.md) · 3 chamadas Figma MCP (só screenshots) | ~20 min |
+| 25/11 | Lidos todos os resumos de UX do Obsidian da Paloma (vault da disciplina) · documento teórico (1.1–1.3) reforçado com o processo formal de UX (CSD, Mapa de Empatia, Problem Statement, Journey Map, Pain Points, HMW, Duplo Diamante, IA, User Flow, Matriz de Impacto×Esforço) · docs/02-fluxo.md ganhou um ponto de decisão real · 0 chamadas Figma MCP | ~30 min |
 
 ---
 

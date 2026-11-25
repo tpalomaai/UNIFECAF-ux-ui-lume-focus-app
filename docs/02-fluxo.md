@@ -1,11 +1,17 @@
 # Fluxo e Telas — Lume
 
-## Fluxo principal
+## Fluxo principal (User Flow)
+> Legenda, seguindo o padrão da disciplina: ⬭ oval = início/fim · ▭ retângulo = tela · ◇ losango = decisão · ➡️ seta = caminho.
+
 ```mermaid
 flowchart LR
-  A[01 - Boas-vindas] --> B[02 - Início]
-  B -->|Nova sessão| C[03 - Escolher tarefa]
-  B -->|Retomar| D
+  Z([Abre o app]) --> A[01 - Boas-vindas]
+  A --> B[02 - Início]
+  B --> G{Tem sessão<br/>anterior salva?}
+  G -->|Sim: Continuar daqui<br/>Estado = Com conteúdo| H[Retomar]
+  G -->|Não: Continuar daqui<br/>Estado = Vazio| I[Nova sessão]
+  H --> D
+  I --> C[03 - Escolher tarefa]
   C --> D[04 - Sessão em andamento]
   D -->|Pausar| P[04b - Sessão pausada]
   P -->|Continuar| D
@@ -16,6 +22,8 @@ flowchart LR
   P -->|Concluir| F
   F -->|Salvar e sair| B
 ```
+
+A decisão "Tem sessão anterior salva?" é o que torna este um **User Flow** de verdade (com alternativas), e não um *Task Flow* puramente linear: ela determina se o card "Continuar daqui" aparece preenchido ou vazio — ambos já construídos como variantes do mesmo componente na Library (ver docs/figma-ids.md, `Card/ContinuarDaqui`).
 
 ## Telas
 | Frame | Objetivo | Elementos (de cima para baixo) | Ação principal | Navega para |
