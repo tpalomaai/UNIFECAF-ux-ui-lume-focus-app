@@ -138,7 +138,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [ ] Seção 🎨 Fundamentos (página 🧩 Library) montada (paleta, tipografia, espaçamentos) — 🔵 cores prontas; falta tipografia, medidas e conferência (PONTO-DE-RETOMADA.md)
 - [x] Componentes atômicos via MCP: `Botão` (18 variantes), `Chip/Tarefa` (2), `Input` (4) — token `destaque/erro` criado (conferir contraste na F5)
 - [ ] Componentes compostos: `Card/Tarefa`, `Card/ContinuarDaqui`, `Card/Métrica`, `Card/Lembrete`, `Cronômetro`, `Header/Saudação`, `Barra/Topo`
-- [x] `Mascote` (Feliz · Focado · Comemorando) via MCP — estrela + olhos + boca, geometria fixa (ícone)
+- [x] `Mascote` (Feliz · Focado · Comemorando) — placeholder vetorial trocado por imagens PNG geradas no ChatGPT, upload via MCP
 - [ ] Tudo em Auto Layout e usando só variables
 - [ ] **Congelar a Library** (portão)
 
@@ -276,6 +276,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | Upgrade Figma Professional confirmado (whoami) · política de uso do MCP registrada no CLAUDE.md · diagnóstico F3 via metadata (Componentes vazia) · docs/figma-ids.md criado · plano recalibrado até 30/11 aprovado | ~25 min |
 | 25/11 | Componentes atômicos via MCP: `Botão` (18 var.), `Chip/Tarefa` (2), `Input` (4) · corrigido bug de property fundida entre variantes · token `destaque/erro` criado · 10 chamadas Figma MCP usadas | ~40 min |
 | 25/11 | `Mascote` via MCP (3 variantes Humor) · 12 chamadas Figma MCP usadas na sessão | ~10 min |
+| 25/11 | Mascote trocado por imagens PNG (Paloma gerou no ChatGPT; uma reprovada e refeita como "Determinada") · upload via MCP · 15 chamadas na sessão | ~15 min |
 
 ---
 

@@ -29,7 +29,7 @@
 | `Botão` | `25:47` | Tipo × Estado × Ícone (18) — property `Label` |
 | `Chip/Tarefa` | `27:6` | Tipo (2) — properties `Label` e `Legenda` |
 | `Input` | `27:15` | Estado (4) — properties `Placeholder` e `Valor` |
-| `Mascote` | `28:20` | Humor: Feliz · Focado · Comemorando (3) — geometria fixa, sem Auto Layout (ícone) |
+| `Mascote` | `28:20` | Humor: Feliz (`28:2`) · Focado (`28:8`) · Comemorando (`28:14`) — fill de imagem (PNG gerado no ChatGPT), sem Auto Layout (ícone) |
 
 > **Atenção para o próximo lote de componentes:** dar nomes de property DIFERENTES quando o texto padrão deve diferir entre variantes (ex. `Label` vs `Legenda`). Mesmo nome em variantes diferentes funde a property e todas passam a mostrar o mesmo texto padrão — foi o bug corrigido nesta sessão.
 > Token novo criado para o Input Estado=Erro: `destaque/erro` (vermelho/600, #D23C3C) — ver docs/03-design-system.md. Conferir contraste na F5.
