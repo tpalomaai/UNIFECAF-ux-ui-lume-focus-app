@@ -8,11 +8,11 @@
 ## 🧭 Agora
 | | |
 |---|---|
-| **Fase atual** | F4 ✅ concluída — próxima: F5 Acessibilidade |
-| **Próxima ação** | Rodar a auditoria de acessibilidade (contraste AA, toque ≥ 48px) e escrever doc 1.4–1.5 |
+| **Fase atual** | F5 ✅ concluída — próxima: F6 Textos (README + roteiro do vídeo) |
+| **Próxima ação** | Escrever o README (reaproveitando docs/01-teorico.md) e o roteiro do vídeo pitch |
 | **Bloqueios** | Nenhum |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 5 dias · meta interna: tudo pronto na **sex 27/11** |
-| **Última atualização** | 25/11/2026 (F4 concluída: fluxo aprovado por Paloma, link público gerado) |
+| **Última atualização** | 25/11/2026 (F5 concluída: contraste corrigido, toque mínimo corrigido, docs 1.4–1.5 escritos) |
 
 ## 📍 Continuar daqui
 > F0 concluída: nome **Lume**, direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet) e repositório no GitHub com toda a estrutura.
@@ -32,7 +32,8 @@
 > Paloma testou no Present e perguntou se dá pra digitar de verdade nos Inputs — expliquei que o Figma não suporta teclado real em prototipagem (limitação da ferramenta) e propus simular com Change to entre os estados Vazio/Foco/Preenchido do componente `Input`. Decisão: **não fazer agora** (ficou pra "Estacionamento de ideias").
 > Na tela 03, adicionei navegação direta: clicar num Card/Tarefa de "Tarefas recentes" leva pra tela 04, igual ao botão "Começar".
 > **F4 concluída** ✅ 25/11: Paloma testou o fluxo completo no Present, aprovou, e gerou o link público do protótipo (colado em 🔗 Links de acesso).
-> **Parei aqui:** próxima fase é a **F5 — Acessibilidade** (contraste AA, toque ≥ 48px, doc 1.4–1.5). Histórico completo e detalhado em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
+> **F5 concluída** ✅ 25/11: contraste recalculado via WCAG fora do Figma — `vermelho/600` corrigido (#D23C3C → #C23434, falhava sobre `bg/app`). Auditoria das 7 telas finais: zero valor solto, zero palavra não-gentil, único problema real foi `Barra/Topo` com 47px (corrigido pra 48px). Seções 1.4 e 1.5 escritas em docs/01-teorico.md. Prompts de todas as fases registrados em docs/prompts.md.
+> **Parei aqui:** próxima fase é a **F6 — Textos** (README + roteiro do vídeo). Histórico completo e detalhado em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
 
 ---
 
@@ -79,7 +80,7 @@
 | F2 Wireframe | 6 telas em cinza + arquivo Figma organizado | 1–2 h | ✅ Concluída | Protótipo (3,5) |
 | F3 Library | Variables, Text Styles, Componentes | 2 h | ✅ Concluída | Protótipo — Design System |
 | F4 Telas + Protótipo | 6 telas finais + interações | 3 h | ✅ Concluída (fluxo aprovado, link público gerado) | Protótipo — Navegação |
-| F5 Acessibilidade | Checklist WCAG + doc 1.4–1.5 | 1 h | ⚪ | Documento teórico |
+| F5 Acessibilidade | Checklist WCAG + doc 1.4–1.5 | 1 h | ✅ Concluída | Documento teórico |
 | F6 Textos | README + roteiro do vídeo + revisão do doc | 2 h | ⚪ | Protótipo — README |
 | F7 Vídeo | Gravação ≤ 4 min + upload | 1 h | ⚪ | Vídeo pitch (2,0) |
 | F8 Entrega | Conferência final + envio no portal | 30 min | ⚪ | Todos |
@@ -170,19 +171,19 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 
 **Pronto quando:** o fluxo principal funciona do início ao fim pelo link público. ✅
 
-### F5 — Acessibilidade · 1 h · ⚪
+### F5 — Acessibilidade · 1 h · ✅
 **Objetivo:** garantir e documentar acessibilidade e inclusão.
-- [ ] Rodar o Prompt F5
-- [ ] Verificar contraste AA dos 4 pares de cor (docs/03-design-system.md)
-- [ ] Conferir áreas de toque ≥ 48 px
-- [ ] Conferir texto do corpo ≥ 14–16 px
-- [ ] Conferir que nada depende só de cor (ícone + texto)
-- [ ] Conferir linguagem gentil (nada de "falhou", "atrasou")
-- [ ] Cronômetro com números tabulares e leitura textual
-- [ ] Corrigir o que falhar (só via Library)
-- [ ] Revisar doc 1.4 (Decisões de UI) e 1.5 (Acessibilidade e Inclusão)
+- [x] Prompt usado: ver [docs/prompts.md](docs/prompts.md)
+- [x] Verificar contraste AA de todos os pares de cor usados (docs/03-design-system.md) — `vermelho/600` corrigido de #D23C3C para #C23434
+- [x] Conferir áreas de toque ≥ 48 px — `Barra/Topo` corrigido de 47px para 48px
+- [x] Conferir texto do corpo ≥ 14 px, legendas nunca < 12 px — 100% conforme
+- [x] Conferir que nada depende só de cor (ícone + texto) — confirmado (legenda "Pausado"/"Em andamento", `acao/borda` e `destaque/retomar` só em bordas, nunca em texto)
+- [x] Conferir linguagem gentil (nada de "falhou", "atrasou") — varredura nas 7 telas, zero ocorrências
+- [x] Cronômetro com caixa fixa (180px) e leitura textual de apoio — confirmado
+- [x] Corrigir o que falhou (via Library, em lote) — `vermelho/600` e `Barra/Topo`
+- [x] Escrever doc 1.4 (Decisões de UI) e 1.5 (Acessibilidade e Inclusão) em docs/01-teorico.md
 
-**Pronto quando:** checklist 100% e seções 1.4 e 1.5 escritas.
+**Pronto quando:** checklist 100% e seções 1.4 e 1.5 escritas. ✅
 
 ### F6 — Textos · 2 h · ⚪
 **Objetivo:** reaproveitar o documento teórico para o README e o vídeo.
@@ -274,6 +275,9 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | As 7 telas reparentadas pra dentro da section "📱 Telas finais" (antes soltas no canvas) | Sobrepunham a section "📖 Capa"; `clone()` + `page.appendChild()` nunca posiciona dentro de uma section |
 | 25/11 | Não simular digitação nos Inputs (Change to Vazio→Foco→Preenchido) por enquanto | Exigiria editar o componente `Input`, já congelado; Paloma decidiu que não precisa agora |
 | 25/11 | **F4 concluída** — fluxo aprovado por Paloma no Present, link público gerado | Portão antes da F5; critério "fluxo clicável completo" atendido |
+| 25/11 | `vermelho/600` corrigido de #D23C3C pra #C23434 (contraste AA) | O valor antigo falhava sobre `bg/app` (4,47); novo valor passa nos dois fundos usados pelo `destaque/erro` com folga (≥5,0) |
+| 25/11 | `Barra/Topo` corrigido de 47px pra 48px de altura | Único problema real da auditoria da F5 — abaixo do toque mínimo e é clicável (ação Back) nas telas 03 e 05 |
+| 25/11 | **F5 concluída** — checklist 100%, docs 1.4 e 1.5 escritos | Portão antes da F6; nenhuma pendência de acessibilidade restante |
 
 ---
 
@@ -299,6 +303,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | 14 interações do protótipo ligadas (navegação entre as 7 telas, pausa como Change to/Smart Animate, botões voltar com ação Back) + frame inicial definido na tela 01 · conferido lendo as reactions de volta · **F4 praticamente concluída**, falta só Paloma testar e gerar o link público · ~10 chamadas neste bloco | ~15 min |
 | 25/11 | Corrigidas as 7 telas pra dentro da section "Telas finais" (estavam soltas, sobrepondo a Capa) · Paloma testou no Present, perguntou sobre digitar nos Inputs — expliquei a limitação do Figma e a opção de simular com Change to; decidiu não fazer agora | ~10 min |
 | 25/11 | Cards de "Tarefas recentes" na tela 03 ganharam navegação direta pra tela 04 · Paloma aprovou o fluxo completo no Present e gerou o link público · **F4 concluída** ✅ | ~10 min |
+| 25/11 | F5: proposto e aprovado novo hex pro `vermelho/600` (#C23434, calculado via WCAG fora do Figma) · auditoria das 7 telas finais (1 chamada) · corrigido `Barra/Topo` (47→48px) · docs 1.4–1.5 escritos · docs/prompts.md criado · **F5 concluída** ✅ · ~4 chamadas Figma MCP neste bloco | ~40 min |
 
 ---
 

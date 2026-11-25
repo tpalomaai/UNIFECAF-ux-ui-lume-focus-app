@@ -38,7 +38,7 @@
 | `Card/ContinuarDaqui` | `39:10` | Estado: Com conteúdo · Vazio (2) — usa instância de `Botão` (Primário); properties `OndeParei`, `ProximoPasso` |
 | `Cronômetro` | `39:19` | Estado: Rodando · Pausado (2) — número em caixa fixa 180px; legenda em `texto/sobre-acao` (corrigido 25/11 — `texto/secundario` tinha baixo contraste sobre `bg/foco`) |
 | `Header/Saudação` | `39:20` | Sem variantes — usa instância de `Mascote` (Feliz); properties `Saudação`, `Subtítulo` |
-| `Barra/Topo` | `39:30` | Tipo: Com voltar · Sem voltar (2) — largura fixa 390px; property `Título` |
+| `Barra/Topo` | `39:30` | Tipo: Com voltar · Sem voltar (2) — largura fixa 390px, altura 48px (corrigido na F5: era 47px, abaixo do toque mínimo); property `Título` |
 
 > **Atenção para o próximo lote de componentes:**
 > 1. Dar nomes de property DIFERENTES quando o texto padrão deve diferir entre variantes (ex. `Label` vs `Legenda`). Mesmo nome em variantes diferentes funde a property e todas passam a mostrar o mesmo texto padrão.

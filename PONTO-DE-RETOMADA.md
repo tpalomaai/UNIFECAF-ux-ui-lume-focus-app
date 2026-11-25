@@ -4,15 +4,11 @@
 > Arquivo Figma: [Lume — UX/UI](https://www.figma.com/design/z7C1XSWQhlIpYry549Ba3Q)
 
 ## 🧭 Onde parei exatamente
-**A F4 está praticamente concluída.** As 7 telas (01, 02, 03, 04, 04b, 05, 06) estão montadas com instâncias reais da Library, dentro da section "📱 Telas finais" (corrigido — ver histórico), e as 14 interações do protótipo estão todas ligadas e conferidas (navegação completa, pausa como Change to/Smart Animate, botões voltar com ação Back, frame inicial na tela 01).
+**F4 e F5 concluídas.** As 7 telas estão prontas, o protótipo tem todas as interações ligadas, Paloma testou no Present, aprovou e gerou o link público. A F5 (acessibilidade) também fechou: contraste recalculado (vermelho corrigido), auditoria das 7 telas feita, `Barra/Topo` corrigido pro toque mínimo, e as seções 1.4/1.5 do documento teórico escritas.
 
-**Falta só:**
-1. Paloma testar o fluxo inteiro no Present/Preview.
-2. Paloma gerar o link público do protótipo e colar no `PROJECT_OVERVIEW.md` (tabela 🔗 Links de acesso).
+**Próxima fase: F6 — Textos.** README (reaproveitando docs/01-teorico.md) + roteiro do vídeo pitch (tabela tempo · fala · tela, ≤ 4 min). Sem uso do Figma MCP.
 
-Depois disso a F4 fecha de vez e seguimos para a F5 (Acessibilidade).
-
-**Chamadas do Figma MCP usadas hoje (25/11), somando todas as sessões: ~80.** Passou bem da meta própria de 40/dia (o limite real do plano Professional é 200/dia — ainda há folga real).
+**Chamadas do Figma MCP usadas hoje (25/11), somando todas as sessões: ~85.** Passou bem da meta própria de 40/dia (o limite real do plano Professional é 200/dia — ainda há folga real).
 
 ---
 
@@ -52,21 +48,30 @@ Depois disso a F4 fecha de vez e seguimos para a F5 (Acessibilidade).
 - **Bug encontrado e corrigido:** as 7 telas tinham sido duplicadas mantendo as coordenadas originais dos wireframes, soltas no canvas da página 📱 Telas (nunca filhas de nenhuma *section*) — por isso telas 01/02/03 apareciam visualmente em cima da section "📖 Capa". Corrigido: as 7 telas viraram filhas de fato da section "📱 Telas finais" (redimensionada para 3200×1000), organizadas lado a lado com espaçamento de 50px; a section "🗂 Arquivo" (ainda vazia) foi deslocada para não sobrepor.
 - **Esclarecimento sobre Capa e Arquivo:** as duas sections continuam vazias de propósito — só são preenchidas na F8 (Capa: nome/versão/link do README; Arquivo: só se alguma tela for descartada no futuro).
 - Paloma testou o fluxo no modo Present e perguntou se dava pra digitar de verdade nos campos Input. Expliquei que o Figma não suporta teclado real em modo de apresentação (limitação da ferramenta de prototipagem, não um bug nosso) e propus simular com **Change to** entre os estados Vazio → Foco → Preenchido do componente `Input` — o que exigiria editar a Library congelada. **Decisão: não fazer agora** (foi para o 🅿️ Estacionamento de ideias do PROJECT_OVERVIEW.md).
+- Adicionada navegação direta nos 3 `Card/Tarefa` de "Tarefas recentes" (tela 03) pra tela 04, além do botão "Começar". **Paloma testou o fluxo completo no Present, aprovou, e gerou o link público do protótipo.** F4 concluída ✅.
+
+### 25/11 (continuação) — F5: Acessibilidade
+- **Parte A:** calculei em Node (fórmula WCAG de luminância relativa) um novo hex pro primitivo `vermelho/600` — o valor antigo (#D23C3C) falhava contraste sobre `bg/app` (4,47, abaixo do mínimo 4,5). Confirmei que meu cálculo batia exatamente com a tabela que a Paloma trouxe pronta (validação cruzada). Proposta: **#C23434** (5,19 sobre `bg/app`, 5,48 sobre branco). **Aprovado e aplicado** na Variable — propagou automaticamente pro `destaque/erro` em toda a Library.
+- **Parte B:** auditoria das 7 telas finais num script só (percorre toda a árvore de nós, inclusive dentro de instâncias) — muito mais barato e completo que 7 `get_metadata` separados, porque também capturou Text Style, conteúdo de texto, fills vinculados a variable e nós com reactions (toque). Achados: zero valor de cor solto, zero palavra não-gentil ("falhou"/"erro"/"atrasou" etc.), nenhum texto abaixo de 12px. Único problema real: `Barra/Topo` com 47px de altura (1px abaixo do mínimo de 48px), e é clicável (ação Back) nas telas 03 e 05.
+- Verificação extra pedida pela Paloma: confirmei que `indigo/300` (via token `acao/borda`) e `rosa/400` (via token `destaque/retomar`) só aparecem como `stroke/border` nas 7 telas, nunca como fill de texto — rodando um segundo script que varre especificamente esses dois tokens.
+- **Bug/lição:** a primeira tentativa dessa verificação buscou os nomes dos PRIMITIVOS (`indigo/300`, `rosa/400`) direto nas telas e voltou vazia — porque as telas nunca vinculam a primitivos, só aos TOKENS que apontam pra eles (`acao/borda`, `destaque/retomar`). Tive que refazer buscando pelo nome do token, não do primitivo.
+- **Parte C:** corrigido `Barra/Topo` (ambas as variantes) de 47px pra 48px via padding +0,5px cada lado — conferido por metadata (altura exata 48 nas instâncias das telas 03 e 05, sem overflow).
+- **Parte D:** escritas as seções 1.4 (Decisões de Interface) e 1.5 (Acessibilidade e Inclusão) em docs/01-teorico.md, no mesmo estilo das seções 1.1–1.3. Atualizada a tabela de Contraste em docs/03-design-system.md com os valores finais.
+- **Parte E:** criado docs/prompts.md com o prompt de cada fase (F0–F4 reconstruídos a partir do histórico, F5 verbatim, F6–F8 como rascunho).
+- **F5 concluída** ✅. Próxima fase: F6 — Textos.
 
 ---
 
 ## ✅ O que já está pronto
 - **F0, F1, F2:** concluídas.
 - **F3 (Library): concluída e congelada.** Variables (3 coleções, incluindo `vermelho/600` e `destaque/erro`), 7 Text Styles, Fundamentos completos (paleta + tipografia + medidas), 4 componentes atômicos + 7 compostos + Mascote, auditoria limpa.
-- **F4 — as 7 telas e o protótipo: concluídos.** Telas organizadas dentro da section correta, 14 interações ligadas e conferidas, frame inicial definido.
+- **F4 — as 7 telas e o protótipo: concluídos.** Telas organizadas dentro da section correta, 14 interações ligadas e conferidas, frame inicial definido, fluxo aprovado por Paloma, link público gerado.
+- **F5 — Acessibilidade: concluída.** `vermelho/600` corrigido (#C23434), `Barra/Topo` corrigido (48px), auditoria das 7 telas 100% conforme, seções 1.4 e 1.5 escritas, docs/prompts.md criado.
 
 ## ⏭️ O que falta (nesta ordem)
-1. **Paloma à mão:** testar o fluxo inteiro no Present/Preview.
-2. **Paloma à mão:** gerar o link público do protótipo e colar no `PROJECT_OVERVIEW.md` (🔗 Links de acesso). Isso fecha a F4.
-3. **F5 — Acessibilidade:** auditoria de contraste AA (incluindo o token novo `destaque/erro`), toque ≥ 48px, doc 1.4–1.5.
-4. **F6 — Textos:** README + roteiro do vídeo.
-5. **F7 — Vídeo pitch** (à mão).
-6. **F8 — Entrega** (à mão) — nesse ponto também preencher as sections "Capa" e "Arquivo" (se houver algo a arquivar).
+1. **F6 — Textos:** README (reaproveitando docs/01-teorico.md) + roteiro do vídeo pitch (tabela tempo · fala · tela, ≤ 4 min).
+2. **F7 — Vídeo pitch** (à mão, Paloma grava e sobe no YouTube não listado).
+3. **F8 — Entrega** (à mão) — nesse ponto também preencher as sections "Capa" e "Arquivo" do Figma (se houver algo a arquivar).
 
 Cronograma detalhado com estimativas de tempo e chamadas: ver `PROJECT_OVERVIEW.md` → 📅 Cronograma.
 
@@ -82,6 +87,8 @@ Cronograma detalhado com estimativas de tempo e chamadas: ver `PROJECT_OVERVIEW.
 - **Componentes com várias variantes podem expor todas as properties de texto em cada instância**, mesmo quando só uma é visualmente usada por variante (caso do `Card/Métrica`). Nunca assumir "a primeira property de texto encontrada" — sempre setar pelo nome exato correspondente à variante.
 - **`clone()` + `page.appendChild()` nunca coloca um nó dentro de uma *section*** — mesmo que as coordenadas coincidam visualmente com a área da section, o nó fica solto no canvas. Para colocar de fato dentro, use `section.appendChild(node)` (que preserva a posição visual absoluta automaticamente) e só depois ajuste x/y se quiser reorganizar.
 - **Figma não suporta digitação real em modo de apresentação** — é uma limitação da ferramenta (não dá pra "codar" isso). O truque possível é simular com **Change to** entre variantes de texto diferentes (ex. Input Vazio → Foco → Preenchido), mas isso precisa ser configurado nas reactions dos próprios variants do componente pra funcionar em toda instância automaticamente.
+- **As telas nunca vinculam direto a um Primitivo, só a Tokens** — ao auditar uso de uma cor "crua" (ex. `indigo/300`), buscar pelo nome do Primitivo retorna vazio mesmo que ela esteja em uso; é preciso buscar pelo nome do Token que aponta pra ela (ex. `acao/borda`).
+- **Um script de auditoria que percorre toda a árvore de nós (incluindo dentro de instâncias) é muito mais barato que vários `get_metadata`** — dá pra pegar Text Style, conteúdo de texto, fills vinculados e nós com reactions (toque) tudo de uma vez, numa chamada só.
 
 ## Prompt para retomar no Claude Code
-> Leia CLAUDE.md, PROJECT_OVERVIEW.md e PONTO-DE-RETOMADA.md. A F4 está pronta (telas + protótipo); só falta eu testar no Present e gerar o link público. Depois disso, me ajude a começar a F5 (acessibilidade: contraste AA, toque mínimo, doc 1.4–1.5).
+> Leia CLAUDE.md, PROJECT_OVERVIEW.md e PONTO-DE-RETOMADA.md. A F4 e a F5 estão concluídas. Preciso começar a F6 (Textos): escrever o README reaproveitando docs/01-teorico.md, e montar o roteiro do vídeo pitch (tabela tempo · fala · tela, ≤ 4 min). Sem uso do Figma MCP nesta fase.

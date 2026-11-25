@@ -1,6 +1,6 @@
 # Documento Teórico — Lume
 
-> Status: **F1 revisada** com as respostas da pesquisa (seções 1.1–1.3). Seções 1.4 e 1.5 serão escritas na F5.
+> Status: **Completo** — seções 1.1 a 1.5 escritas (1.1–1.3 na F1, 1.4–1.5 na F5).
 
 ---
 
@@ -99,15 +99,66 @@ O app tem **6 telas** e um único fluxo principal, organizado em três momentos:
 ---
 
 ## 1.4 Decisões de Interface (UI)
-*(F5)*
+
+### Cores e a função de cada token
+O Lume usa uma paleta "céu de estrelas": cada cor tem **uma função fixa**, nunca decorativa — as telas usam só tokens (nunca a cor crua), o que garante consistência em todo o app.
+
+| Cor | Token | Por quê |
+|---|---|---|
+| **Índigo** (#3730A3) | `acao/primaria` | Cor da ação mais importante de cada tela (Começar, Concluir, Retomar) — só uma por tela, para não competir por atenção |
+| **Creme lunar** (#FFF8EC) | `bg/app` | Fundo acolhedor e de alto contraste nas telas "antes/depois" do foco — lembra papel, não tela fria de notificação |
+| **Noite** (#1B1846) | `bg/foco` | Fundo exclusivo da Sessão em andamento — sinaliza "modo foco" visualmente, como se a usuária estivesse num ambiente calmo e sem distração |
+| **Estrela** (#FFD43B) | `destaque/progresso` | Progresso e conquista (cronômetro, "última vez", "Lembrar depois") — amarelo transmite avanço, nunca alerta |
+| **Rosa** (#EC6FA8 / #A3215F) | `destaque/retomar` / `-texto` | Só no card "Continuar daqui", pra ele se destacar visualmente como o atalho mais valioso do Início |
+| **Vermelho** (#C23434) | `destaque/erro` | Único uso é o estado de erro do campo de texto — vermelho reservado exclusivamente pra isso, nunca usado em outro contexto, pra não gerar alarme falso |
+
+### Tipografia
+- **Lexend** é a fonte de todo o texto funcional (títulos, corpo, botões) — foi desenhada especificamente para reduzir o esforço de leitura, o que reforça o objetivo de acessibilidade do produto.
+- **Sniglet** aparece só na saudação do Início ("Oi, Camila") — dá personalidade e calor ao app sem comprometer a leitura, já que nunca é usada em texto longo ou funcional.
+- O **cronômetro** usa uma caixa de largura fixa (180px) em vez de deixar o texto livre — como a Lexend não tem números tabulares, cada dígito ocupa uma largura ligeiramente diferente; sem a caixa fixa, o número "pularia" visualmente a cada segundo, o que é desconfortável de acompanhar por longos períodos.
+
+### Componentes e variantes
+Todos os elementos repetidos (botões, cards, inputs, cronômetro) são **componentes únicos com variantes** (ex.: `Botão` tem 18 variantes — Tipo × Estado × Ícone — mas é um componente só). Isso significa que corrigir uma cor, espaçamento ou contraste na Library atualiza **todas as telas de uma vez**, sem risco de uma tela ficar "esquecida" e inconsistente — foi assim, inclusive, que as correções da F5 (vermelho e altura mínima de toque) chegaram às 7 telas automaticamente.
+
+### Mascote e linguagem gentil
+A estrelinha mascote (Feliz · Focado · Comemorando) e os textos do app seguem o mesmo princípio: **nunca cobrar, sempre acolher**. Não existem palavras como "falhou", "atrasou" ou "erro" voltadas à usuária — mesmo no pior cenário (levou mais tempo que da última vez), o texto é "e tudo bem".
 
 ## 1.5 Acessibilidade e Inclusão
-*(F5)*
+
+### Contraste de cores (WCAG 2.2, nível AA)
+Calculado pela fórmula de luminância relativa do WCAG, para os pares realmente usados no app:
+
+| Par | Uso | Contraste | Resultado |
+|---|---|---|---|
+| `texto/principal` sobre `bg/app` | Texto padrão | 15,71 | ✅ |
+| `texto/secundario` sobre `bg/app` / `bg/card` | Texto de apoio | 6,35 / 6,71 | ✅ |
+| Branco sobre `acao/primaria` | Botão primário | 9,93 | ✅ |
+| `estrela/900` sobre `estrela/400` / `estrela/100` | Botão/chip "Lembrar depois" | 9,18 / 11,73 | ✅ |
+| `rosa/800` sobre branco | Título "Continuar daqui" | 7,14 | ✅ |
+| `estrela/400` sobre `bg/foco` | Progresso no modo foco | 11,64 | ✅ |
+| `destaque/erro` sobre branco / `bg/app` | Input em erro | 5,48 / 5,19 | ✅ |
+| `indigo/300` (`acao/borda`) | Só como borda (mín. 3,0), nunca texto — conferido nas 7 telas finais | 3,68–4,27 | ✅ |
+| `rosa/400` (`destaque/retomar`) | Só como barra decorativa, nunca texto — conferido nas 7 telas finais | 2,84 | ✅ |
+
+O token `destaque/erro` foi corrigido nesta fase: o tom original (#D23C3C) passava sobre branco mas falhava sobre `bg/app` (4,47, abaixo do mínimo 4,5). O novo tom (#C23434) passa nos dois fundos com folga, mantendo a mesma identidade visual de vermelho.
+
+### Toque, leitura e independência de cor
+- **Área de toque mínima de 48px** em todo elemento clicável (padrão Material Design e WCAG 2.5.5) — auditoria da F5 encontrou o componente `Barra/Topo` com 47px e foi corrigido para 48px.
+- **Texto de corpo sempre ≥14px**, legendas nunca abaixo de 12px.
+- **Rótulos sempre visíveis** acima dos campos de texto (nunca só um placeholder que some ao digitar).
+- **Nada depende só de cor**: o estado "Pausado" do cronômetro, por exemplo, tem o texto "Pausado" junto, não só uma mudança de cor — importante para usuárias com daltonismo.
+- **Linguagem simples e gentil** em todo o app (ver 1.4), o que também ajuda leitores de tela e pessoas com dificuldade de leitura.
+
+### Inclusão por trás do cronômetro progressivo
+A decisão de design mais relevante para acessibilidade do Lume não é visual — é a **ausência de contagem regressiva**. Para pessoas com ansiedade ou dificuldade de manter o foco (TDAH, sobrecarga mental, jornadas fragmentadas), um prazo com alarme é uma barreira a mais, não um incentivo. Medir o tempo em vez de cobrá-lo torna o app utilizável por um público mais amplo, incluindo pessoas neurodivergentes — sem precisar de nenhum "modo especial", porque é assim que o app funciona por padrão.
+
+### Diversidade do público
+O público do Lume (universitários EAD, profissionais em home office, estudantes de idiomas) tem em comum estudar ou trabalhar **sozinho, sem a estrutura de uma sala de aula ou escritório**. São pessoas com rotinas, equipamentos e contextos de uso bem diferentes entre si — por isso o app evita qualquer suposição sobre horário fixo, conexão constante ou ambiente silencioso, e funciona igual em qualquer um desses contextos.
 
 ---
 
 ### Referências
-- Laws of UX — https://lawsofux.com
-- Nielsen Norman Group — https://www.nngroup.com
-- Material Design — https://m3.material.io
-- WCAG — https://www.w3.org/WAI/standards-guidelines/wcag/
+- Laws of UX — https://lawsofux.com (1.3: Zeigarnik, Fitts, Hick, pico-fim, Jakob)
+- Nielsen Norman Group — https://www.nngroup.com (linguagem simples, redução de carga cognitiva)
+- Material Design — https://m3.material.io (área de toque mínima de 48dp)
+- WCAG 2.2 — https://www.w3.org/TR/WCAG22/ (contraste mínimo, área de toque, independência de cor)

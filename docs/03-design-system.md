@@ -31,7 +31,7 @@ Capa (nome, versão, link do README) e Arquivo (versões descartadas) ficam para
 | `neutro/0` | #FFFFFF |
 | `neutro/500` | #5A5784 |
 | `fundo/creme-lunar` | #FFF8EC |
-| `vermelho/600` | #D23C3C |
+| `vermelho/600` | #C23434 (corrigido na F5 — #D23C3C falhava contraste AA sobre `bg/app`: 4,47) |
 
 ## Variables — `Tokens` (as telas usam SÓ estes)
 | Token | Aponta para | Uso |
@@ -96,10 +96,22 @@ Capa (nome, versão, link do README) e Arquivo (versões descartadas) ficam para
 4. Componentes compostos: Cards, Cronômetro, Header
 5. Montar as 6 telas com instâncias
 
-## Contraste (verificar na F5)
-| Par | Uso |
-|---|---|
-| indigo/900 sobre creme #FFF8EC | texto principal |
-| branco sobre indigo/700 | botão primário |
-| estrela/900 (#3D2F00) sobre estrela/400 | botão "Lembrar depois" |
-| rosa/800 sobre branco | título "Continuar daqui" |
+## Contraste — auditoria final (F5, 25/11)
+Calculado via fórmula WCAG (luminância relativa), fora do Figma. Mínimo AA: 4,5 para texto normal, 3,0 para elementos gráficos/bordas.
+
+| Par | Uso | Contraste | Resultado |
+|---|---|---|---|
+| `texto/principal` sobre `bg/app` | Texto padrão | 15,71 | ✅ passa com folga |
+| `texto/secundario` sobre `bg/app` / `bg/card` | Texto de apoio | 6,35 / 6,71 | ✅ passa |
+| Branco sobre `acao/primaria` | Botão primário | 9,93 | ✅ passa com folga |
+| `estrela/900` sobre `estrela/400` / `estrela/100` | Botão e chip "Lembrar depois" | 9,18 / 11,73 | ✅ passa com folga |
+| `rosa/800` sobre branco | Título "Continuar daqui" | 7,14 | ✅ passa |
+| `estrela/400` sobre `bg/foco` | Progresso no modo foco | 11,64 | ✅ passa com folga |
+| `destaque/erro` sobre branco | Borda/texto do Input em erro | 5,48 | ✅ passa com folga (corrigido — ver abaixo) |
+| `destaque/erro` sobre `bg/app` | Idem, sobre fundo do app | 5,19 | ✅ passa com folga (corrigido — ver abaixo) |
+| `indigo/300` sobre `bg/foco` / `bg/app` | Borda do botão secundário | 3,68 / 4,27 | ✅ passa como borda (mín. 3,0) — nunca usado como texto |
+| `rosa/400` sobre branco | Barra decorativa do "Continuar daqui" | 2,84 | ✅ só decorativo, sem texto sobre essa cor |
+
+**Correção aplicada na F5:** `vermelho/600` mudou de `#D23C3C` para **`#C23434`** — o valor antigo falhava sobre `bg/app` (4,47, abaixo do mínimo 4,5). O novo hex mantém o mesmo tom de vermelho e passa com folga nos dois fundos usados pelo `destaque/erro`.
+
+**Conferido na auditoria:** `indigo/300` nunca é usado como cor de texto (só como borda, onde o mínimo é 3,0, não 4,5) e `rosa/400` nunca tem texto sobre si (só a barra decorativa do Card/ContinuarDaqui).
