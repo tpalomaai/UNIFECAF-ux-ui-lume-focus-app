@@ -83,3 +83,37 @@ Detalhes completos em `docs/03-design-system.md`.
 - Uma proposta por vez, sem oferecer várias alternativas visuais.
 - Ao fim de cada sessão, atualize PROJECT_OVERVIEW.md ("Onde estou" + "Continuar daqui").
 - Textos: claros, curtos, sem enrolação.
+
+### 💳 Política de uso do Figma MCP
+Limite do plano: 200 chamadas/dia e 10/min. Meta: no máximo 40 por dia.
+
+| Claude via MCP (repetitivo, em lote, precisão de tokens) | Paloma à mão (poucos cliques, ajuste pontual) |
+|---|---|
+| Criar componentes com variantes (Botão, Chip, Input, Cards, Cronômetro) | Renomear, mover ou alinhar 1 elemento |
+| Ligar variables/tokens em vários elementos de uma vez | Trocar 1 texto, 1 cor ou 1 ícone |
+| Montar as telas finais com instâncias | Ajustar o tamanho de seções e frames |
+| Criar as interações do protótipo (muitas ligações) | Testar o protótipo no Present/Preview |
+| Auditoria do arquivo (tokens soltos, nomes, Auto Layout) | Gerar o link público e configurar o compartilhamento |
+| Qualquer tarefa com mais de ~10 elementos parecidos | Qualquer tarefa com menos de ~5 cliques |
+
+Na dúvida: se eu levo menos de 3 minutos à mão, me passe o passo a passo em vez de usar o MCP.
+
+Como economizar:
+1. **Lote:** junte o máximo de trabalho numa única chamada de escrita, e não uma por peça.
+2. **Leitura barata primeiro:** get_metadata antes de screenshot; leia só o nó que vai editar.
+3. **IDs guardados:** use e mantenha atualizado o docs/figma-ids.md (páginas, seções, frames, componentes); não busque de novo um ID que já está lá.
+4. **Aviso de custo:** antes de cada bloco, informe "custo estimado: N chamadas". Se passar de 15, espere a minha aprovação.
+5. **Placar:** ao fim de cada bloco, informe "chamadas usadas nesta sessão: X / meta diária 40".
+6. **Erro de limite (429):** pare na hora, sem tentar de novo em loop, e me passe o restante como passo a passo à mão.
+7. Nunca use o MCP para conferir algo que eu já confirmei, nem para testar a conexão.
+
+### 🔁 Self-Refine em toda execução
+A cada tarefa (Figma, documentos ou repositório):
+1. **Gerar:** faça a tarefa.
+2. **Criticar:** confira com a lista abaixo. No Figma, comece pela metadata e tire no máximo 1 screenshot por bloco (não por item).
+   - Segue as decisões travadas e a Lista do NÃO?
+   - No Figma: toda cor é token, todo texto tem Text Style, todo frame com filhos tem Auto Layout, nomes no padrão `Categoria/Nome`, nada vazando ou sobreposto, nenhum valor solto?
+   - Acessibilidade: contraste AA, toque mínimo de 48 px, rótulos visíveis, linguagem gentil (nunca "falhou" ou "atrasou")?
+   - Atende ao critério de pronto e bate com docs/01-teorico.md e docs/02-fluxo.md?
+3. **Refinar:** corrija e critique de novo. No máximo 2 rodadas; se ainda falhar, pare e me explique.
+4. **Relatar:** primeiro o resultado (o que fez, o que a crítica encontrou, o que corrigiu, o que ficou pendente, chamadas usadas) e só depois a próxima ação ou os comandos.
