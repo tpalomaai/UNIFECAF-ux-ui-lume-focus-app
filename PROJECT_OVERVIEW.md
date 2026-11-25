@@ -12,7 +12,7 @@
 | **Próxima ação** | Paloma: ler o roteiro em voz alta e cronometrar (≤ 4 min); depois F7 (gravar o vídeo) |
 | **Bloqueios** | Nenhum |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 5 dias · meta interna: tudo pronto na **sex 27/11** |
-| **Última atualização** | 25/11/2026 (F6: README e roteiro do vídeo escritos) |
+| **Última atualização** | 25/11/2026 (reforço do documento teórico + página "🧠 Processo UX" criada no Figma) |
 
 ## 📍 Continuar daqui
 > F0 concluída: nome **Lume**, direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet) e repositório no GitHub com toda a estrutura.
@@ -227,18 +227,18 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 
 ## ✅ Checklist de entrega (critérios do enunciado)
 **Documento teórico (1,5)**
-- [ ] 1.1 Problema e Usuário
-- [ ] 1.2 Jornada do Usuário
-- [ ] 1.3 Estrutura da Solução (UX)
-- [ ] 1.4 Decisões de Interface (UI)
-- [ ] 1.5 Acessibilidade e Inclusão
+- [x] 1.1 Problema e Usuário (reforçada com Problem Statement, Matriz CSD, Mapa de Empatia)
+- [x] 1.2 Jornada do Usuário (reforçada com Journey Map formal, Pain Points, HMW)
+- [x] 1.3 Estrutura da Solução (UX) (reforçada com Duplo Diamante, Arquitetura da Informação, User Flow, Matriz de Impacto×Esforço)
+- [x] 1.4 Decisões de Interface (UI)
+- [x] 1.5 Acessibilidade e Inclusão
 
 **Protótipo Figma (3,5)**
 - [x] 4–6 telas com fluxo principal completo
 - [x] Interações configuradas e navegação funcional
 - [x] Design system: cores, tipografia, componentes reutilizáveis
 - [x] Telas nomeadas e arquivo organizado
-- [ ] Link público + README (objetivo, fluxo, decisões) — link ✅, README ainda falta (F6)
+- [x] Link público + README (objetivo, fluxo, decisões)
 
 **Vídeo pitch (2,0)**
 - [ ] Problema e usuário
@@ -285,6 +285,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | `vermelho/600` corrigido de #D23C3C pra #C23434 (contraste AA) | O valor antigo falhava sobre `bg/app` (4,47); novo valor passa nos dois fundos usados pelo `destaque/erro` com folga (≥5,0) |
 | 25/11 | `Barra/Topo` corrigido de 47px pra 48px de altura | Único problema real da auditoria da F5 — abaixo do toque mínimo e é clicável (ação Back) nas telas 03 e 05 |
 | 25/11 | **F5 concluída** — checklist 100%, docs 1.4 e 1.5 escritos | Portão antes da F6; nenhuma pendência de acessibilidade restante |
+| 25/11 | Criada a página "🧠 Processo UX" dentro do próprio arquivo Figma, espelhando os artefatos de UX (CSD, Mapa de Empatia, Persona, Journey Map, Pain Points+HMW, Sitemap, User Flow, Matriz de Impacto×Esforço) | O enunciado pede pra projetar a UX "utilizando Figma" — manter o processo só no documento teórico deixaria essa parte de fora do arquivo de entrega |
 
 ---
 

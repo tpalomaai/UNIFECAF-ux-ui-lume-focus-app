@@ -6,9 +6,13 @@
 ## 🧭 Onde parei exatamente
 **F4 e F5 concluídas. F6 quase pronta.** As 7 telas e o protótipo estão prontos e aprovados, com link público gerado. A F5 (acessibilidade) fechou: contraste corrigido, toque mínimo corrigido, docs 1.4/1.5 escritos. Na F6, o README está completo (com 3 screenshots das telas) e o roteiro do vídeo está escrito e calibrado pros 4 minutos.
 
+Depois disso, a Paloma revisou o enunciado de novo e notou que ele pede pra **estruturar a UX**, não só entregar a interface pronta — então o documento teórico (seções 1.1–1.3) e o docs/02-fluxo.md foram reforçados com o processo formal estudado na disciplina (Matriz CSD, Mapa de Empatia, Problem Statement, Journey Map, Pain Points, HMW, Duplo Diamante, Arquitetura da Informação, User Flow com decisão real, Matriz de Impacto×Esforço). E, como o enunciado também pede pra projetar a UX "utilizando Figma", os mesmos 8 artefatos foram recriados como uma página visual dentro do próprio arquivo Figma ("🧠 Processo UX") — pra essa parte do trabalho não existir só no markdown.
+
+**Encerrando o dia aqui, tudo salvo e no GitHub (commit `b9699c0`).**
+
 **Falta só:** Paloma ler o roteiro (`docs/04-roteiro-video.md`) em voz alta e cronometrar — se passar de 4 min, ajustar o texto (não a estrutura dos blocos de tempo). Depois disso, F6 fecha e começa a F7 (gravar o vídeo, à mão).
 
-**Chamadas do Figma MCP usadas hoje (25/11), somando todas as sessões: ~88.** Passou bem da meta própria de 40/dia (o limite real do plano Professional é 200/dia — ainda há folga real).
+**Chamadas do Figma MCP usadas hoje (25/11), somando todas as sessões: ~100.** Passou bem da meta própria de 40/dia (o limite real do plano Professional é 200/dia — ainda há folga real).
 
 ---
 
@@ -97,4 +101,4 @@ Cronograma detalhado com estimativas de tempo e chamadas: ver `PROJECT_OVERVIEW.
 - **Um script de auditoria que percorre toda a árvore de nós (incluindo dentro de instâncias) é muito mais barato que vários `get_metadata`** — dá pra pegar Text Style, conteúdo de texto, fills vinculados e nós com reactions (toque) tudo de uma vez, numa chamada só.
 
 ## Prompt para retomar no Claude Code
-> Leia CLAUDE.md, PROJECT_OVERVIEW.md e PONTO-DE-RETOMADA.md. README e roteiro do vídeo já estão escritos (F6 quase pronta). Eu cronometrei o roteiro em voz alta — [resultado]. Me ajude a ajustar o texto se precisar, e depois vamos pra F7 (preparar a gravação do vídeo).
+> Leia CLAUDE.md, PROJECT_OVERVIEW.md e PONTO-DE-RETOMADA.md. README e roteiro do vídeo já estão escritos (F6 quase pronta), o documento teórico foi reforçado com o processo formal de UX e a página "🧠 Processo UX" já existe no Figma. Eu cronometrei o roteiro em voz alta — [resultado]. Me ajude a ajustar o texto se precisar, e depois vamos pra F7 (preparar a gravação do vídeo).
