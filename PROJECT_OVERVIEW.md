@@ -35,6 +35,7 @@
 > **F5 concluída** ✅ 25/11: contraste recalculado via WCAG fora do Figma — `vermelho/600` corrigido (#D23C3C → #C23434, falhava sobre `bg/app`). Auditoria das 7 telas finais: zero valor solto, zero palavra não-gentil, único problema real foi `Barra/Topo` com 47px (corrigido pra 48px). Seções 1.4 e 1.5 escritas em docs/01-teorico.md. Prompts de todas as fases registrados em docs/prompts.md.
 > **F6 em andamento** 25/11: README completo (links, objetivo, fluxo, decisões de design, 3 screenshots das telas) e roteiro do vídeo escrito (docs/04-roteiro-video.md), calibrado pros 4 minutos.
 > **Reforço do documento teórico** 25/11: Paloma revisou o enunciado do trabalho — ele pede pra **estruturar a experiência do usuário**, não só entregar a interface pronta. Li todos os resumos de aula dela no Obsidian (Matriz CSD, Mapa de Empatia, Persona, Journey Map, Pain Points, HMW, Duplo Diamante, Arquitetura da Informação, User Flow, Matriz de Impacto×Esforço) e incorporei essas ferramentas formais nas seções 1.1–1.3 do `docs/01-teorico.md` e no `docs/02-fluxo.md` (que ganhou um ponto de decisão real, virando um User Flow de verdade).
+> **Página "🧠 Processo UX" criada no Figma** 25/11: além do documento teórico, montei os mesmos 8 artefatos (CSD, Mapa de Empatia, Persona, Pain Points+HMW, Journey Map, Sitemap, User Flow, Matriz de Impacto×Esforço) como uma página visual dentro do próprio arquivo Figma — já que o enunciado pede pra projetar a UX "utilizando Figma". Encontrei e corrigi um bug real no processo (texto sobrepondo texto por causa da ordem errada entre `resize()` e `.characters`), documentado em docs/figma-ids.md.
 > **Parei aqui:** falta só Paloma ler o roteiro em voz alta e cronometrar — se passar de 4 min, ajustar o texto (não a estrutura). Depois disso, F7 (gravar o vídeo). Histórico completo e detalhado em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
 
 ---
@@ -312,6 +313,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | F5: proposto e aprovado novo hex pro `vermelho/600` (#C23434, calculado via WCAG fora do Figma) · auditoria das 7 telas finais (1 chamada) · corrigido `Barra/Topo` (47→48px) · docs 1.4–1.5 escritos · docs/prompts.md criado · **F5 concluída** ✅ · ~4 chamadas Figma MCP neste bloco | ~40 min |
 | 25/11 | F6: README completo (objetivo, fluxo, decisões, 3 screenshots das telas) · roteiro do vídeo escrito e calibrado pra 4 min (docs/04-roteiro-video.md) · 3 chamadas Figma MCP (só screenshots) | ~20 min |
 | 25/11 | Lidos todos os resumos de UX do Obsidian da Paloma (vault da disciplina) · documento teórico (1.1–1.3) reforçado com o processo formal de UX (CSD, Mapa de Empatia, Problem Statement, Journey Map, Pain Points, HMW, Duplo Diamante, IA, User Flow, Matriz de Impacto×Esforço) · docs/02-fluxo.md ganhou um ponto de decisão real · 0 chamadas Figma MCP | ~30 min |
+| 25/11 | Criada a página "🧠 Processo UX" no Figma com os mesmos 8 artefatos, em forma de board visual · bug de texto sobrepondo texto encontrado e corrigido (ordem resize/characters) · ~12 chamadas Figma MCP | ~30 min |
 
 ---
 

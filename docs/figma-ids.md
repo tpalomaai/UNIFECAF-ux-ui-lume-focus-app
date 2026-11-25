@@ -8,6 +8,12 @@
 | 🧩 Library | `0:1` |
 | 🔲 Wireframes | `2:2` |
 | 📱 Telas | `2:3` |
+| 🧠 Processo UX | `76:3` (criada 25/11, plano Professional permite mais de 3 páginas) |
+
+### 🧠 Processo UX (criada 25/11)
+Página só de documentação visual do processo (não é tela do app nem é avaliada por acessibilidade/toque — é o "porquê" por trás do protótipo). Board único (`76:4`, 1300px de largura) com 8 cards: Matriz CSD, Mapa de Empatia, Persona, Pain Points + HMW, Journey Map, Arquitetura da Informação (sitemap), User Flow com decisão, Matriz de Impacto × Esforço. Conteúdo espelha docs/01-teorico.md e docs/02-fluxo.md.
+
+> **Atenção — bug de texto com quebra de linha:** ao criar um nó de texto novo via `figma.createText()` e preencher conteúdo longo, a ordem importa muito: setar `textAutoResize='HEIGHT'` e `resize(largura, h)` **ANTES** de setar `.characters` funciona; fazer na ordem inversa (characters primeiro, resize depois) faz o Figma calcular a altura errada e o texto sobrepõe o elemento seguinte — mesmo chamando `resize()` de novo depois ("settle") não corrige, porque o bug é nos nós de texto individuais, não no frame-pai. Lição: sempre **largura → depois texto**, nunca o contrário, para texto em Auto Layout com wrap.
 
 ## 🧩 Library → seções
 | Seção | ID | Status |
