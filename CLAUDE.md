@@ -68,7 +68,7 @@ Universitários EAD, profissionais em home office e estudantes de idiomas — ad
 | F0 Setup | Repo e estrutura | 30 min | ✅ concluída |
 | F1 UX | docs/01-teorico.md (1.1–1.3) + docs/02-fluxo.md | 2 h | ✅ concluída (fluxo aprovado) |
 | F2 Wireframe | 6 telas em cinza no Figma | 1–2 h | ✅ concluída (revisada) |
-| F3 Library | Variables, Text Styles, Componentes (docs/03-design-system.md) | 2 h | componentes prontos |
+| F3 Library | Variables, Text Styles, Componentes (docs/03-design-system.md) | 2 h | ✅ concluída (congelada 25/11) |
 | F4 Telas + Protótipo | 6 telas só com instâncias + interações | 3 h | fluxo clicável completo |
 | F5 Acessibilidade | Checklist WCAG + doc 1.4–1.5 | 1 h | checklist 100% |
 | F6 Textos | README + roteiro do vídeo (reaproveitar doc teórico) | 2 h | revisado |

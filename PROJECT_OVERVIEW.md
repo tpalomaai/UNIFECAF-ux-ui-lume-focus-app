@@ -8,11 +8,11 @@
 ## 🧭 Agora
 | | |
 |---|---|
-| **Fase atual** | F3 — Library (Variables, Text Styles, Componentes) |
-| **Próxima ação (≤ 30 min)** | Congelar a Library (portão da F3) — falta só sua aprovação para eu fazer a auditoria final via MCP |
+| **Fase atual** | F3 — Library ✅ concluída e congelada → próxima é F4 (Telas + Protótipo) |
+| **Próxima ação** | F4: duplicar wireframes para 📱 Telas, montar com instâncias, trocar "Espaço" por Auto Layout |
 | **Bloqueios** | Nenhum — upgrade para **Figma Professional** (vaga Full) liberou o MCP de volta, com política de uso (ver CLAUDE.md) |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 5 dias · meta interna: tudo pronto na **sex 27/11** |
-| **Última atualização** | 25/11/2026 (Fundamentos à mão + atômicos e Mascote via MCP) |
+| **Última atualização** | 25/11/2026 (F3 Library concluída e congelada) |
 
 ## 📍 Continuar daqui
 > F0 concluída: nome **Lume**, direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet) e repositório no GitHub com toda a estrutura.
@@ -69,7 +69,7 @@
 | F0 Setup | Tema, direção visual, estrutura, repo | 30 min | ✅ Concluída | — |
 | F1 UX | Problema, persona, jornada, fluxo | 2 h | ✅ Concluída | Documento teórico (1,5) |
 | F2 Wireframe | 6 telas em cinza + arquivo Figma organizado | 1–2 h | ✅ Concluída | Protótipo (3,5) |
-| F3 Library | Variables, Text Styles, Componentes | 2 h | 🔵 Em andamento | Protótipo — Design System |
+| F3 Library | Variables, Text Styles, Componentes | 2 h | ✅ Concluída | Protótipo — Design System |
 | F4 Telas + Protótipo | 6 telas finais + interações | 3 h | ⚪ | Protótipo — Navegação |
 | F5 Acessibilidade | Checklist WCAG + doc 1.4–1.5 | 1 h | ⚪ | Documento teórico |
 | F6 Textos | README + roteiro do vídeo + revisão do doc | 2 h | ⚪ | Protótipo — README |
@@ -139,8 +139,8 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [x] Componentes atômicos via MCP: `Botão` (18 variantes), `Chip/Tarefa` (2), `Input` (4) — token `destaque/erro` criado (conferir contraste na F5)
 - [x] Componentes compostos via MCP: `Card/Tarefa`, `Card/ContinuarDaqui` (com instância de Botão), `Card/Métrica`, `Card/Lembrete`, `Cronômetro`, `Header/Saudação` (com instância de Mascote), `Barra/Topo` — 2 bugs de sizing encontrados e corrigidos (ver docs/figma-ids.md)
 - [x] `Mascote` (Feliz · Focado · Comemorando) — placeholder vetorial trocado por imagens PNG geradas no ChatGPT, upload via MCP
-- [ ] Tudo em Auto Layout e usando só variables
-- [ ] **Congelar a Library** (portão)
+- [x] Tudo em Auto Layout e usando só variables — auditado via MCP (254 nós, 0 problemas reais)
+- [x] **Congelar a Library** (portão) ✅ 25/11/2026 — screenshots em docs/screenshots/
 
 **Pronto quando:** todos os componentes existem na seção 🧩 Componentes (página 🧩 Library).
 
@@ -260,6 +260,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 24/11 | Pausa como estado da tela 04 (04b no wireframe; Change to na F4) | Pausar não troca de contexto; componente interativo conta em "componentes reutilizáveis" |
 | 25/11 | Upgrade para **Figma Professional** (vaga Full) | Créditos do MCP no Starter acabaram; Professional libera volume suficiente para fechar F3–F4 no prazo |
 | 25/11 | **Política de uso do MCP:** lote por tarefa, leitura barata antes de screenshot, IDs salvos em docs/figma-ids.md, aviso de custo acima de 15 chamadas, placar por sessão, limite 40/dia, parar na hora em 429 | Evitar reincidir no limite e manter o trabalho repetitivo (componentes, telas, interações) com o Claude, deixando ajustes pontuais para Paloma à mão |
+| 25/11 | **Library congelada** (F3 ✅) — auditoria via MCP (254 nós: 0 sem Auto Layout, 0 cor solta fora das seções de organização) | Portão antes de montar as telas finais (F4); mudanças na Library a partir daqui exigem motivo forte, como as demais Decisões travadas |
 
 ---
 
@@ -279,6 +280,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | Mascote trocado por imagens PNG (Paloma gerou no ChatGPT; uma reprovada e refeita como "Determinada") · upload via MCP · 15 chamadas na sessão | ~15 min |
 | 25/11 | Fundamentos Etapas 3–5 via MCP (a pedido da Paloma, mudando a divisão original): Tipografia (7 linhas) + Medidas (espaço/raio/toque) + correção do padding/gap para `espaco/xl` · F3 Library = Fundamentos 100% completo · 16 chamadas na sessão | ~10 min |
 | 25/11 | 7 componentes compostos via MCP (Cards, Cronômetro, Header/Saudação, Barra/Topo) · 2 bugs de sizing encontrados e corrigidos no self-refine (texto cortado, número deslocado) · 30 chamadas na sessão | ~35 min |
+| 25/11 | Auditoria completa (254 nós) + **Library congelada** ✅ · F3 concluída · screenshots salvos em docs/screenshots/ · 32 chamadas na sessão | ~10 min |
 
 ---
 
