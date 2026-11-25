@@ -1,12 +1,18 @@
 # 📍 Ponto de retomada — Lume
 
-> Última atualização: **25/11/2026**, depois de retomar de uma pausa. Leia este arquivo primeiro; ele tem o histórico completo. Para o dia a dia (próxima ação, cronograma), use `PROJECT_OVERVIEW.md`.
+> Última atualização: **25/11/2026**. Leia este arquivo primeiro; ele tem o histórico completo. Para o dia a dia (próxima ação, cronograma), use `PROJECT_OVERVIEW.md`.
 > Arquivo Figma: [Lume — UX/UI](https://www.figma.com/design/z7C1XSWQhlIpYry549Ba3Q)
 
 ## 🧭 Onde parei exatamente
-**As 7 telas da F4 estão prontas** — 01, 02, 03, 04, 04b, 05 e 06, todas montadas com instâncias reais da Library na página 📱 Telas (nenhum placeholder cinza restante). Falta só o **protótipo**: ligar as interações entre as telas, definir o frame inicial, transições, e depois Paloma testar e gerar o link público.
+**A F4 está praticamente concluída.** As 7 telas (01, 02, 03, 04, 04b, 05, 06) estão montadas com instâncias reais da Library, dentro da section "📱 Telas finais" (corrigido — ver histórico), e as 14 interações do protótipo estão todas ligadas e conferidas (navegação completa, pausa como Change to/Smart Animate, botões voltar com ação Back, frame inicial na tela 01).
 
-**Chamadas do Figma MCP usadas hoje (25/11), nas duas sessões somadas: ~67.** Isso já passou da meta própria de 40/dia (o limite real do plano Professional é 200/dia — ainda há bastante folga real). Antes de continuar com as interações do protótipo (próximo bloco), avise o custo estimado e confirme se segue hoje ou amanhã.
+**Falta só:**
+1. Paloma testar o fluxo inteiro no Present/Preview.
+2. Paloma gerar o link público do protótipo e colar no `PROJECT_OVERVIEW.md` (tabela 🔗 Links de acesso).
+
+Depois disso a F4 fecha de vez e seguimos para a F5 (Acessibilidade).
+
+**Chamadas do Figma MCP usadas hoje (25/11), somando todas as sessões: ~80.** Passou bem da meta própria de 40/dia (o limite real do plano Professional é 200/dia — ainda há folga real).
 
 ---
 
@@ -39,22 +45,28 @@
 - Componentes usados pela primeira vez em tela: `Mascote` (Feliz na 01, Comemorando na 06), `Header/Saudação`, `Card/ContinuarDaqui` (Com conteúdo), `Card/Tarefa` (Padrão), `Card/Lembrete`, `Card/Métrica` (3 tipos), `Input` (Vazio), `Barra/Topo` (Com voltar).
 - **Bug encontrado:** `instance.layoutSizingHorizontal/Vertical = 'FILL'` só pode ser setado depois de a instância já estar inserida num frame com Auto Layout — setar antes lança erro e desfaz **o script inteiro** (nenhuma mutação anterior é salva, mesmo as que já tinham "rodado" antes do erro). Descoberto porque a 1ª tentativa das telas 01+05 voltou com tudo intacto apesar de o código parecer ter avançado bastante.
 - **Bug encontrado:** o componente `Card/Métrica` expõe as 3 properties de valor (`ValorTempodehoje`, `ValorÚltimavez`, `ValorLembretes`) em **toda** variante, não uma exclusiva por tipo (cada variante só *exibe* a sua, mas as três existem no `componentProperties` da instância). Um helper que pegava "a primeira property de texto encontrada" setou a errada, e a tela 06 mostrou "47 min" em vez de "45 min" no card "Tempo de hoje". Corrigido setando pelo nome exato correspondente ao tipo da variante.
-- **Construção da F4 (as 7 telas) concluída.** Falta só o protótipo: interações, frame inicial, transições.
+- **Construção da F4 (as 7 telas) concluída.**
+
+### 25/11 (continuação) — Protótipo ligado + correção da section
+- **14 interações do protótipo** criadas via `node.setReactionsAsync(...)`: navegação completa do fluxo principal (01→02→03→04→06→02), atalho "Retomar"→04, "Lembrar depois" (04 e 04b)→05, pausa 04⇄04b como **Change to + Smart Animate** (200ms), botões "voltar" (Barra/Topo da 03 e 05, "Guardar e voltar" da 05) usando a ação **Back** em vez de destino fixo — necessário porque essas telas são acessadas de mais de um ponto do fluxo. Ponto de partida do fluxo definido na tela 01. Conferido lendo as reactions de volta do Figma — tudo salvo certo.
+- **Bug encontrado e corrigido:** as 7 telas tinham sido duplicadas mantendo as coordenadas originais dos wireframes, soltas no canvas da página 📱 Telas (nunca filhas de nenhuma *section*) — por isso telas 01/02/03 apareciam visualmente em cima da section "📖 Capa". Corrigido: as 7 telas viraram filhas de fato da section "📱 Telas finais" (redimensionada para 3200×1000), organizadas lado a lado com espaçamento de 50px; a section "🗂 Arquivo" (ainda vazia) foi deslocada para não sobrepor.
+- **Esclarecimento sobre Capa e Arquivo:** as duas sections continuam vazias de propósito — só são preenchidas na F8 (Capa: nome/versão/link do README; Arquivo: só se alguma tela for descartada no futuro).
+- Paloma testou o fluxo no modo Present e perguntou se dava pra digitar de verdade nos campos Input. Expliquei que o Figma não suporta teclado real em modo de apresentação (limitação da ferramenta de prototipagem, não um bug nosso) e propus simular com **Change to** entre os estados Vazio → Foco → Preenchido do componente `Input` — o que exigiria editar a Library congelada. **Decisão: não fazer agora** (foi para o 🅿️ Estacionamento de ideias do PROJECT_OVERVIEW.md).
 
 ---
 
 ## ✅ O que já está pronto
 - **F0, F1, F2:** concluídas.
 - **F3 (Library): concluída e congelada.** Variables (3 coleções, incluindo `vermelho/600` e `destaque/erro`), 7 Text Styles, Fundamentos completos (paleta + tipografia + medidas), 4 componentes atômicos + 7 compostos + Mascote, auditoria limpa.
-- **F4 — as 7 telas: concluídas.** 01, 02, 03, 04, 04b, 05 e 06 montadas com instâncias reais da Library, Auto Layout, tokens e Text Styles — nenhum placeholder cinza restante.
+- **F4 — as 7 telas e o protótipo: concluídos.** Telas organizadas dentro da section correta, 14 interações ligadas e conferidas, frame inicial definido.
 
 ## ⏭️ O que falta (nesta ordem)
-1. **Interações do protótipo** — todas as ligações (Começar → Início → Configurar → Sessão; Lembrar depois → anotação → volta; Retomar → atalho; Concluir → Sessão concluída → Início; Pausar/Continuar entre 04 e 04b via Change to/Smart Animate); frame inicial; transições.
-2. **Paloma à mão:** testar no Present/Preview e gerar o link público.
+1. **Paloma à mão:** testar o fluxo inteiro no Present/Preview.
+2. **Paloma à mão:** gerar o link público do protótipo e colar no `PROJECT_OVERVIEW.md` (🔗 Links de acesso). Isso fecha a F4.
 3. **F5 — Acessibilidade:** auditoria de contraste AA (incluindo o token novo `destaque/erro`), toque ≥ 48px, doc 1.4–1.5.
 4. **F6 — Textos:** README + roteiro do vídeo.
 5. **F7 — Vídeo pitch** (à mão).
-6. **F8 — Entrega** (à mão).
+6. **F8 — Entrega** (à mão) — nesse ponto também preencher as sections "Capa" e "Arquivo" (se houver algo a arquivar).
 
 Cronograma detalhado com estimativas de tempo e chamadas: ver `PROJECT_OVERVIEW.md` → 📅 Cronograma.
 
@@ -68,6 +80,8 @@ Cronograma detalhado com estimativas de tempo e chamadas: ver `PROJECT_OVERVIEW.
 - **"Espaço" placeholder → spacer com `layoutSizingVertical: FILL`** é o equivalente real em Auto Layout (em vez de um frame cinza vazio).
 - **`layoutSizingHorizontal/Vertical = 'FILL'` só funciona depois que a instância já tem um pai em Auto Layout** — setar antes de `insertChild`/`appendChild` lança erro e desfaz o script inteiro (nenhuma mutação anterior é salva). Ordem certa: criar → inserir no pai → setar sizing.
 - **Componentes com várias variantes podem expor todas as properties de texto em cada instância**, mesmo quando só uma é visualmente usada por variante (caso do `Card/Métrica`). Nunca assumir "a primeira property de texto encontrada" — sempre setar pelo nome exato correspondente à variante.
+- **`clone()` + `page.appendChild()` nunca coloca um nó dentro de uma *section*** — mesmo que as coordenadas coincidam visualmente com a área da section, o nó fica solto no canvas. Para colocar de fato dentro, use `section.appendChild(node)` (que preserva a posição visual absoluta automaticamente) e só depois ajuste x/y se quiser reorganizar.
+- **Figma não suporta digitação real em modo de apresentação** — é uma limitação da ferramenta (não dá pra "codar" isso). O truque possível é simular com **Change to** entre variantes de texto diferentes (ex. Input Vazio → Foco → Preenchido), mas isso precisa ser configurado nas reactions dos próprios variants do componente pra funcionar em toda instância automaticamente.
 
 ## Prompt para retomar no Claude Code
-> Leia CLAUDE.md, PROJECT_OVERVIEW.md e PONTO-DE-RETOMADA.md. A F4 já tem as 7 telas prontas; preciso agora ligar as interações do protótipo (navegação entre as telas, frame inicial, transições, Pausar/Continuar como Change to entre 04 e 04b). Siga a política de uso do MCP (lote, aviso de custo, placar).
+> Leia CLAUDE.md, PROJECT_OVERVIEW.md e PONTO-DE-RETOMADA.md. A F4 está pronta (telas + protótipo); só falta eu testar no Present e gerar o link público. Depois disso, me ajude a começar a F5 (acessibilidade: contraste AA, toque mínimo, doc 1.4–1.5).

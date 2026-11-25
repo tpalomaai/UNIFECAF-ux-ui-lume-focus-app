@@ -28,6 +28,8 @@
 > **F4 iniciada** 25/11: os 7 wireframes foram duplicados para a página 📱 Telas (wireframes originais intactos). Telas **04** e **04b** montadas com instâncias reais (Chip, Cronômetro, Botão) e os frames "Espaço" trocados por spacers flexíveis (Auto Layout FILL). No processo, corrigi um bug de contraste no componente `Cronômetro` (já congelado — exceção documentada).
 > **F4 — as 7 telas concluídas** ✅ 25/11: telas 01, 02, 03, 05 e 06 montadas com o mesmo método (instâncias reais: Mascote, Header/Saudação, Card/ContinuarDaqui, Card/Tarefa, Card/Lembrete, Card/Métrica, Input, Barra/Topo, Botão). Encontrei e corrigi 2 bugs no processo: (1) `layoutSizingHorizontal = 'FILL'` setado antes de inserir a instância no frame pai derruba o script inteiro — corrigir a ordem; (2) `Card/Métrica` expõe as 3 properties de valor em toda variante (não uma exclusiva por tipo) — "pegar a primeira property de texto" setou a errada e a tela 06 mostrou "47 min" em vez de "45 min" no card "Tempo de hoje"; corrigido setando pelo nome exato.
 > **F4 — protótipo ligado** ✅ 25/11: 14 interações criadas (navegação entre as 7 telas, Pausar/Continuar como Change to com Smart Animate entre 04 e 04b, botões "voltar" com ação Back), ponto de partida do fluxo definido na tela 01. Conferido lendo as reactions de volta — tudo salvo certo.
+> **Correção na página 📱 Telas:** as 7 telas tinham sido duplicadas soltas no canvas (nunca filhas de nenhuma *section*), sobrepondo a section "📖 Capa". Corrigido: agora são filhas de fato da section "📱 Telas finais" (redimensionada), lado a lado, sem sobrepor nada.
+> Paloma testou no Present e perguntou se dá pra digitar de verdade nos Inputs — expliquei que o Figma não suporta teclado real em prototipagem (limitação da ferramenta) e propus simular com Change to entre os estados Vazio/Foco/Preenchido do componente `Input`. Decisão: **não fazer agora** (ficou pra "Estacionamento de ideias").
 > **Parei aqui:** só falta Paloma testar o fluxo completo no Present/Preview e gerar o link público (ver checklist da F4). Depois disso a F4 fecha e seguimos para a F5. Histórico completo e detalhado em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
 
 ---
@@ -266,6 +268,8 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | **Library congelada** (F3 ✅) — auditoria via MCP (254 nós: 0 sem Auto Layout, 0 cor solta fora das seções de organização) | Portão antes de montar as telas finais (F4); mudanças na Library a partir daqui exigem motivo forte, como as demais Decisões travadas |
 | 25/11 | Exceção à Library congelada: legenda do `Cronômetro` trocada de `texto/secundario` para `texto/sobre-acao` | Achado na montagem da tela 04b — baixo contraste sobre `bg/foco` (tela escura); motivo forte = acessibilidade |
 | 25/11 | Botões "voltar" (Barra/Topo e "Guardar e voltar") usam a ação **Back** do Figma, não um destino fixo | Telas 05 e 03 são acessadas a partir de mais de um ponto do fluxo (04 ou 04b); Back volta sempre pra tela de origem, sem precisar duplicar lógica |
+| 25/11 | As 7 telas reparentadas pra dentro da section "📱 Telas finais" (antes soltas no canvas) | Sobrepunham a section "📖 Capa"; `clone()` + `page.appendChild()` nunca posiciona dentro de uma section |
+| 25/11 | Não simular digitação nos Inputs (Change to Vazio→Foco→Preenchido) por enquanto | Exigiria editar o componente `Input`, já congelado; Paloma decidiu que não precisa agora |
 
 ---
 
@@ -289,10 +293,11 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | F4 iniciada: 7 telas duplicadas · telas 04 e 04b montadas com instâncias (Chip, Cronômetro, Botão) + Espaço trocado por spacer flexível · corrigido contraste da legenda do Cronômetro (exceção à Library congelada) · 39 chamadas na sessão — parado no limite de hoje | ~20 min |
 | 25/11 | Retomado após pausa · telas 01, 02, 03, 05 e 06 montadas com instâncias reais (Mascote, Header/Saudação, Card/ContinuarDaqui, Card/Tarefa×5, Card/Lembrete×2, Card/Métrica×3, Input×4, Barra/Topo×2, Botão×5) · **F4: as 7 telas concluídas** · 2 bugs corrigidos (ordem do layoutSizing FILL; property errada no Card/Métrica) · ~28 chamadas nesta sessão | ~35 min |
 | 25/11 | 14 interações do protótipo ligadas (navegação entre as 7 telas, pausa como Change to/Smart Animate, botões voltar com ação Back) + frame inicial definido na tela 01 · conferido lendo as reactions de volta · **F4 praticamente concluída**, falta só Paloma testar e gerar o link público · ~10 chamadas neste bloco | ~15 min |
+| 25/11 | Corrigidas as 7 telas pra dentro da section "Telas finais" (estavam soltas, sobrepondo a Capa) · Paloma testou no Present, perguntou sobre digitar nos Inputs — expliquei a limitação do Figma e a opção de simular com Change to; decidiu não fazer agora | ~10 min |
 
 ---
 
 ## 🅿️ Estacionamento de ideias (para depois da entrega)
 - Animação do mascote ao concluir sessão
 - Modo escuro completo
-- 
+- Simular digitação nos Inputs (Change to entre os estados Vazio → Foco → Preenchido do componente `Input`) — exigiria editar a Library congelada; avaliar depois da entrega
