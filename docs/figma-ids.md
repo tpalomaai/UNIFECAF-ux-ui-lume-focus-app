@@ -69,7 +69,31 @@
 | 05 - Lembrar depois | `43:85` | ✅ pronta (Barra/Topo, Input, 2× Card/Lembrete, Botão) |
 | 06 - Sessão concluída | `43:100` | ✅ pronta (Mascote/Comemorando, 3× Card/Métrica, 2 campos, Botão) |
 
-**F4 — construção das 7 telas: concluída ✅ (25/11).** Falta só o protótipo (interações, frame inicial, link público).
+**F4 — construção das 7 telas: concluída ✅ (25/11).**
+
+## 🔗 Interações do protótipo (concluído ✅ 25/11)
+Ponto de partida do fluxo: tela **01** (`43:3`), flow "Fluxo principal".
+
+| Origem (nó) | Ação | Destino | Transição |
+|---|---|---|---|
+| 01 Botão "Começar" (`48:18`) | Navigate | 02 (`43:11`) | Dissolve 300ms |
+| 02 Botão "Nova sessão" (`49:35`) | Navigate | 03 (`43:31`) | Dissolve 300ms |
+| 02 Botão "Retomar" dentro do Card/ContinuarDaqui (`I49:29;39:6`) | Navigate | 04 (`43:53`) | Dissolve 300ms |
+| 03 Botão "Começar" (`50:52`) | Navigate | 04 (`43:53`) | Dissolve 300ms |
+| 04 Botão "Pausar" (`44:13`) | Navigate | 04b (`43:69`) | **Smart Animate** 200ms |
+| 04b Botão "Continuar" (`44:29`) | Navigate | 04 (`43:53`) | **Smart Animate** 200ms |
+| 04 Botão "Lembrar depois" (`44:15`) | Navigate | 05 (`43:85`) | Dissolve 300ms |
+| 04b Botão "Lembrar depois" (`44:31`) | Navigate | 05 (`43:85`) | Dissolve 300ms |
+| 04 Botão "Concluir" (`44:17`) | Navigate | 06 (`43:100`) | Dissolve 300ms |
+| 04b Botão "Concluir" (`44:33`) | Navigate | 06 (`43:100`) | Dissolve 300ms |
+| 06 Botão "Salvar e sair" (`51:62`) | Navigate | 02 (`43:11`) | Dissolve 300ms |
+| 05 Botão "Guardar e voltar" (`48:29`) | **Back** | (origem: 04 ou 04b) | — |
+| 05 Barra/Topo (`48:20`) | **Back** | (origem: 04 ou 04b) | — |
+| 03 Barra/Topo (`50:38`) | **Back** | (origem: 02) | — |
+
+> Nota técnica: `node.setReactionsAsync([...])` substitui a API antiga `node.reactions` (read-only). Ação `BACK` não leva `destinationId` — o Figma resolve pra tela de onde a navegação partiu, por isso é melhor que um destino fixo quando uma tela é acessada de mais de um lugar (caso das telas 03 e 05). ID de filho dentro de uma instância usa o formato `I<idDaInstância>;<idOriginalNoComponente>` (ex. `I49:29;39:6`) e funciona normalmente em `getNodeByIdAsync`.
+
+Falta só Paloma testar o fluxo (Present/Preview) e gerar o link público.
 
 > **Atenção para a próxima etapa (interações):**
 > 1. `instance.layoutSizingHorizontal/Vertical = 'FILL'` só pode ser setado **depois** que a instância já foi inserida num frame com Auto Layout (`insertChild`/`appendChild`) — setar antes (instância ainda sem pai) lança erro e o Figma desfaz o script inteiro (nenhuma mutação anterior fica salva). Ordem certa: criar → inserir no pai → setar sizing.

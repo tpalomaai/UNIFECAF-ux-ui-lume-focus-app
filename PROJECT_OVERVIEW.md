@@ -8,11 +8,11 @@
 ## 🧭 Agora
 | | |
 |---|---|
-| **Fase atual** | F4 — Telas + Protótipo (telas prontas, falta o protótipo) |
-| **Próxima ação** | Interações do protótipo: ligações entre as 7 telas, frame inicial, transições |
+| **Fase atual** | F4 — Telas + Protótipo (telas e interações prontas; falta só o teste manual) |
+| **Próxima ação** | Paloma: testar o fluxo no Present/Preview e gerar o link público (ver 📋 F4 abaixo) |
 | **Bloqueios** | Nenhum — upgrade para **Figma Professional** (vaga Full) liberou o MCP de volta, com política de uso (ver CLAUDE.md) |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 5 dias · meta interna: tudo pronto na **sex 27/11** |
-| **Última atualização** | 25/11/2026 (as 7 telas da F4 montadas com instâncias reais) |
+| **Última atualização** | 25/11/2026 (F4: as 7 telas + todas as interações do protótipo prontas) |
 
 ## 📍 Continuar daqui
 > F0 concluída: nome **Lume**, direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet) e repositório no GitHub com toda a estrutura.
@@ -27,7 +27,8 @@
 > **F3 concluída e congelada** ✅ 25/11: Fundamentos (paleta, tipografia, medidas), 4 componentes atômicos, 7 compostos e Mascote — tudo via MCP, auditoria limpa (254 nós). Screenshots em docs/screenshots/.
 > **F4 iniciada** 25/11: os 7 wireframes foram duplicados para a página 📱 Telas (wireframes originais intactos). Telas **04** e **04b** montadas com instâncias reais (Chip, Cronômetro, Botão) e os frames "Espaço" trocados por spacers flexíveis (Auto Layout FILL). No processo, corrigi um bug de contraste no componente `Cronômetro` (já congelado — exceção documentada).
 > **F4 — as 7 telas concluídas** ✅ 25/11: telas 01, 02, 03, 05 e 06 montadas com o mesmo método (instâncias reais: Mascote, Header/Saudação, Card/ContinuarDaqui, Card/Tarefa, Card/Lembrete, Card/Métrica, Input, Barra/Topo, Botão). Encontrei e corrigi 2 bugs no processo: (1) `layoutSizingHorizontal = 'FILL'` setado antes de inserir a instância no frame pai derruba o script inteiro — corrigir a ordem; (2) `Card/Métrica` expõe as 3 properties de valor em toda variante (não uma exclusiva por tipo) — "pegar a primeira property de texto" setou a errada e a tela 06 mostrou "47 min" em vez de "45 min" no card "Tempo de hoje"; corrigido setando pelo nome exato.
-> **Parei aqui:** faltam as **interações do protótipo** (ligações entre as 7 telas, frame inicial, transições), depois o teste manual e o link público. Histórico completo e detalhado em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
+> **F4 — protótipo ligado** ✅ 25/11: 14 interações criadas (navegação entre as 7 telas, Pausar/Continuar como Change to com Smart Animate entre 04 e 04b, botões "voltar" com ação Back), ponto de partida do fluxo definido na tela 01. Conferido lendo as reactions de volta — tudo salvo certo.
+> **Parei aqui:** só falta Paloma testar o fluxo completo no Present/Preview e gerar o link público (ver checklist da F4). Depois disso a F4 fecha e seguimos para a F5. Histórico completo e detalhado em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
 
 ---
 
@@ -73,7 +74,7 @@
 | F1 UX | Problema, persona, jornada, fluxo | 2 h | ✅ Concluída | Documento teórico (1,5) |
 | F2 Wireframe | 6 telas em cinza + arquivo Figma organizado | 1–2 h | ✅ Concluída | Protótipo (3,5) |
 | F3 Library | Variables, Text Styles, Componentes | 2 h | ✅ Concluída | Protótipo — Design System |
-| F4 Telas + Protótipo | 6 telas finais + interações | 3 h | 🔵 Em andamento (7 telas prontas, falta o protótipo) | Protótipo — Navegação |
+| F4 Telas + Protótipo | 6 telas finais + interações | 3 h | 🔵 Quase pronta (telas + interações prontas; falta Paloma testar e gerar o link) | Protótipo — Navegação |
 | F5 Acessibilidade | Checklist WCAG + doc 1.4–1.5 | 1 h | ⚪ | Documento teórico |
 | F6 Textos | README + roteiro do vídeo + revisão do doc | 2 h | ⚪ | Protótipo — README |
 | F7 Vídeo | Gravação ≤ 4 min + upload | 1 h | ⚪ | Vídeo pitch (2,0) |
@@ -152,15 +153,15 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 - [x] Duplicar os wireframes para a página 📱 Telas (via MCP, wireframes originais intactos)
 - [x] Tela 04 e 04b: instâncias de Chip/Tarefa, Cronômetro (Rodando/Pausado) e Botão (Secundário, Destaque, Primário) + fundo `bg/foco` + "Espaço" trocado por spacer flexível (Auto Layout FILL)
 - [x] Telas 01, 02, 03, 05, 06: substituídas por instâncias da Library (mesmo método das 04/04b) — **as 7 telas estão prontas**
-- [ ] Interações: Começar → Início → Configurar → Sessão
-- [ ] Interação: "Lembrar depois" → anotação → volta à Sessão
-- [ ] Interação: Início "Retomar" → Sessão (atalho)
-- [ ] Interação: "Concluir" → Sessão concluída → Início
-- [ ] Pausa como interactive component (Change to) entre as telas 04 (Rodando) e 04b (Pausado), já montadas como instâncias — falta só ligar a interação Pausar/Continuar com Smart Animate
-- [ ] Definir o frame inicial (flow starting point)
-- [ ] Transições simples (Smart Animate ou Dissolve, 200–300 ms)
-- [ ] Testar o fluxo inteiro em modo apresentação
-- [ ] Gerar o link público do protótipo e colar acima
+- [x] Interações: Começar (01) → Início (02); Nova sessão (02) → Escolher tarefa (03); Começar (03) → Sessão (04)
+- [x] Interação: "Lembrar depois" (04 e 04b) → tela 05; botão e Barra/Topo da 05 voltam com ação **Back** (volta pra 04 ou 04b, conforme de onde veio)
+- [x] Interação: Início "Retomar" (dentro do Card/ContinuarDaqui) → Sessão (04), atalho
+- [x] Interação: "Concluir" (04 e 04b) → Sessão concluída (06) → "Salvar e sair" volta ao Início (02)
+- [x] Pausa como interactive component: Pausar (04→04b) e Continuar (04b→04) ligados com **Smart Animate** (200 ms)
+- [x] Definido o frame inicial (flow starting point): tela 01, fluxo "Fluxo principal"
+- [x] Transições: Dissolve 300 ms nas navegações normais, Smart Animate 200 ms só na pausa (conferido lendo as reactions de volta — tudo salvo certo)
+- [ ] **Paloma à mão:** testar o fluxo inteiro em modo apresentação (Present/Preview)
+- [ ] **Paloma à mão:** gerar o link público do protótipo e colar na tabela 🔗 Links de acesso acima
 
 **Pronto quando:** o fluxo principal funciona do início ao fim pelo link público.
 
@@ -264,6 +265,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | **Política de uso do MCP:** lote por tarefa, leitura barata antes de screenshot, IDs salvos em docs/figma-ids.md, aviso de custo acima de 15 chamadas, placar por sessão, limite 40/dia, parar na hora em 429 | Evitar reincidir no limite e manter o trabalho repetitivo (componentes, telas, interações) com o Claude, deixando ajustes pontuais para Paloma à mão |
 | 25/11 | **Library congelada** (F3 ✅) — auditoria via MCP (254 nós: 0 sem Auto Layout, 0 cor solta fora das seções de organização) | Portão antes de montar as telas finais (F4); mudanças na Library a partir daqui exigem motivo forte, como as demais Decisões travadas |
 | 25/11 | Exceção à Library congelada: legenda do `Cronômetro` trocada de `texto/secundario` para `texto/sobre-acao` | Achado na montagem da tela 04b — baixo contraste sobre `bg/foco` (tela escura); motivo forte = acessibilidade |
+| 25/11 | Botões "voltar" (Barra/Topo e "Guardar e voltar") usam a ação **Back** do Figma, não um destino fixo | Telas 05 e 03 são acessadas a partir de mais de um ponto do fluxo (04 ou 04b); Back volta sempre pra tela de origem, sem precisar duplicar lógica |
 
 ---
 
@@ -286,6 +288,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | Auditoria completa (254 nós) + **Library congelada** ✅ · F3 concluída · screenshots salvos em docs/screenshots/ · 32 chamadas na sessão | ~10 min |
 | 25/11 | F4 iniciada: 7 telas duplicadas · telas 04 e 04b montadas com instâncias (Chip, Cronômetro, Botão) + Espaço trocado por spacer flexível · corrigido contraste da legenda do Cronômetro (exceção à Library congelada) · 39 chamadas na sessão — parado no limite de hoje | ~20 min |
 | 25/11 | Retomado após pausa · telas 01, 02, 03, 05 e 06 montadas com instâncias reais (Mascote, Header/Saudação, Card/ContinuarDaqui, Card/Tarefa×5, Card/Lembrete×2, Card/Métrica×3, Input×4, Barra/Topo×2, Botão×5) · **F4: as 7 telas concluídas** · 2 bugs corrigidos (ordem do layoutSizing FILL; property errada no Card/Métrica) · ~28 chamadas nesta sessão | ~35 min |
+| 25/11 | 14 interações do protótipo ligadas (navegação entre as 7 telas, pausa como Change to/Smart Animate, botões voltar com ação Back) + frame inicial definido na tela 01 · conferido lendo as reactions de volta · **F4 praticamente concluída**, falta só Paloma testar e gerar o link público · ~10 chamadas neste bloco | ~15 min |
 
 ---
 
