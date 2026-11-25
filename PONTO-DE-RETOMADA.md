@@ -1,12 +1,12 @@
 # 📍 Ponto de retomada — Lume
 
-> Última atualização: **25/11/2026**, antes de uma pausa. Leia este arquivo primeiro; ele tem o histórico completo. Para o dia a dia (próxima ação, cronograma), use `PROJECT_OVERVIEW.md`.
+> Última atualização: **25/11/2026**, depois de retomar de uma pausa. Leia este arquivo primeiro; ele tem o histórico completo. Para o dia a dia (próxima ação, cronograma), use `PROJECT_OVERVIEW.md`.
 > Arquivo Figma: [Lume — UX/UI](https://www.figma.com/design/z7C1XSWQhlIpYry549Ba3Q)
 
 ## 🧭 Onde parei exatamente
-Terminei de montar as telas **04 (Sessão em andamento)** e **04b (Sessão pausada)** com instâncias reais da Library, na página 📱 Telas. Faltam as telas **01, 02, 03, 05 e 06** (mesmo método), depois as interações do protótipo e o link público. Parei porque bati na meta de 40 chamadas do dia — nada quebrado, só uma pausa de orçamento.
+**As 7 telas da F4 estão prontas** — 01, 02, 03, 04, 04b, 05 e 06, todas montadas com instâncias reais da Library na página 📱 Telas (nenhum placeholder cinza restante). Falta só o **protótipo**: ligar as interações entre as telas, definir o frame inicial, transições, e depois Paloma testar e gerar o link público.
 
-**Chamadas do Figma MCP usadas hoje (25/11): 39 / 40.** Reinicia amanhã.
+**Chamadas do Figma MCP usadas hoje (25/11), nas duas sessões somadas: ~67.** Isso já passou da meta própria de 40/dia (o limite real do plano Professional é 200/dia — ainda há bastante folga real). Antes de continuar com as interações do protótipo (próximo bloco), avise o custo estimado e confirme se segue hoje ou amanhã.
 
 ---
 
@@ -34,21 +34,27 @@ Terminei de montar as telas **04 (Sessão em andamento)** e **04b (Sessão pausa
 - **Exceção à Library congelada:** a legenda do `Cronômetro` ("Em andamento"/"Pausado") usava `texto/secundario`, pensado para fundo claro — sobre o `bg/foco` escuro ficava quase ilegível. Corrigido para `texto/sobre-acao` (motivo forte: acessibilidade).
 - Parado em 39/40 chamadas do dia.
 
+### 25/11 (retomada) — F4 completa: as 7 telas
+- Montadas as telas **01 (Boas-vindas)**, **02 (Início)**, **03 (Escolher tarefa)**, **05 (Lembrar depois)** e **06 (Sessão concluída)** com o mesmo método das 04/04b: Auto Layout vertical no frame da tela, instâncias reais no lugar dos placeholders, "Espaço" → spacer flex, cores por Variables e texto por Text Styles.
+- Componentes usados pela primeira vez em tela: `Mascote` (Feliz na 01, Comemorando na 06), `Header/Saudação`, `Card/ContinuarDaqui` (Com conteúdo), `Card/Tarefa` (Padrão), `Card/Lembrete`, `Card/Métrica` (3 tipos), `Input` (Vazio), `Barra/Topo` (Com voltar).
+- **Bug encontrado:** `instance.layoutSizingHorizontal/Vertical = 'FILL'` só pode ser setado depois de a instância já estar inserida num frame com Auto Layout — setar antes lança erro e desfaz **o script inteiro** (nenhuma mutação anterior é salva, mesmo as que já tinham "rodado" antes do erro). Descoberto porque a 1ª tentativa das telas 01+05 voltou com tudo intacto apesar de o código parecer ter avançado bastante.
+- **Bug encontrado:** o componente `Card/Métrica` expõe as 3 properties de valor (`ValorTempodehoje`, `ValorÚltimavez`, `ValorLembretes`) em **toda** variante, não uma exclusiva por tipo (cada variante só *exibe* a sua, mas as três existem no `componentProperties` da instância). Um helper que pegava "a primeira property de texto encontrada" setou a errada, e a tela 06 mostrou "47 min" em vez de "45 min" no card "Tempo de hoje". Corrigido setando pelo nome exato correspondente ao tipo da variante.
+- **Construção da F4 (as 7 telas) concluída.** Falta só o protótipo: interações, frame inicial, transições.
+
 ---
 
 ## ✅ O que já está pronto
 - **F0, F1, F2:** concluídas.
 - **F3 (Library): concluída e congelada.** Variables (3 coleções, incluindo `vermelho/600` e `destaque/erro`), 7 Text Styles, Fundamentos completos (paleta + tipografia + medidas), 4 componentes atômicos + 7 compostos + Mascote, auditoria limpa.
-- **F4 (em andamento):** 7 telas duplicadas para 📱 Telas · telas **04** e **04b** montadas com instâncias.
+- **F4 — as 7 telas: concluídas.** 01, 02, 03, 04, 04b, 05 e 06 montadas com instâncias reais da Library, Auto Layout, tokens e Text Styles — nenhum placeholder cinza restante.
 
 ## ⏭️ O que falta (nesta ordem)
-1. **Telas 01, 02, 03, 05, 06** — montar com instâncias da Library, mesmo método das 04/04b (ver `docs/figma-ids.md` para todos os IDs de componentes e telas). Lotes sugeridos: 01+05 juntas (mais simples), depois 02, depois 03, depois 06.
-2. **Interações do protótipo** — todas as ligações (Começar → Início → Configurar → Sessão; Lembrar depois → anotação → volta; Retomar → atalho; Concluir → Sessão concluída → Início; Pausar/Continuar entre 04 e 04b via Change to/Smart Animate); frame inicial; transições.
-3. **Paloma à mão:** testar no Present/Preview e gerar o link público.
-4. **F5 — Acessibilidade:** auditoria de contraste AA (incluindo o token novo `destaque/erro`), toque ≥ 48px, doc 1.4–1.5.
-5. **F6 — Textos:** README + roteiro do vídeo.
-6. **F7 — Vídeo pitch** (à mão).
-7. **F8 — Entrega** (à mão).
+1. **Interações do protótipo** — todas as ligações (Começar → Início → Configurar → Sessão; Lembrar depois → anotação → volta; Retomar → atalho; Concluir → Sessão concluída → Início; Pausar/Continuar entre 04 e 04b via Change to/Smart Animate); frame inicial; transições.
+2. **Paloma à mão:** testar no Present/Preview e gerar o link público.
+3. **F5 — Acessibilidade:** auditoria de contraste AA (incluindo o token novo `destaque/erro`), toque ≥ 48px, doc 1.4–1.5.
+4. **F6 — Textos:** README + roteiro do vídeo.
+5. **F7 — Vídeo pitch** (à mão).
+6. **F8 — Entrega** (à mão).
 
 Cronograma detalhado com estimativas de tempo e chamadas: ver `PROJECT_OVERVIEW.md` → 📅 Cronograma.
 
@@ -60,6 +66,8 @@ Cronograma detalhado com estimativas de tempo e chamadas: ver `PROJECT_OVERVIEW.
 - **Frame-wrapper sem `resize()` nem sizing mode explícito** pode ficar preso no padrão do Figma (100×100 fixo), não em hug — setar `counterAxisSizingMode = 'AUTO'` explicitamente.
 - **Tokens pensados para fundo claro** (como `texto/secundario`) podem falhar o contraste em telas de fundo escuro (`bg/foco`) — conferir caso a caso, não assumir que todo token serve em qualquer fundo.
 - **"Espaço" placeholder → spacer com `layoutSizingVertical: FILL`** é o equivalente real em Auto Layout (em vez de um frame cinza vazio).
+- **`layoutSizingHorizontal/Vertical = 'FILL'` só funciona depois que a instância já tem um pai em Auto Layout** — setar antes de `insertChild`/`appendChild` lança erro e desfaz o script inteiro (nenhuma mutação anterior é salva). Ordem certa: criar → inserir no pai → setar sizing.
+- **Componentes com várias variantes podem expor todas as properties de texto em cada instância**, mesmo quando só uma é visualmente usada por variante (caso do `Card/Métrica`). Nunca assumir "a primeira property de texto encontrada" — sempre setar pelo nome exato correspondente à variante.
 
 ## Prompt para retomar no Claude Code
-> Leia CLAUDE.md, PROJECT_OVERVIEW.md e PONTO-DE-RETOMADA.md. Estou na F4, preciso montar as telas 01, 02, 03, 05 e 06 com instâncias da Library (mesmo método usado nas telas 04/04b). Siga a política de uso do MCP (lote, aviso de custo, placar).
+> Leia CLAUDE.md, PROJECT_OVERVIEW.md e PONTO-DE-RETOMADA.md. A F4 já tem as 7 telas prontas; preciso agora ligar as interações do protótipo (navegação entre as telas, frame inicial, transições, Pausar/Continuar como Change to entre 04 e 04b). Siga a política de uso do MCP (lote, aviso de custo, placar).

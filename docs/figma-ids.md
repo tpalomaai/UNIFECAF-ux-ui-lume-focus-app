@@ -57,14 +57,20 @@
 | 06 - Sessão concluída | `3:81` |
 
 ## 📱 Telas (F4 em andamento)
-> Duplicadas dos wireframes em 25/11 — ainda em cinza, placeholders. Próximo passo: trocar por instâncias dos componentes da Library, trocar frames "Espaço" por Auto Layout real, interações, link público.
+> Duplicadas dos wireframes em 25/11. Próximo passo: trocar os placeholders restantes por instâncias dos componentes da Library.
 
-| Tela | ID (cópia em Telas) |
-|---|---|
-| 01 - Boas-vindas | `43:3` |
-| 02 - Início | `43:11` |
-| 03 - Escolher tarefa | `43:31` |
-| 04 - Sessão em andamento | `43:53` |
-| 04b - Sessão pausada | `43:69` |
-| 05 - Lembrar depois | `43:85` |
-| 06 - Sessão concluída | `43:100` |
+| Tela | ID (cópia em Telas) | Status |
+|---|---|---|
+| 01 - Boas-vindas | `43:3` | ✅ pronta (Mascote/Feliz, Botão) |
+| 02 - Início | `43:11` | ✅ pronta (Header/Saudação, Card/ContinuarDaqui, Botão, 2× Card/Tarefa) |
+| 03 - Escolher tarefa | `43:31` | ✅ pronta (Barra/Topo, campo+Input, 3× Card/Tarefa, Botão) |
+| 04 - Sessão em andamento | `43:53` | ✅ pronta |
+| 04b - Sessão pausada | `43:69` | ✅ pronta |
+| 05 - Lembrar depois | `43:85` | ✅ pronta (Barra/Topo, Input, 2× Card/Lembrete, Botão) |
+| 06 - Sessão concluída | `43:100` | ✅ pronta (Mascote/Comemorando, 3× Card/Métrica, 2 campos, Botão) |
+
+**F4 — construção das 7 telas: concluída ✅ (25/11).** Falta só o protótipo (interações, frame inicial, link público).
+
+> **Atenção para a próxima etapa (interações):**
+> 1. `instance.layoutSizingHorizontal/Vertical = 'FILL'` só pode ser setado **depois** que a instância já foi inserida num frame com Auto Layout (`insertChild`/`appendChild`) — setar antes (instância ainda sem pai) lança erro e o Figma desfaz o script inteiro (nenhuma mutação anterior fica salva). Ordem certa: criar → inserir no pai → setar sizing.
+> 2. **`Card/Métrica` expõe as 3 properties de valor (`ValorTempodehoje`, `ValorÚltimavez`, `ValorLembretes`) em TODAS as variantes**, não uma exclusiva por tipo como o texto antigo deste arquivo sugeria — cada variante só *exibe* a sua, mas as três existem no `componentProperties` de qualquer instância. Pegar "a primeira property de texto encontrada" é um bug (causou a tela 06 mostrar "47 min" em vez de "45 min" no Card "Tempo de hoje"). Sempre setar pelo nome exato que corresponde ao tipo da variante.

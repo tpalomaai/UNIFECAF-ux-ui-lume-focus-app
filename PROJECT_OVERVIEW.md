@@ -8,11 +8,11 @@
 ## 🧭 Agora
 | | |
 |---|---|
-| **Fase atual** | F4 — Telas + Protótipo (iniciada) |
-| **Próxima ação** | Montar as 5 telas restantes (01, 02, 03, 05, 06) com instâncias da Library |
+| **Fase atual** | F4 — Telas + Protótipo (telas prontas, falta o protótipo) |
+| **Próxima ação** | Interações do protótipo: ligações entre as 7 telas, frame inicial, transições |
 | **Bloqueios** | Nenhum — upgrade para **Figma Professional** (vaga Full) liberou o MCP de volta, com política de uso (ver CLAUDE.md) |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 5 dias · meta interna: tudo pronto na **sex 27/11** |
-| **Última atualização** | 25/11/2026 (F3 Library concluída e congelada) |
+| **Última atualização** | 25/11/2026 (as 7 telas da F4 montadas com instâncias reais) |
 
 ## 📍 Continuar daqui
 > F0 concluída: nome **Lume**, direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet) e repositório no GitHub com toda a estrutura.
@@ -25,8 +25,9 @@
 > Fundamentos à mão: Etapa 1 (frame + título) ✅ · Etapa 2 (13 cores, grid conferido por metadata — sem sobreposição) ✅.
 > **25/11:** assinado **Figma Professional** (vaga Full) → MCP de volta, com política de uso (lote, leitura barata, IDs em docs/figma-ids.md, aviso de custo, placar, limite 40/dia). Plano recalibrado até 30/11 aprovado (ver 📅 Cronograma).
 > **F3 concluída e congelada** ✅ 25/11: Fundamentos (paleta, tipografia, medidas), 4 componentes atômicos, 7 compostos e Mascote — tudo via MCP, auditoria limpa (254 nós). Screenshots em docs/screenshots/.
-> **F4 iniciada** 25/11: os 7 wireframes foram duplicados para a página 📱 Telas (wireframes originais intactos). Telas **04** e **04b** já montadas com instâncias reais (Chip, Cronômetro, Botão) e os frames "Espaço" trocados por spacers flexíveis (Auto Layout FILL). No processo, corrigi um bug de contraste no componente `Cronômetro` (já congelado — exceção documentada).
-> **Parei aqui:** faltam as telas 01, 02, 03, 05 e 06 (mesmo método das 04/04b), depois as interações do protótipo e o link público. Histórico completo e detalhado em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
+> **F4 iniciada** 25/11: os 7 wireframes foram duplicados para a página 📱 Telas (wireframes originais intactos). Telas **04** e **04b** montadas com instâncias reais (Chip, Cronômetro, Botão) e os frames "Espaço" trocados por spacers flexíveis (Auto Layout FILL). No processo, corrigi um bug de contraste no componente `Cronômetro` (já congelado — exceção documentada).
+> **F4 — as 7 telas concluídas** ✅ 25/11: telas 01, 02, 03, 05 e 06 montadas com o mesmo método (instâncias reais: Mascote, Header/Saudação, Card/ContinuarDaqui, Card/Tarefa, Card/Lembrete, Card/Métrica, Input, Barra/Topo, Botão). Encontrei e corrigi 2 bugs no processo: (1) `layoutSizingHorizontal = 'FILL'` setado antes de inserir a instância no frame pai derruba o script inteiro — corrigir a ordem; (2) `Card/Métrica` expõe as 3 properties de valor em toda variante (não uma exclusiva por tipo) — "pegar a primeira property de texto" setou a errada e a tela 06 mostrou "47 min" em vez de "45 min" no card "Tempo de hoje"; corrigido setando pelo nome exato.
+> **Parei aqui:** faltam as **interações do protótipo** (ligações entre as 7 telas, frame inicial, transições), depois o teste manual e o link público. Histórico completo e detalhado em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
 
 ---
 
@@ -72,7 +73,7 @@
 | F1 UX | Problema, persona, jornada, fluxo | 2 h | ✅ Concluída | Documento teórico (1,5) |
 | F2 Wireframe | 6 telas em cinza + arquivo Figma organizado | 1–2 h | ✅ Concluída | Protótipo (3,5) |
 | F3 Library | Variables, Text Styles, Componentes | 2 h | ✅ Concluída | Protótipo — Design System |
-| F4 Telas + Protótipo | 6 telas finais + interações | 3 h | 🔵 Em andamento (04, 04b prontas) | Protótipo — Navegação |
+| F4 Telas + Protótipo | 6 telas finais + interações | 3 h | 🔵 Em andamento (7 telas prontas, falta o protótipo) | Protótipo — Navegação |
 | F5 Acessibilidade | Checklist WCAG + doc 1.4–1.5 | 1 h | ⚪ | Documento teórico |
 | F6 Textos | README + roteiro do vídeo + revisão do doc | 2 h | ⚪ | Protótipo — README |
 | F7 Vídeo | Gravação ≤ 4 min + upload | 1 h | ⚪ | Vídeo pitch (2,0) |
@@ -150,7 +151,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 **Objetivo:** protótipo navegável completo, montado só com instâncias.
 - [x] Duplicar os wireframes para a página 📱 Telas (via MCP, wireframes originais intactos)
 - [x] Tela 04 e 04b: instâncias de Chip/Tarefa, Cronômetro (Rodando/Pausado) e Botão (Secundário, Destaque, Primário) + fundo `bg/foco` + "Espaço" trocado por spacer flexível (Auto Layout FILL)
-- [ ] Telas 01, 02, 03, 05, 06: substituir os elementos cinza por instâncias da Library (mesmo método das 04/04b)
+- [x] Telas 01, 02, 03, 05, 06: substituídas por instâncias da Library (mesmo método das 04/04b) — **as 7 telas estão prontas**
 - [ ] Interações: Começar → Início → Configurar → Sessão
 - [ ] Interação: "Lembrar depois" → anotação → volta à Sessão
 - [ ] Interação: Início "Retomar" → Sessão (atalho)
@@ -284,6 +285,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | 7 componentes compostos via MCP (Cards, Cronômetro, Header/Saudação, Barra/Topo) · 2 bugs de sizing encontrados e corrigidos no self-refine (texto cortado, número deslocado) · 30 chamadas na sessão | ~35 min |
 | 25/11 | Auditoria completa (254 nós) + **Library congelada** ✅ · F3 concluída · screenshots salvos em docs/screenshots/ · 32 chamadas na sessão | ~10 min |
 | 25/11 | F4 iniciada: 7 telas duplicadas · telas 04 e 04b montadas com instâncias (Chip, Cronômetro, Botão) + Espaço trocado por spacer flexível · corrigido contraste da legenda do Cronômetro (exceção à Library congelada) · 39 chamadas na sessão — parado no limite de hoje | ~20 min |
+| 25/11 | Retomado após pausa · telas 01, 02, 03, 05 e 06 montadas com instâncias reais (Mascote, Header/Saudação, Card/ContinuarDaqui, Card/Tarefa×5, Card/Lembrete×2, Card/Métrica×3, Input×4, Barra/Topo×2, Botão×5) · **F4: as 7 telas concluídas** · 2 bugs corrigidos (ordem do layoutSizing FILL; property errada no Card/Métrica) · ~28 chamadas nesta sessão | ~35 min |
 
 ---
 
