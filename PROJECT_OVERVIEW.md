@@ -9,7 +9,7 @@
 | | |
 |---|---|
 | **Fase atual** | F4 — Telas + Protótipo (iniciada) |
-| **Próxima ação** | Montar as 7 telas com instâncias da Library (trocar placeholders cinza) + trocar "Espaço" por Auto Layout |
+| **Próxima ação** | Montar as 5 telas restantes (01, 02, 03, 05, 06) com instâncias da Library |
 | **Bloqueios** | Nenhum — upgrade para **Figma Professional** (vaga Full) liberou o MCP de volta, com política de uso (ver CLAUDE.md) |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 5 dias · meta interna: tudo pronto na **sex 27/11** |
 | **Última atualização** | 25/11/2026 (F3 Library concluída e congelada) |
@@ -261,6 +261,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | Upgrade para **Figma Professional** (vaga Full) | Créditos do MCP no Starter acabaram; Professional libera volume suficiente para fechar F3–F4 no prazo |
 | 25/11 | **Política de uso do MCP:** lote por tarefa, leitura barata antes de screenshot, IDs salvos em docs/figma-ids.md, aviso de custo acima de 15 chamadas, placar por sessão, limite 40/dia, parar na hora em 429 | Evitar reincidir no limite e manter o trabalho repetitivo (componentes, telas, interações) com o Claude, deixando ajustes pontuais para Paloma à mão |
 | 25/11 | **Library congelada** (F3 ✅) — auditoria via MCP (254 nós: 0 sem Auto Layout, 0 cor solta fora das seções de organização) | Portão antes de montar as telas finais (F4); mudanças na Library a partir daqui exigem motivo forte, como as demais Decisões travadas |
+| 25/11 | Exceção à Library congelada: legenda do `Cronômetro` trocada de `texto/secundario` para `texto/sobre-acao` | Achado na montagem da tela 04b — baixo contraste sobre `bg/foco` (tela escura); motivo forte = acessibilidade |
 
 ---
 
@@ -281,7 +282,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | Fundamentos Etapas 3–5 via MCP (a pedido da Paloma, mudando a divisão original): Tipografia (7 linhas) + Medidas (espaço/raio/toque) + correção do padding/gap para `espaco/xl` · F3 Library = Fundamentos 100% completo · 16 chamadas na sessão | ~10 min |
 | 25/11 | 7 componentes compostos via MCP (Cards, Cronômetro, Header/Saudação, Barra/Topo) · 2 bugs de sizing encontrados e corrigidos no self-refine (texto cortado, número deslocado) · 30 chamadas na sessão | ~35 min |
 | 25/11 | Auditoria completa (254 nós) + **Library congelada** ✅ · F3 concluída · screenshots salvos em docs/screenshots/ · 32 chamadas na sessão | ~10 min |
-| 25/11 | F4 iniciada: 7 telas duplicadas dos wireframes para a página 📱 Telas (wireframes intactos) · 34 chamadas na sessão — parado no limite de hoje, continua amanhã | ~5 min |
+| 25/11 | F4 iniciada: 7 telas duplicadas · telas 04 e 04b montadas com instâncias (Chip, Cronômetro, Botão) + Espaço trocado por spacer flexível · corrigido contraste da legenda do Cronômetro (exceção à Library congelada) · 39 chamadas na sessão — parado no limite de hoje | ~20 min |
 
 ---
 

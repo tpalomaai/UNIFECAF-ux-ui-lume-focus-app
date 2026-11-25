@@ -36,7 +36,7 @@
 | `Card/Métrica` | `37:18` | Tipo: Tempo de hoje · Última vez · Lembretes (3) — property de valor exclusiva por tipo |
 | `Card/Lembrete` | `37:19` | Sem variantes — property `Texto` |
 | `Card/ContinuarDaqui` | `39:10` | Estado: Com conteúdo · Vazio (2) — usa instância de `Botão` (Primário); properties `OndeParei`, `ProximoPasso` |
-| `Cronômetro` | `39:19` | Estado: Rodando · Pausado (2) — número em caixa fixa 180px |
+| `Cronômetro` | `39:19` | Estado: Rodando · Pausado (2) — número em caixa fixa 180px; legenda em `texto/sobre-acao` (corrigido 25/11 — `texto/secundario` tinha baixo contraste sobre `bg/foco`) |
 | `Header/Saudação` | `39:20` | Sem variantes — usa instância de `Mascote` (Feliz); properties `Saudação`, `Subtítulo` |
 | `Barra/Topo` | `39:30` | Tipo: Com voltar · Sem voltar (2) — largura fixa 390px; property `Título` |
 
