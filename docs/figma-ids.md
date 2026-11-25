@@ -95,6 +95,8 @@ Ponto de partida do fluxo: tela **01** (`43:3`), flow "Fluxo principal".
 
 Falta só Paloma testar o fluxo (Present/Preview) e gerar o link público.
 
+> **Correção 25/11:** as 7 telas tinham sido duplicadas mantendo as coordenadas originais dos wireframes, soltas no canvas (nunca filhas de nenhuma *section*) — por isso telas 01/02/03 apareciam em cima da section "📖 Capa". Corrigido: as 7 telas agora são filhas de fato da section "📱 Telas finais" (`2:7`, redimensionada pra 3200×1000), lado a lado com espaçamento de 50px. A section "🗂 Arquivo" (`2:8`, ainda vazia) foi deslocada pra x=4050 pra não sobrepor. Lição: `clone()` + `page.appendChild()` nunca posiciona dentro de uma section — pra isso use `section.appendChild(node)` (preserva a posição visual absoluta automaticamente) e só depois ajuste x/y se quiser reorganizar.
+
 > **Atenção para a próxima etapa (interações):**
 > 1. `instance.layoutSizingHorizontal/Vertical = 'FILL'` só pode ser setado **depois** que a instância já foi inserida num frame com Auto Layout (`insertChild`/`appendChild`) — setar antes (instância ainda sem pai) lança erro e o Figma desfaz o script inteiro (nenhuma mutação anterior fica salva). Ordem certa: criar → inserir no pai → setar sizing.
 > 2. **`Card/Métrica` expõe as 3 properties de valor (`ValorTempodehoje`, `ValorÚltimavez`, `ValorLembretes`) em TODAS as variantes**, não uma exclusiva por tipo como o texto antigo deste arquivo sugeria — cada variante só *exibe* a sua, mas as três existem no `componentProperties` de qualquer instância. Pegar "a primeira property de texto encontrada" é um bug (causou a tela 06 mostrar "47 min" em vez de "45 min" no Card "Tempo de hoje"). Sempre setar pelo nome exato que corresponde ao tipo da variante.
