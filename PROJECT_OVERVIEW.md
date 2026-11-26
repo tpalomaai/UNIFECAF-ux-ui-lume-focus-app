@@ -328,6 +328,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 26/11 | Deck de slides gerado no Canva (IA, 1 geração) · **reprovado pela Paloma** (títulos pequenos, celular minúsculo, símbolos de texto, prints ilegíveis, muito vazio) · 0 chamadas Figma MCP | ~25 min |
 | 26/11 | Novo caminho: 11 slides montados em HTML/CSS + Playwright (`video-editor/slides-src/`) · fontes Lexend/Sniglet e ícones Tabler baixados localmente · 5 chamadas Figma MCP (recortes ampliados: paleta, Botão, Card/ContinuarDaqui, telas 03/05) · teste de estilo (slides 5 e 10) aprovado · os 11 completos aprovados em grade única, 1 rodada de correção (linha cruzando texto, cor de estrelinha fora da paleta) | ~1h30 |
 | 26/11 | docs/05-slides-narracao.md criado (narração, áudio, duração por slide — total ~3:46) · as 11 páginas do deck do Canva substituídas pelos PNGs renderizados (upload via MCP) e anotações atualizadas com a narração · aprovado pela Paloma antes do commit · 0 chamadas Figma MCP | ~30 min |
+| 26/11 | Bug reportado por Paloma: título grudado na grade de cartões no slide 10 · corrigido o espaçamento em `build.py` (cartões descidos de 400→470px e 660→730px) · reexportado e recolado no Canva | ~10 min |
 
 ---
 

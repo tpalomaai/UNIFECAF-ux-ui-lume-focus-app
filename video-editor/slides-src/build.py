@@ -122,10 +122,10 @@ def slide_10(preview):
           <div style="font-weight:400; font-size:24px; color:{text_color}; opacity:0.85;">{sub_txt}</div>
         </div>'''
 
-    body += diff_card(400, 120, "clock", ESTRELA, "#1B1846", "Cronômetro progressivo", "mede, não cobra")
-    body += diff_card(400, 640, "history", "#FFFFFF", "#1B1846", "Histórico por tarefa", "melhora no seu ritmo")
-    body += diff_card(660, 120, "bell", "#FFFFFF", "#1B1846", "Lembrar depois", "a outra tarefa fica guardada")
-    body += diff_card(660, 640, "player-play", ROSA, "#1B1846", "Continuar daqui", "retomar em 1 toque")
+    body += diff_card(470, 120, "clock", ESTRELA, "#1B1846", "Cronômetro progressivo", "mede, não cobra")
+    body += diff_card(470, 640, "history", "#FFFFFF", "#1B1846", "Histórico por tarefa", "melhora no seu ritmo")
+    body += diff_card(730, 120, "bell", "#FFFFFF", "#1B1846", "Lembrar depois", "a outra tarefa fica guardada")
+    body += diff_card(730, 640, "player-play", ROSA, "#1B1846", "Continuar daqui", "retomar em 1 toque")
     body += bg_circle(-200, 1500, 700, FORMA_NOITE, 0.6)
     body += sparkle(140, 1250, 36, ESTRELA)
     body += sparkle(300, 1680, 26, "#FFFFFF")
