@@ -8,11 +8,11 @@
 ## 🧭 Agora
 | | |
 |---|---|
-| **Fase atual** | F6 — Textos (README e roteiro prontos; falta só Paloma cronometrar) |
-| **Próxima ação** | Paloma: ler o roteiro em voz alta e cronometrar (≤ 4 min); depois F7 (gravar o vídeo) |
+| **Fase atual** | F6 — Textos (README e roteiro prontos; falta só Paloma cronometrar) + teste de animação do mascote p/ F7 |
+| **Próxima ação** | Paloma: aprovar (ou pedir ajuste) o teste do mascote em `video-editor/saida/teste-mascote.mp4`; ler o roteiro em voz alta e cronometrar (≤ 4 min); depois F7 (gravar o vídeo) |
 | **Bloqueios** | Nenhum |
-| **Prazo final** | **30/11/2026 (seg)** · faltam 5 dias · meta interna: tudo pronto na **sex 27/11** |
-| **Última atualização** | 25/11/2026 (reforço do documento teórico + página "🧠 Processo UX" criada no Figma) |
+| **Prazo final** | **30/11/2026 (seg)** · faltam 4 dias · meta interna: tudo pronto na **sex 27/11** |
+| **Última atualização** | 26/11/2026 (ambiente de vídeo montado + teste de animação do mascote) |
 
 ## 📍 Continuar daqui
 > F0 concluída: nome **Lume**, direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet) e repositório no GitHub com toda a estrutura.
@@ -36,7 +36,8 @@
 > **F6 em andamento** 25/11: README completo (links, objetivo, fluxo, decisões de design, 3 screenshots das telas) e roteiro do vídeo escrito (docs/04-roteiro-video.md), calibrado pros 4 minutos.
 > **Reforço do documento teórico** 25/11: Paloma revisou o enunciado do trabalho — ele pede pra **estruturar a experiência do usuário**, não só entregar a interface pronta. Li todos os resumos de aula dela no Obsidian (Matriz CSD, Mapa de Empatia, Persona, Journey Map, Pain Points, HMW, Duplo Diamante, Arquitetura da Informação, User Flow, Matriz de Impacto×Esforço) e incorporei essas ferramentas formais nas seções 1.1–1.3 do `docs/01-teorico.md` e no `docs/02-fluxo.md` (que ganhou um ponto de decisão real, virando um User Flow de verdade).
 > **Página "🧠 Processo UX" criada no Figma** 25/11: além do documento teórico, montei os mesmos 8 artefatos (CSD, Mapa de Empatia, Persona, Pain Points+HMW, Journey Map, Sitemap, User Flow, Matriz de Impacto×Esforço) como uma página visual dentro do próprio arquivo Figma — já que o enunciado pede pra projetar a UX "utilizando Figma". Encontrei e corrigi um bug real no processo (texto sobrepondo texto por causa da ordem errada entre `resize()` e `.characters`), documentado em docs/figma-ids.md.
-> **Parei aqui:** falta só Paloma ler o roteiro em voz alta e cronometrar — se passar de 4 min, ajustar o texto (não a estrutura). Depois disso, F7 (gravar o vídeo). Histórico completo e detalhado em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
+> **Ambiente de vídeo + teste do mascote** 26/11: montado `video-editor/` com FFmpeg, MoviePy, faster-whisper e auto-editor (todos testados). PNGs do mascote organizados em `video-editor/entrada/mascote/` (feliz/focado/comemorando, 1254×1254, transparentes). Testada a animação (pop de entrada, flutuação, troca de expressão com fade, pulinho de comemoração) em tela dividida creme/noite — `video-editor/saida/teste-mascote.mp4` — **aguardando aprovação da Paloma**.
+> **Parei aqui:** falta a Paloma aprovar o teste do mascote (ou pedir ajuste, máx. 2 rodadas) e ler o roteiro em voz alta pra cronometrar — se passar de 4 min, ajustar o texto (não a estrutura). Depois disso, F7 (gravar o vídeo). Histórico completo e detalhado em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
 
 ---
 
@@ -315,6 +316,8 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | F6: README completo (objetivo, fluxo, decisões, 3 screenshots das telas) · roteiro do vídeo escrito e calibrado pra 4 min (docs/04-roteiro-video.md) · 3 chamadas Figma MCP (só screenshots) | ~20 min |
 | 25/11 | Lidos todos os resumos de UX do Obsidian da Paloma (vault da disciplina) · documento teórico (1.1–1.3) reforçado com o processo formal de UX (CSD, Mapa de Empatia, Problem Statement, Journey Map, Pain Points, HMW, Duplo Diamante, IA, User Flow, Matriz de Impacto×Esforço) · docs/02-fluxo.md ganhou um ponto de decisão real · 0 chamadas Figma MCP | ~30 min |
 | 25/11 | Criada a página "🧠 Processo UX" no Figma com os mesmos 8 artefatos, em forma de board visual · bug de texto sobrepondo texto encontrado e corrigido (ordem resize/characters) · ~12 chamadas Figma MCP | ~30 min |
+| 26/11 | Ambiente `video-editor/` montado e testado: FFmpeg, MoviePy, faster-whisper, auto-editor · contornado bug PyAV/Python 3.14 decodificando áudio via FFmpeg · 0 chamadas Figma MCP | ~30 min |
+| 26/11 | PNGs do mascote organizados em `entrada/mascote/` (feliz/focado/comemorando, 1254×1254, transparentes) · teste de animação (pop, flutuação, fade de expressão, pulinho) em tela dividida creme/noite · `teste-mascote.mp4` + 4 frames gerados · aguardando aprovação da Paloma · 0 chamadas Figma MCP | ~25 min |
 
 ---
 

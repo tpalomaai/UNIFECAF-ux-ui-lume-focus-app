@@ -1,0 +1,3 @@
+# Video editor: mídia de entrada e saída não é versionada (arquivos grandes, gerados/baixados)
+video-editor/entrada/
+video-editor/saida/
