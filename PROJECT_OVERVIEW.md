@@ -9,10 +9,10 @@
 | | |
 |---|---|
 | **Fase atual** | F6 — Textos (README e roteiro prontos; falta só Paloma cronometrar) · slides do vídeo pitch prontos no Canva p/ F7 |
-| **Próxima ação** | Paloma: ler o roteiro em voz alta e cronometrar (≤ 4 min); depois F7 (gravar a narração slide por slide + a tela do protótipo, conforme docs/05-slides-narracao.md, e montar com o mascote: Feliz na abertura, Focado na navegação, Comemorando nos diferenciais/encerramento) |
+| **Próxima ação** | Paloma: gravar a narração slide por slide + a tela do protótipo, usando `docs/06-roteiro-gravacao.md` (texto pronto pra ler); depois F7 (montar o vídeo com MoviePy, os slides, os áudios e o mascote: Feliz na abertura, Focado na navegação, Comemorando nos diferenciais/encerramento) |
 | **Bloqueios** | Nenhum |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 4 dias · meta interna: tudo pronto na **sex 27/11** |
-| **Última atualização** | 26/11/2026 (slides do vídeo pitch renderizados em HTML e colados no deck do Canva) |
+| **Última atualização** | 26/11/2026 (slides com prints corrigidos no Canva; script de gravação criado — docs/06) |
 
 ## 📍 Continuar daqui
 > F0 concluída: nome **Lume**, direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet) e repositório no GitHub com toda a estrutura.
@@ -330,6 +330,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 26/11 | docs/05-slides-narracao.md criado (narração, áudio, duração por slide — total ~3:46) · as 11 páginas do deck do Canva substituídas pelos PNGs renderizados (upload via MCP) e anotações atualizadas com a narração · aprovado pela Paloma antes do commit · 0 chamadas Figma MCP | ~30 min |
 | 26/11 | Bug reportado por Paloma: título grudado na grade de cartões no slide 10 · corrigido o espaçamento em `build.py` (cartões descidos de 400→470px e 660→730px) · reexportado e recolado no Canva | ~10 min |
 | 26/11 | Bug reportado por Paloma: prints cortados pelo arredondamento dos cantos nos slides 7 e 8, e paleta do slide 7 se misturando com o fundo creme · corrigido em `build.py`: cantos do celular reduzidos de 64→28px no slide 8, prints da Figma (paleta, botões) passaram a ter cartão branco de fundo em vez de recorte direto · paleta ainda ilegível numa 1ª correção (borda grossa) → aumentada e com borda mais fina (960px, padding 18px) numa 2ª rodada · reexportado e recolado no Canva | ~20 min |
+| 26/11 | Explicado o que a separação de camadas por IA do Canva faz (gera design novo, aproximação por IA, não garante qualidade) · Paloma decidiu não usar · criado `docs/06-roteiro-gravacao.md` (texto pronto pra ler em voz alta, por arquivo de áudio) · `docs/04-roteiro-video.md` reescrito pra não duplicar a narração (agora só descreve o que mostrar, por slide, remetendo a docs/05 e docs/06 como fonte do texto) · sessão encerrada por hoje, próximo passo é Paloma gravar | ~15 min |
 
 ---
 

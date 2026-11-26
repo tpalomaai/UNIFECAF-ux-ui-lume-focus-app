@@ -1,10 +1,21 @@
 # Roteiro do Vídeo Pitch (≤ 4 min) — Lume
 
-> Ler em voz alta e cronometrar antes de gravar. Ritmo de leitura confortável ≈ 130–150 palavras/minuto — cada bloco abaixo já está calibrado pra caber no tempo indicado; se sobrar ou faltar tempo, ajustar o texto, não a estrutura.
+> A narração palavra por palavra está em `docs/05-slides-narracao.md` (fonte da verdade) e formatada pra gravação em `docs/06-roteiro-gravacao.md`. Este arquivo só descreve a estrutura visual do vídeo — a numeração é por **slide**, não por cena de tempo.
 
-| Tempo | O que falar | O que mostrar |
-|---|---|---|
-| 0:00–0:40 | "Quem estuda ou trabalha sozinho, em casa, sabe o problema: não tem ninguém puxando sua atenção de volta. E os apps de foco mais conhecidos usam contagem regressiva — que vira uma corrida contra o relógio e gera ansiedade quando o tempo acaba antes da tarefa. O Lume inverte isso: em vez de cobrar um prazo, ele mede. Um cronômetro progressivo registra quanto tempo cada tarefa levou, sem prazo e sem alarme — e guarda onde você parou, pra retomar em segundos." | Slide/tela com o nome "Lume" e a frase "Foque no seu ritmo" (tela 01) |
-| 0:40–2:20 | "Vamos ver o fluxo. Na tela inicial, o card 'Continuar daqui' já mostra onde parei e o próximo passo — um toque em 'Retomar' e eu volto direto pra sessão, sem precisar escolher nada de novo. Pra começar algo novo, escolho a tarefa — as mais recentes aparecem com o tempo da última vez, pra eu não digitar de novo. Na sessão, o cronômetro sobe sem pressão, sem contagem regressiva. Se alguma outra tarefa me distrai no meio do caminho, eu só toco em 'Lembrar depois', anoto rapidinho, e volto exatamente pra onde estava — sem perder o fio. Quando termino, toco em 'Concluir': vejo quanto tempo levei, comparo com a última vez de forma gentil, e já registro onde parei e o próximo passo pra próxima sessão." | Protótipo em modo apresentação: 02 Início → 03 Escolher tarefa → 04 Sessão → 05 Lembrar depois → 04 → 06 Concluída |
-| 2:20–3:20 | "Por trás disso tem um design system único no Figma: cada cor tem uma função fixa — índigo pra ação principal, amarelo pra progresso, rosa só pro atalho de retomar. A fonte Lexend foi escolhida justamente por facilitar a leitura. E cada botão, card e input é um componente reutilizável ligado a tokens — então uma correção de contraste, por exemplo, atualiza as sete telas de uma vez só. Isso também guiou a parte de acessibilidade: todo contraste de cor passa o padrão AA do WCAG, todo elemento clicável tem no mínimo 48 pixels de área de toque, e nada no app depende só de cor pra passar uma informação." | Página Library (Fundamentos / Componentes) |
-| 3:20–4:00 | "O maior diferencial do Lume não é visual — é a ausência da contagem regressiva. Pra quem tem ansiedade ou dificuldade de manter o foco, medir o tempo em vez de cobrar ele faz toda a diferença. Junto com o histórico por tarefa e o 'Continuar daqui', o Lume trata o progresso como ele realmente é: no seu próprio ritmo." | Telas 02, 04 e 06 lado a lado (ou o mascote comemorando, na 06) |
+## Estrutura
+| Slides / bloco | O que mostrar |
+|---|---|
+| 1 | Abertura: logo "Lume" + "foque no seu ritmo" (só música) |
+| 2 | O problema (estudar sozinho) |
+| 3 | Para quem é o Lume |
+| 4 | O problema da contagem regressiva |
+| 5 | A solução: cronômetro progressivo |
+| 6 | "Vamos ver na prática" (transição) |
+| protótipo | Protótipo em modo apresentação: 02 Início → 03 Escolher tarefa → 04 Sessão → 05 Lembrar depois → 04 → 06 Concluída |
+| 7 | Design system (cores por função, tipografia) |
+| 8 | Componentes reutilizáveis |
+| 9 | Acessibilidade |
+| 10 | O diferencial (sem contagem regressiva) |
+| 11 | Encerramento: logo + links (só música) |
+
+Duração alvo total: **~3:45** (nunca acima de 3:55) — detalhamento de tempo por bloco em `docs/05-slides-narracao.md`.
