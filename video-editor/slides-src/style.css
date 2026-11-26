@@ -1,0 +1,141 @@
+@font-face {
+  font-family: 'Lexend';
+  src: url('fonts/Lexend-Variable.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sniglet';
+  src: url('fonts/Sniglet-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sniglet';
+  src: url('fonts/Sniglet-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  font-family: 'Lexend', sans-serif;
+}
+
+.slide {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+}
+
+.bg-creme { background: #FFF8EC; }
+.bg-noite { background: #1B1846; }
+
+/* ---- grade / cabeçalho (posição fixa nos slides 2-10) ---- */
+.header {
+  position: absolute;
+  top: 120px;
+  left: 120px;
+  width: 1200px;
+}
+.eyebrow {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.eyebrow-rosa { color: #EC6FA8; }
+.eyebrow-estrela { color: #FFD43B; }
+
+.title {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 700;
+  font-size: 108px;
+  line-height: 1.05;
+}
+.title-creme { color: #1B1846; }
+.title-noite { color: #FFFFFF; }
+
+.subtitle {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  margin-top: 28px;
+  max-width: 900px;
+}
+.subtitle-creme { color: #5A5784; }
+.subtitle-noite { color: #D9D6FF; }
+
+/* ---- celular ---- */
+.phone {
+  position: absolute;
+  border-radius: 64px;
+  border: 14px solid #0F0D2E;
+  box-shadow: 0 50px 100px -20px rgba(15, 13, 46, 0.45), 0 20px 40px rgba(15, 13, 46, 0.25);
+  overflow: hidden;
+  background: #000;
+}
+.phone img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---- cartão flutuante ---- */
+.card-float {
+  position: absolute;
+  background: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 24px 48px -12px rgba(27, 24, 70, 0.28);
+  padding: 28px 34px;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #1B1846;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.card-float.borda-rosa { border: 3px solid #EC6FA8; }
+.card-float .icon { width: 36px; height: 36px; flex-shrink: 0; }
+
+/* ---- formas de fundo ---- */
+.bg-circle { position: absolute; border-radius: 50%; }
+
+/* ---- estrelinha ---- */
+.sparkle { position: absolute; }
+.sparkle svg { display: block; width: 100%; height: 100%; }
+
+/* ---- área reservada do mascote ---- */
+.mascot-area {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+}
+.mascot-area.preview {
+  border: 3px dashed rgba(27, 24, 70, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: rgba(27, 24, 70, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.mascot-area.preview.on-noite {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.icon-inline { display: inline-flex; vertical-align: middle; }

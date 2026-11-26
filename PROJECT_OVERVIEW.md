@@ -8,11 +8,11 @@
 ## 🧭 Agora
 | | |
 |---|---|
-| **Fase atual** | F6 — Textos (README e roteiro prontos; falta só Paloma cronometrar) · animação do mascote aprovada p/ F7 |
-| **Próxima ação** | Paloma: ler o roteiro em voz alta e cronometrar (≤ 4 min); depois F7 (gravar o vídeo, com o mascote: Feliz na abertura, Focado na navegação, Comemorando nos diferenciais/encerramento) |
+| **Fase atual** | F6 — Textos (README e roteiro prontos; falta só Paloma cronometrar) · slides do vídeo pitch prontos no Canva p/ F7 |
+| **Próxima ação** | Paloma: ler o roteiro em voz alta e cronometrar (≤ 4 min); depois F7 (gravar a narração slide por slide + a tela do protótipo, conforme docs/05-slides-narracao.md, e montar com o mascote: Feliz na abertura, Focado na navegação, Comemorando nos diferenciais/encerramento) |
 | **Bloqueios** | Nenhum |
 | **Prazo final** | **30/11/2026 (seg)** · faltam 4 dias · meta interna: tudo pronto na **sex 27/11** |
-| **Última atualização** | 26/11/2026 (ambiente de vídeo montado + teste de animação do mascote) |
+| **Última atualização** | 26/11/2026 (slides do vídeo pitch renderizados em HTML e colados no deck do Canva) |
 
 ## 📍 Continuar daqui
 > F0 concluída: nome **Lume**, direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet) e repositório no GitHub com toda a estrutura.
@@ -37,7 +37,10 @@
 > **Reforço do documento teórico** 25/11: Paloma revisou o enunciado do trabalho — ele pede pra **estruturar a experiência do usuário**, não só entregar a interface pronta. Li todos os resumos de aula dela no Obsidian (Matriz CSD, Mapa de Empatia, Persona, Journey Map, Pain Points, HMW, Duplo Diamante, Arquitetura da Informação, User Flow, Matriz de Impacto×Esforço) e incorporei essas ferramentas formais nas seções 1.1–1.3 do `docs/01-teorico.md` e no `docs/02-fluxo.md` (que ganhou um ponto de decisão real, virando um User Flow de verdade).
 > **Página "🧠 Processo UX" criada no Figma** 25/11: além do documento teórico, montei os mesmos 8 artefatos (CSD, Mapa de Empatia, Persona, Pain Points+HMW, Journey Map, Sitemap, User Flow, Matriz de Impacto×Esforço) como uma página visual dentro do próprio arquivo Figma — já que o enunciado pede pra projetar a UX "utilizando Figma". Encontrei e corrigi um bug real no processo (texto sobrepondo texto por causa da ordem errada entre `resize()` e `.characters`), documentado em docs/figma-ids.md.
 > **Ambiente de vídeo + mascote animado** 26/11: montado `video-editor/` com FFmpeg, MoviePy, faster-whisper e auto-editor (todos testados). PNGs do mascote organizados em `video-editor/entrada/mascote/` (feliz/focado/comemorando, 1254×1254, transparentes). Animação testada (pop de entrada, flutuação, troca de expressão com fade, pulinho de comemoração) em tela dividida creme/noite — `video-editor/saida/teste-mascote.mp4` — **aprovada pela Paloma, sem rodada de ajuste**. Vira o padrão pro vídeo pitch: Feliz na abertura, Focado na navegação pelo protótipo, Comemorando nos diferenciais e no encerramento (com o pulinho).
-> **Parei aqui:** falta a Paloma ler o roteiro em voz alta pra cronometrar — se passar de 4 min, ajustar o texto (não a estrutura). Depois disso, F7 (gravar o vídeo, já com o mascote aprovado). Histórico completo e detalhado em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
+> **Deck de slides no Canva reprovado e refeito em HTML** 26/11: o primeiro deck gerado por IA no Canva ("Lume — Vídeo Pitch (slides)") foi reprovado por Paloma — títulos pequenos, celular minúsculo, símbolos de texto no lugar de ícones, prints da Library ilegíveis. Novo caminho: os 11 slides passaram a ser montados em HTML/CSS (Playwright renderiza cada um como PNG 1920×1080) em `video-editor/slides-src/` — fontes Lexend/Sniglet e ícones Tabler baixados localmente, recortes ampliados do Figma (paleta, Botão, Card/ContinuarDaqui, telas 03/05) via MCP (5 chamadas). Teste de estilo (slides 5 e 10) aprovado, depois os 11 completos aprovados em grade única. Self-Refine corrigiu uma linha pontilhada cruzando texto e cores de estrelinha fora da paleta.
+> **Slides colados de volta no Canva** 26/11: a pedido da Paloma, as 11 páginas do mesmo deck do Canva (ID `DAHb_Q3KpO4`) foram substituídas pelos PNGs renderizados (upload via MCP, 1 imagem de página inteira por slide) e as anotações do apresentador passaram a ter a narração de `docs/05-slides-narracao.md`. Aprovado por Paloma antes do commit.
+> **docs/05-slides-narracao.md criado** 26/11: tabela com narração, nome do áudio (`narracao/slide-NN.m4a` / `narracao/prototipo.m4a`) e duração estimada por bloco — total ~3:46, dentro do alvo de 3:45 (limite 3:55). É a fonte da verdade da gravação.
+> **Parei aqui:** falta a Paloma gravar a narração slide por slide (conforme docs/05) e a tela do protótipo, depois montar o vídeo com MoviePy usando o mascote aprovado. Histórico completo e detalhado em **[PONTO-DE-RETOMADA.md](PONTO-DE-RETOMADA.md)**.
 
 ---
 
@@ -71,6 +74,7 @@
 | 🐙 Repositório GitHub | [UNIFECAF-ux-ui-lume-focus-app](https://github.com/tpalomaai/UNIFECAF-ux-ui-lume-focus-app) | ✅ |
 | 🎨 Arquivo Figma | [Lume — UX/UI](https://www.figma.com/design/z7C1XSWQhlIpYry549Ba3Q) | ✅ |
 | 🔗 Protótipo (link público) | [Protótipo - Preview](https://www.figma.com/proto/z7C1XSWQhlIpYry549Ba3Q/Lume-%E2%80%94-UX-UI?node-id=43-3&p=f&viewport=217%2C273%2C0.21&t=U2qWueE7FQUYMI9P-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=43%3A3&page-id=2%3A3) | ✅ |
+| 🖼️ Slides do vídeo pitch (Canva) | [Lume — Vídeo Pitch (slides)](https://canva.link/3b4h0m8m7m54uqv) | ✅ (11 slides renderizados em HTML, narração nas anotações) |
 | 🎬 Vídeo pitch | (a gravar na F7) | ⏳ |
 | 📄 Enunciado do trabalho | (salvar PDF no Vault) | ⏳ |
 
@@ -287,6 +291,9 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | `Barra/Topo` corrigido de 47px pra 48px de altura | Único problema real da auditoria da F5 — abaixo do toque mínimo e é clicável (ação Back) nas telas 03 e 05 |
 | 25/11 | **F5 concluída** — checklist 100%, docs 1.4 e 1.5 escritos | Portão antes da F6; nenhuma pendência de acessibilidade restante |
 | 25/11 | Criada a página "🧠 Processo UX" dentro do próprio arquivo Figma, espelhando os artefatos de UX (CSD, Mapa de Empatia, Persona, Journey Map, Pain Points+HMW, Sitemap, User Flow, Matriz de Impacto×Esforço) | O enunciado pede pra projetar a UX "utilizando Figma" — manter o processo só no documento teórico deixaria essa parte de fora do arquivo de entrega |
+| 26/11 | Slides antes do áudio: primeiro montar e aprovar os 11 slides do vídeo pitch, só depois gravar a narração | Permite gravar cada narração já olhando pro slide certo e calibrar a duração por bloco antes de gastar tempo de gravação |
+| 26/11 | Numeração por slide substitui cenas: qualquer estrutura antiga de "cena-XX"/storyboard de vídeo fica obsoleta — tudo se organiza por slide (1 a 11) ou pelo bloco "protótipo" | Evita ambiguidade entre dois sistemas de referência para o mesmo vídeo pitch |
+| 26/11 | Deck do Canva descartado por qualidade (gerado por IA) — slides passaram a ser feitos em HTML renderizado com Playwright | Canva: títulos pequenos, celular minúsculo, símbolos de texto no lugar de ícones, prints da Library ilegíveis — HTML/CSS deu controle fino de tipografia, ícones reais e recortes legíveis do Figma |
 
 ---
 
@@ -318,6 +325,9 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 | 25/11 | Criada a página "🧠 Processo UX" no Figma com os mesmos 8 artefatos, em forma de board visual · bug de texto sobrepondo texto encontrado e corrigido (ordem resize/characters) · ~12 chamadas Figma MCP | ~30 min |
 | 26/11 | Ambiente `video-editor/` montado e testado: FFmpeg, MoviePy, faster-whisper, auto-editor · contornado bug PyAV/Python 3.14 decodificando áudio via FFmpeg · 0 chamadas Figma MCP | ~30 min |
 | 26/11 | PNGs do mascote organizados em `entrada/mascote/` (feliz/focado/comemorando, 1254×1254, transparentes) · teste de animação (pop, flutuação, fade de expressão, pulinho) em tela dividida creme/noite · `teste-mascote.mp4` + 4 frames gerados · **aprovado pela Paloma** ✅, sem ajuste · vira padrão do mascote pro vídeo pitch (Feliz abertura · Focado navegação · Comemorando diferenciais/encerramento) · 0 chamadas Figma MCP | ~25 min |
+| 26/11 | Deck de slides gerado no Canva (IA, 1 geração) · **reprovado pela Paloma** (títulos pequenos, celular minúsculo, símbolos de texto, prints ilegíveis, muito vazio) · 0 chamadas Figma MCP | ~25 min |
+| 26/11 | Novo caminho: 11 slides montados em HTML/CSS + Playwright (`video-editor/slides-src/`) · fontes Lexend/Sniglet e ícones Tabler baixados localmente · 5 chamadas Figma MCP (recortes ampliados: paleta, Botão, Card/ContinuarDaqui, telas 03/05) · teste de estilo (slides 5 e 10) aprovado · os 11 completos aprovados em grade única, 1 rodada de correção (linha cruzando texto, cor de estrelinha fora da paleta) | ~1h30 |
+| 26/11 | docs/05-slides-narracao.md criado (narração, áudio, duração por slide — total ~3:46) · as 11 páginas do deck do Canva substituídas pelos PNGs renderizados (upload via MCP) e anotações atualizadas com a narração · aprovado pela Paloma antes do commit · 0 chamadas Figma MCP | ~30 min |
 
 ---
 
