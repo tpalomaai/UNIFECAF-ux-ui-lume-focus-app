@@ -45,11 +45,19 @@ def img_src(path: Path) -> str:
     return "file:///" + str(path.resolve()).replace("\\", "/")
 
 
-def phone(src_path: Path, top, left, height, rotate_deg=0, width=None):
+def phone(src_path: Path, top, left, height, rotate_deg=0, width=None, radius=64):
     w = width or int(height * 390 / 844)
-    return f'''<div class="phone" style="top:{top}px; left:{left}px; width:{w}px; height:{height}px; transform: rotate({rotate_deg}deg);">
+    return f'''<div class="phone" style="top:{top}px; left:{left}px; width:{w}px; height:{height}px; border-radius:{radius}px; transform: rotate({rotate_deg}deg);">
       <img src="{img_src(src_path)}" />
     </div>'''
+
+
+def framed_image(top, left, width, src_path, bg="#FFFFFF", padding=32, radius=28):
+    inner_radius = max(radius - padding, 8)
+    return f'''<div style="position:absolute; top:{top}px; left:{left}px; width:{width}px; border-radius:{radius}px;
+      background:{bg}; padding:{padding}px; box-shadow:0 24px 48px -16px rgba(27,24,70,.22);">
+      <img src="{img_src(src_path)}" style="width:100%; display:block; border-radius:{inner_radius}px;" />
+      </div>'''
 
 
 def card(top, left, html, rotate_deg=0, extra_class="", width=None):
@@ -268,13 +276,10 @@ def slide_06(preview):
 
 def slide_07(preview):
     body = header("UI", "eyebrow-rosa", "Cada cor tem<br>uma função", "creme")
-    body += f'''<div style="position:absolute; top:430px; left:120px; width:820px; border-radius:28px; overflow:hidden;
-      box-shadow:0 24px 48px -16px rgba(27,24,70,.22);">
-      <img src="{img_src(FIGMA / 'paleta.png')}" style="width:100%; display:block;" />
-      </div>'''
+    body += framed_image(420, 120, 960, FIGMA / "paleta.png", bg="#FFFFFF", padding=18, radius=24)
 
     def color_tag(top, dot_color, label):
-        return f'''<div style="position:absolute; top:{top}px; left:1040px; display:flex; align-items:center; gap:18px;">
+        return f'''<div style="position:absolute; top:{top}px; left:1140px; display:flex; align-items:center; gap:18px;">
           <div style="width:44px; height:44px; border-radius:50%; background:{dot_color};"></div>
           <div style="font-weight:600; font-size:30px; color:{TEXTO};">{label}</div>
           </div>'''
@@ -282,11 +287,11 @@ def slide_07(preview):
     body += color_tag(460, INDIGO, "Ação")
     body += color_tag(560, ESTRELA, "Progresso")
     body += color_tag(660, ROSA, "Retomar")
-    body += big_card(770, 1040, 640, 170, "#FFFFFF", (
+    body += big_card(770, 1140, 640, 170, "#FFFFFF", (
         f'<div style="font-family:\'Lexend\'; font-weight:700; font-size:40px; color:{TEXTO};">Aa</div>'
         f'<div style="font-weight:400; font-size:26px; color:{TEXTO_SEC};">Lexend — leitura fácil</div>'
     ))
-    body += sparkle(360, 1700, 28, ESTRELA)
+    body += sparkle(360, 1800, 28, ESTRELA)
     return body
 
 
@@ -296,14 +301,11 @@ def slide_07(preview):
 
 def slide_08(preview):
     body = header("COMPONENTES", "eyebrow-rosa", "Um ajuste,<br>sete telas", "creme")
-    body += f'''<div style="position:absolute; top:480px; left:120px; width:760px; border-radius:24px; overflow:hidden;
-      box-shadow:0 24px 48px -16px rgba(27,24,70,.22);">
-      <img src="{img_src(FIGMA / 'botao-variantes.png')}" style="width:100%; display:block;" />
-      </div>'''
+    body += framed_image(480, 120, 760, FIGMA / "botao-variantes.png", bg="#FFFFFF", padding=28, radius=24)
     body += f'<div style="position:absolute; top:640px; left:940px; transform:rotate(18deg);">{icon("arrow-right", INDIGO, 64)}</div>'
-    body += phone(SCREENSHOTS / "tela-02-inicio.png", 300, 1120, 560, rotate_deg=-8)
-    body += phone(SCREENSHOTS / "tela-04-sessao.png", 260, 1350, 600, rotate_deg=3)
-    body += phone(SCREENSHOTS / "tela-06-concluida.png", 300, 1600, 560, rotate_deg=12)
+    body += phone(SCREENSHOTS / "tela-02-inicio.png", 300, 1120, 560, rotate_deg=-8, radius=28)
+    body += phone(SCREENSHOTS / "tela-04-sessao.png", 260, 1350, 600, rotate_deg=3, radius=28)
+    body += phone(SCREENSHOTS / "tela-06-concluida.png", 300, 1600, 560, rotate_deg=12, radius=28)
     body += sparkle(900, 1150, 24, ESTRELA)
     return body
 
