@@ -361,6 +361,42 @@ def build_slide_lembrar_depois():
     render(body, OUT_DIR / "tela-04b-05-lembrar-depois-slide.png")
 
 
+# ---------------------------------------------------------------------------
+# 7) Tela 06 - Sessão concluída: celular centralizado "subindo", cortado logo
+#    apos o campo "Proximo passo" (sem mostrar o botao "Salvar e sair")
+# ---------------------------------------------------------------------------
+
+def build_slide_sessao_concluida():
+    phone_h = 950
+    phone_w = phone_geometry(phone_h)[0]
+    phone_left = (W - phone_w) // 2
+
+    border = PHONE_BORDER
+    scale = (phone_h - 2 * border) / NATIVE_H
+    crop_native_y = 580  # logo depois do campo "Proximo passo" (termina em y=557)
+    phone_top = int(H - border - crop_native_y * scale)
+
+    body = ""
+    body += b.bg_circle(630, 510, 900, b.FORMA_NOITE, 0.6)
+
+    body += f'''<div style="position:absolute; top:60px; left:0px; width:{W}px; text-align:center;
+      font-family:'Lexend'; font-weight:600; font-size:28px; letter-spacing:0.1em; text-transform:uppercase;
+      color:{b.ESTRELA};">NA PRÁTICA</div>'''
+    body += f'''<div style="position:absolute; top:106px; left:0px; width:{W}px; text-align:center;
+      font-family:'Lexend'; font-weight:700; font-size:80px; color:#FFFFFF;">Sessão concluída</div>'''
+    body += f'''<div style="position:absolute; top:206px; left:0px; width:{W}px; text-align:center;
+      font-family:'Lexend'; font-weight:400; font-size:32px; color:#D9D6FF;">O que você fez, e o que vem a seguir</div>'''
+
+    body += b.phone(SCREENSHOTS / "tela-06-concluida.png", phone_top, phone_left, phone_h, rotate_deg=0)
+
+    body += b.sparkle(140, 220, 28, b.ESTRELA)
+    body += b.sparkle(160, 1720, 24, b.ROSA)
+    body += b.sparkle(640, 260, 22, "#FFFFFF")
+    body += b.sparkle(640, 1680, 26, b.ESTRELA)
+
+    render(body, OUT_DIR / "tela-06-sessao-concluida-slide.png")
+
+
 if __name__ == "__main__":
     build_celular_continuar()
     build_balao()
@@ -368,3 +404,4 @@ if __name__ == "__main__":
     build_slide_continuar_completo()
     build_slide_tarefas_recentes()
     build_slide_lembrar_depois()
+    build_slide_sessao_concluida()
