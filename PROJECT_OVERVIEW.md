@@ -8,11 +8,11 @@
 ## 🧭 Agora
 | | |
 |---|---|
-| **Fase atual** | F6 — Textos (README e roteiro prontos; falta só Paloma cronometrar) · slides do vídeo pitch prontos no Canva p/ F7 |
-| **Próxima ação** | Paloma: gravar a narração slide por slide + a tela do protótipo, usando `docs/06-roteiro-gravacao.md` (texto pronto pra ler); depois F7 (montar o vídeo com MoviePy, os slides, os áudios e o mascote: Feliz na abertura, Focado na navegação, Comemorando nos diferenciais/encerramento) |
+| **Fase atual** | **F7 concluída** — vídeo pitch publicado no YouTube · falta só F8 (entrega) |
+| **Próxima ação** | F8 — conferência final (links do README, protótipo público, vídeo) e envio no portal da UniFECAF |
 | **Bloqueios** | Nenhum |
-| **Prazo final** | **30/11/2026 (seg)** · faltam 4 dias · meta interna: tudo pronto na **sex 27/11** |
-| **Última atualização** | 26/11/2026 (slides com prints corrigidos no Canva; script de gravação criado — docs/06) |
+| **Prazo final** | **30/11/2026 (seg)** · faltam 3 dias · meta interna: tudo pronto na **sex 27/11** |
+| **Última atualização** | 27/11/2026 (vídeo pitch publicado: https://youtu.be/vAujLSk3l3M) |
 
 ## 📍 Continuar daqui
 > F0 concluída: nome **Lume**, direção visual travada (fundo Creme lunar #FFF8EC, Lexend + Sniglet) e repositório no GitHub com toda a estrutura.
@@ -75,7 +75,7 @@
 | 🎨 Arquivo Figma | [Lume — UX/UI](https://www.figma.com/design/z7C1XSWQhlIpYry549Ba3Q) | ✅ |
 | 🔗 Protótipo (link público) | [Protótipo - Preview](https://www.figma.com/proto/z7C1XSWQhlIpYry549Ba3Q/Lume-%E2%80%94-UX-UI?node-id=43-3&p=f&viewport=217%2C273%2C0.21&t=U2qWueE7FQUYMI9P-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=43%3A3&page-id=2%3A3) | ✅ |
 | 🖼️ Slides do vídeo pitch (Canva) | [Lume — Vídeo Pitch (slides)](https://canva.link/3b4h0m8m7m54uqv) | ✅ (11 slides renderizados em HTML, narração nas anotações) |
-| 🎬 Vídeo pitch | (a gravar na F7) | ⏳ |
+| 🎬 Vídeo pitch | [Assistir no YouTube](https://youtu.be/vAujLSk3l3M) | ✅ |
 | 📄 Enunciado do trabalho | (salvar PDF no Vault) | ⏳ |
 
 ---
@@ -90,7 +90,7 @@
 | F4 Telas + Protótipo | 6 telas finais + interações | 3 h | ✅ Concluída (fluxo aprovado, link público gerado) | Protótipo — Navegação |
 | F5 Acessibilidade | Checklist WCAG + doc 1.4–1.5 | 1 h | ✅ Concluída | Documento teórico |
 | F6 Textos | README + roteiro do vídeo + revisão do doc | 2 h | 🔵 Quase pronta (falta só Paloma cronometrar o roteiro) | Protótipo — README |
-| F7 Vídeo | Gravação ≤ 4 min + upload | 1 h | ⚪ | Vídeo pitch (2,0) |
+| F7 Vídeo | Gravação ≤ 4 min + upload | 1 h | ✅ Concluída (publicado no YouTube) | Vídeo pitch (2,0) |
 | F8 Entrega | Conferência final + envio no portal | 30 min | ⚪ | Todos |
 
 Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travada
@@ -336,6 +336,7 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 
 | 27/11 | Correções nos fundos dos slides do vídeo pitch (prints cortados nos slides 7/8, paleta ilegível, celular do slide 10, fonte "More Sugar" no logo do slide 11) · novos fundos gerados pra 3 slides extras (Tarefas recentes, Lembrar depois, Sessão concluída) | ~1h30 |
 | 27/11 | **Tela 01 (Boas-vindas) redesenhada no Figma**, a pedido da Paloma, pra aproximar de uma referência que ela criou: mascote trocado por uma ilustração nova (estrela com prancheta, fundo lilás) no lugar do componente `Mascote` padrão, e adicionados 3 indicadores (Foco/Organização/Progresso, imagem pronta da Paloma) no espaço antes vazio. Título e subtítulo centralizados; subtítulo quebrado em 2 linhas. **Isso reabre 2 decisões travadas só nesta tela:** o mascote "estrelinha simples" (CLAUDE.md) e a Library congelada (os indicadores são uma imagem solta na tela, não um componente novo) — nada mudou nas outras telas nem na Library · ~14 chamadas Figma MCP no dia | ~25 min |
+| 27/11 | Paloma gravou a narração, montou o vídeo e publicou no YouTube (não listado) — **F7 concluída** ✅. Link colado no README.md e no PROJECT_OVERVIEW.md. Falta só a F8 (entrega) | ~5 min |
 
 ## 🅿️ Estacionamento de ideias (para depois da entrega)
 - Animação do mascote ao concluir sessão

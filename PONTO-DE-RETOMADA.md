@@ -109,11 +109,10 @@ Ainda no dia 26/11, mudança de plano no F7: em vez de gravar a tela do protóti
 - **F5 — Acessibilidade: concluída.** `vermelho/600` corrigido (#C23434), `Barra/Topo` corrigido (48px), auditoria das 7 telas 100% conforme, seções 1.4 e 1.5 escritas, docs/prompts.md criado.
 - **F6 — Textos: quase concluída.** README completo com screenshots, roteiro do vídeo escrito e calibrado.
 - **Slides do vídeo pitch: concluídos e aprovados.** 11 slides renderizados em HTML/CSS (`video-editor/slides-src/`), colados no deck do Canva (ID `DAHb_Q3KpO4`), narração em `docs/05-slides-narracao.md` e nas anotações de cada página.
+- **F7 — Vídeo pitch: concluída ✅ (27/11).** Paloma gravou a narração, montou o vídeo (por conta própria, fora do Claude Code) e publicou no YouTube não listado: https://youtu.be/vAujLSk3l3M — link colado no README.md e no PROJECT_OVERVIEW.md.
 
 ## ⏭️ O que falta (nesta ordem)
-1. **Paloma à mão:** gravar a narração slide por slide e a tela do protótipo, usando `docs/06-roteiro-gravacao.md` (texto pronto pra ler, um bloco por arquivo de áudio).
-2. **F7 — Vídeo pitch:** montar o vídeo (MoviePy) com os slides, os áudios gravados e o mascote aprovado (Feliz abertura · Focado navegação · Comemorando diferenciais/encerramento), depois subir no YouTube não listado.
-3. **F8 — Entrega** (à mão) — nesse ponto também preencher as sections "Capa" e "Arquivo" do Figma (se houver algo a arquivar).
+1. **F8 — Entrega** (à mão): conferir todos os links (README, protótipo público, vídeo), preencher as sections "Capa" e "Arquivo" do Figma (se houver algo a arquivar), e enviar no portal da UniFECAF.
 
 Cronograma detalhado com estimativas de tempo e chamadas: ver `PROJECT_OVERVIEW.md` → 📅 Cronograma.
 

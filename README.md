@@ -4,7 +4,7 @@
 |---|---|
 | 🎨 Protótipo no Figma | [Lume — UX/UI](https://www.figma.com/design/z7C1XSWQhlIpYry549Ba3Q) |
 | ▶️ Protótipo navegável (link público) | [Abrir protótipo](https://www.figma.com/proto/z7C1XSWQhlIpYry549Ba3Q/Lume-%E2%80%94-UX-UI?node-id=43-3&p=f&viewport=217%2C273%2C0.21&t=U2qWueE7FQUYMI9P-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=43%3A3&page-id=2%3A3) |
-| 🎬 Vídeo pitch | *(a publicar na F7)* |
+| 🎬 Vídeo pitch | [Assistir no YouTube](https://youtu.be/vAujLSk3l3M) |
 | 📄 Documento teórico | [docs/01-teorico.md](docs/01-teorico.md) |
 | 🐙 Repositório | [github.com/tpalomaai/UNIFECAF-ux-ui-lume-focus-app](https://github.com/tpalomaai/UNIFECAF-ux-ui-lume-focus-app) |
 
