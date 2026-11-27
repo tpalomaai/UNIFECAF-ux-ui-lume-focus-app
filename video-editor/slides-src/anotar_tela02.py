@@ -339,7 +339,7 @@ def build_slide_lembrar_depois():
     # indicador 1: botao "Lembrar depois" na 04b
     btn_a_cx = a_left + hi_a[0] + hi_a[2] / 2
     btn_a_cy = a_top + hi_a[1] + hi_a[3] / 2
-    label1_left, label1_top, label1_w = 130, 680, 360
+    label1_left, label1_top, label1_w = 660, 700, 270
     label1_cy = label1_top + 22
     body += b.dashed_line_between(label1_left + label1_w, label1_cy, btn_a_cx, btn_a_cy, b.ROSA, width=3)
     body += f'''<div style="position:absolute; top:{label1_top}px; left:{label1_left}px; width:{label1_w}px;
