@@ -55,22 +55,22 @@ ROWS = [
 ]
 
 MARGIN = 36
-HEADER_TOP = 90
-HEADER_H = 54
+HEADER_TOP = 76
+HEADER_H = 60
 ROW_TOP0 = HEADER_TOP + HEADER_H
 ROW_H = (H - ROW_TOP0 - 10) / len(ROWS)
 CELL_PAD = 10
 
 body = ""
-body += f'''<div style="position:absolute; top:26px; left:{MARGIN}px; font-family:'Lexend'; font-weight:700;
-  font-size:28px; color:{INDIGO};">Etapas e Objetivos em Cada Interação</div>'''
+body += f'''<div style="position:absolute; top:22px; left:{MARGIN}px; font-family:'Lexend'; font-weight:700;
+  font-size:30px; color:{INDIGO};">Etapas e Objetivos em Cada Interação</div>'''
 
 # cabecalho
 x = MARGIN
 for label, w in COLS:
     body += f'''<div style="position:absolute; top:{HEADER_TOP}px; left:{x}px; width:{w - CELL_PAD}px; height:{HEADER_H}px;
       background:{INDIGO}; display:flex; align-items:center; padding:0 {CELL_PAD}px;
-      font-family:'Lexend'; font-weight:700; font-size:13px; color:#FFFFFF; line-height:1.2;">{label}</div>'''
+      font-family:'Lexend'; font-weight:700; font-size:16px; color:#FFFFFF; line-height:1.25;">{label}</div>'''
     x += w
 
 # linhas
@@ -85,7 +85,7 @@ for r, row in enumerate(ROWS):
         color = INDIGO if c == 0 else TEXTO
         body += f'''<div style="position:absolute; top:{top}px; left:{x}px; width:{w - CELL_PAD * 2}px; height:{ROW_H}px;
           display:flex; align-items:center; padding:0 {CELL_PAD}px;
-          font-family:'Lexend'; font-weight:{weight}; font-size:12.5px; color:{color}; line-height:1.3;">{text}</div>'''
+          font-family:'Lexend'; font-weight:{weight}; font-size:15.5px; color:{color}; line-height:1.32;">{text}</div>'''
         x += w
     body += f'<div style="position:absolute; top:{top + ROW_H}px; left:{MARGIN}px; width:{sum(w for _, w in COLS)}px; height:1px; background:#D9D6FF;"></div>'
 
