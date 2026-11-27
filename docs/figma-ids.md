@@ -67,7 +67,7 @@ Página só de documentação visual do processo (não é tela do app nem é ava
 
 | Tela | ID (cópia em Telas) | Status |
 |---|---|---|
-| 01 - Boas-vindas | `43:3` | ✅ pronta (Mascote/Feliz, Botão) |
+| 01 - Boas-vindas | `43:3` | ✅ pronta, mas **27/11: redesenhada** — instância `Mascote` (`48:17`) removida; no lugar, imagem solta `107:57` (ilustração nova da estrela com prancheta) dentro do frame `Ilustração` (`43:4`); frame `Espaço (flex)` (`43:8`) renomeado pra `Indicadores` e recebeu a imagem solta `107:58` (Foco/Organização/Progresso); `Botão` (`48:18`) inalterado. **Não é mais igual às outras 6 telas** (mascote/indicadores não são componentes da Library) |
 | 02 - Início | `43:11` | ✅ pronta (Header/Saudação, Card/ContinuarDaqui, Botão, 2× Card/Tarefa) |
 | 03 - Escolher tarefa | `43:31` | ✅ pronta (Barra/Topo, campo+Input, 3× Card/Tarefa, Botão) |
 | 04 - Sessão em andamento | `43:53` | ✅ pronta |

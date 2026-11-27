@@ -334,6 +334,9 @@ Legenda: ✅ concluída · 🔵 em andamento · ⚪ não iniciada · 🔴 travad
 
 ---
 
+| 27/11 | Correções nos fundos dos slides do vídeo pitch (prints cortados nos slides 7/8, paleta ilegível, celular do slide 10, fonte "More Sugar" no logo do slide 11) · novos fundos gerados pra 3 slides extras (Tarefas recentes, Lembrar depois, Sessão concluída) | ~1h30 |
+| 27/11 | **Tela 01 (Boas-vindas) redesenhada no Figma**, a pedido da Paloma, pra aproximar de uma referência que ela criou: mascote trocado por uma ilustração nova (estrela com prancheta, fundo lilás) no lugar do componente `Mascote` padrão, e adicionados 3 indicadores (Foco/Organização/Progresso, imagem pronta da Paloma) no espaço antes vazio. Título e subtítulo centralizados; subtítulo quebrado em 2 linhas. **Isso reabre 2 decisões travadas só nesta tela:** o mascote "estrelinha simples" (CLAUDE.md) e a Library congelada (os indicadores são uma imagem solta na tela, não um componente novo) — nada mudou nas outras telas nem na Library · ~14 chamadas Figma MCP no dia | ~25 min |
+
 ## 🅿️ Estacionamento de ideias (para depois da entrega)
 - Animação do mascote ao concluir sessão
 - Modo escuro completo
