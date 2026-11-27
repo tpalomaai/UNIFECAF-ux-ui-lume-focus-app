@@ -2,6 +2,9 @@
 video-editor/entrada/
 video-editor/saida/
 
+# Vídeo pitch final: já está publicado no YouTube, só o link fica no repo
+docs/video-pitch/
+
 # Python
 __pycache__/
 *.pyc
