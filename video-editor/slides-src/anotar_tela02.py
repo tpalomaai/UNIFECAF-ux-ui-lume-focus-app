@@ -299,9 +299,72 @@ def build_slide_tarefas_recentes():
     render(body, OUT_DIR / "tela-03-tarefas-recentes-slide.png")
 
 
+# ---------------------------------------------------------------------------
+# 6) Tela 04b - Sessão pausada + Tela 05 - Lembrar depois, no mesmo slide
+# ---------------------------------------------------------------------------
+
+# Posicoes nativas (do get_metadata, node 43:69 e 43:85, frame 390x844)
+BOTAO_LEMBRAR_04B = (200.5, 679, 165.5, 53)    # botao "Lembrar depois" na 04b
+BOTAO_GUARDAR_05 = (24, 757, 342, 53)         # botao "Guardar e voltar" na 05
+
+
+def build_slide_lembrar_depois():
+    body = b.header("NA PRÁTICA", "eyebrow-rosa", "Lembrar<br>depois", "noite")
+    body += b.bg_circle(150, 1200, 750, b.FORMA_NOITE, 0.65)
+
+    phone_h = 700
+    phone_w = phone_geometry(phone_h)[0]
+
+    a_left, a_top, a_rot = 950, 170, -6
+    bb_left, b_top, b_rot = 1360, 210, 6
+
+    hi_a = to_box(*BOTAO_LEMBRAR_04B, height=phone_h)
+    body += phone_with_highlight(
+        FIGMA / "tela-04b-sessao-pausada.png", hi_a, hi_color=b.ROSA,
+        top=a_top, left=a_left, height=phone_h, rotate_deg=a_rot,
+    )
+
+    hi_b = to_box(*BOTAO_GUARDAR_05, height=phone_h)
+    body += phone_with_highlight(
+        FIGMA / "tela-05-lembrar-depois.png", hi_b, hi_color=b.ROSA,
+        top=b_top, left=bb_left, height=phone_h, rotate_deg=b_rot,
+    )
+
+    # seta indicando a transicao de uma tela pra outra
+    arrow_cx = (a_left + phone_w + bb_left) / 2
+    arrow_cy = (a_top + phone_h / 2 + b_top + phone_h / 2) / 2
+    body += f'''<div style="position:absolute; top:{arrow_cy - 28}px; left:{arrow_cx - 28}px;">
+      {b.icon("arrow-right", "#FFFFFF", 56)}</div>'''
+
+    # indicador 1: botao "Lembrar depois" na 04b
+    btn_a_cx = a_left + hi_a[0] + hi_a[2] / 2
+    btn_a_cy = a_top + hi_a[1] + hi_a[3] / 2
+    label1_left, label1_top, label1_w = 130, 680, 360
+    label1_cy = label1_top + 22
+    body += b.dashed_line_between(label1_left + label1_w, label1_cy, btn_a_cx, btn_a_cy, b.ROSA, width=3)
+    body += f'''<div style="position:absolute; top:{label1_top}px; left:{label1_left}px; width:{label1_w}px;
+      font-family:'Lexend'; font-weight:700; font-size:34px; color:{b.ROSA};">Lembrar depois</div>'''
+
+    # indicador 2: botao "Guardar e voltar" na 05
+    btn_b_right = bb_left + hi_b[0] + hi_b[2]
+    btn_b_cy = b_top + hi_b[1] + hi_b[3] / 2
+    label2_left, label2_top, label2_w = 1700, 770, 190
+    label2_cy = label2_top + 34
+    body += b.dashed_line_between(btn_b_right, btn_b_cy, label2_left - 16, label2_cy, b.ROSA, width=3)
+    body += f'''<div style="position:absolute; top:{label2_top}px; left:{label2_left}px; width:{label2_w}px;
+      font-family:'Lexend'; font-weight:700; font-size:26px; color:{b.ROSA}; line-height:1.25;">Guardar<br>e voltar</div>'''
+
+    body += b.sparkle(90, 1850, 26, b.ESTRELA)
+    body += b.sparkle(950, 1500, 22, "#FFFFFF")
+    body += b.sparkle(950, 260, 24, b.ESTRELA)
+
+    render(body, OUT_DIR / "tela-04b-05-lembrar-depois-slide.png")
+
+
 if __name__ == "__main__":
     build_celular_continuar()
     build_balao()
     build_nova_sessao()
     build_slide_continuar_completo()
     build_slide_tarefas_recentes()
+    build_slide_lembrar_depois()
