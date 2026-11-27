@@ -339,14 +339,14 @@ def slide_09(preview):
 
 def slide_11(preview):
     body = ""
-    body += logo_lume(230, 150, 167, ESTRELA, font="More Sugar")
-    body += f'<span style="position:absolute; top:255px; left:620px;">{icon("star-filled", ESTRELA, 70)}</span>'
-    body += f'<div class="subtitle subtitle-noite" style="position:absolute; top:400px; left:158px; font-size:36px;">no seu ritmo</div>'
-    body += big_card(540, 150, 560, 130, "#FFFFFF", (
+    body += logo_lume(210, 150, 230, ESTRELA, font="More Sugar")
+    body += f'<span style="position:absolute; top:285px; left:740px;">{icon("star-filled", ESTRELA, 70)}</span>'
+    body += f'<div class="subtitle subtitle-noite" style="position:absolute; top:440px; left:158px; font-size:36px;">no seu ritmo</div>'
+    body += big_card(570, 150, 560, 130, "#FFFFFF", (
         icon("brand-figma", INDIGO, 40) +
         f'<div style="font-weight:600; font-size:30px; color:{TEXTO};">Protótipo no Figma</div>'
     ))
-    body += big_card(700, 150, 560, 130, "#FFFFFF", (
+    body += big_card(730, 150, 560, 130, "#FFFFFF", (
         icon("brand-github", INDIGO, 40) +
         f'<div style="font-weight:600; font-size:30px; color:{TEXTO};">GitHub</div>'
     ))
