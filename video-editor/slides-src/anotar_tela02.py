@@ -34,25 +34,37 @@ BOTAO_RETOMAR = (17.5, 104.5, 109, 53)
 # Mesmos parametros de celular do slide 6 (build.slide_06)
 PHONE_TOP, PHONE_LEFT, PHONE_HEIGHT, PHONE_ROTATE = 120, 1200, 860, 4
 PHONE_BORDER = 14
-PHONE_WIDTH = int(PHONE_HEIGHT * NATIVE_W / NATIVE_H)
-_c_w = PHONE_WIDTH - 2 * PHONE_BORDER
-_c_h = PHONE_HEIGHT - 2 * PHONE_BORDER
-_scale = _c_h / NATIVE_H
-_rendered_w = NATIVE_W * _scale
-_crop_x = (_rendered_w - _c_w) / 2
 
 
-def to_box(x, y, w, h):
+def phone_geometry(height):
+    """Pra um celular de uma certa altura: largura (mesma proporcao 390x844),
+    escala e corte horizontal do object-fit:cover por dentro da moldura."""
+    width = int(height * NATIVE_W / NATIVE_H)
+    c_w = width - 2 * PHONE_BORDER
+    c_h = height - 2 * PHONE_BORDER
+    scale = c_h / NATIVE_H
+    rendered_w = NATIVE_W * scale
+    crop_x = (rendered_w - c_w) / 2
+    return width, scale, crop_x
+
+
+PHONE_WIDTH, _scale, _crop_x = phone_geometry(PHONE_HEIGHT)
+
+
+def to_box(x, y, w, h, height=PHONE_HEIGHT):
     """Converte coordenada nativa (frame 390x844) pra coordenada dentro do
     conteudo do .phone (que usa object-fit:cover e corta um pouco as laterais)."""
-    return (x * _scale - _crop_x, y * _scale, w * _scale, h * _scale)
+    _, scale, crop_x = phone_geometry(height) if height != PHONE_HEIGHT else (None, _scale, _crop_x)
+    return (x * scale - crop_x, y * scale, w * scale, h * scale)
 
 
-def phone_with_highlight(src_path, hi_box, hi_color=None):
+def phone_with_highlight(src_path, hi_box, hi_color=None, top=PHONE_TOP, left=PHONE_LEFT,
+                          height=PHONE_HEIGHT, rotate_deg=PHONE_ROTATE):
     hi_color = hi_color or b.ROSA
+    width = phone_geometry(height)[0]
     hx, hy, hw, hh = hi_box
-    return f'''<div class="phone" style="top:{PHONE_TOP}px; left:{PHONE_LEFT}px; width:{PHONE_WIDTH}px;
-      height:{PHONE_HEIGHT}px; transform: rotate({PHONE_ROTATE}deg);">
+    return f'''<div class="phone" style="top:{top}px; left:{left}px; width:{width}px;
+      height:{height}px; transform: rotate({rotate_deg}deg);">
       <img src="{b.img_src(src_path)}" />
       <div style="position:absolute; top:{hy}px; left:{hx}px; width:{hw}px; height:{hh}px;
         border-radius:16px; border:4px solid {hi_color}; box-shadow:0 0 0 6px rgba(236,111,168,0.22);"></div>
@@ -162,7 +174,83 @@ def build_nova_sessao():
     render(body, OUT_DIR / "nova-sessao-destaque.png")
 
 
+# ---------------------------------------------------------------------------
+# 4) As duas imagens (1 e 2) juntas, como fundo de um unico slide 1920x1080
+# ---------------------------------------------------------------------------
+
+def build_slide_continuar_completo():
+    phone_h = 620
+    phone_left, phone_top = 130, 260
+    phone_w = phone_geometry(phone_h)[0]
+
+    card_scale = 2.0
+    cw, ch = CARD[2] * card_scale, CARD[3] * card_scale
+    card_left, card_top = 640, 330
+
+    hi_box = to_box(*CARD, height=phone_h)
+    hi_left = phone_left + hi_box[0]
+    hi_top = phone_top + hi_box[1]
+    hi_w, hi_h = hi_box[2], hi_box[3]
+
+    body = ""
+    body += b.bg_circle(-180, 1500, 700, b.FORMA_NOITE, 0.55)
+
+    body += f'''<div style="position:absolute; top:52px; left:120px; font-family:'Lexend'; font-weight:600;
+      font-size:28px; letter-spacing:0.1em; text-transform:uppercase; color:{b.ESTRELA};">NA PRÁTICA</div>'''
+    body += f'''<div style="position:absolute; top:92px; left:120px; font-family:'Lexend'; font-weight:700;
+      font-size:72px; color:#FFFFFF;">Continuar daqui</div>'''
+
+    body += phone_with_highlight(
+        SCREENSHOTS / "tela-02-inicio.png", to_box(*CARD, height=phone_h),
+        top=phone_top, left=phone_left, height=phone_h,
+    )
+
+    # linhas "lupa" ligando o destaque no celular ao balao ampliado
+    body += b.dashed_line_between(hi_left + hi_w, hi_top, card_left, card_top, b.ROSA, width=3)
+    body += b.dashed_line_between(hi_left + hi_w, hi_top + hi_h, card_left, card_top + ch, b.ROSA, width=3)
+
+    body += f'''<div class="card-float borda-rosa" style="top:{card_top}px; left:{card_left}px;
+      width:{cw}px; height:{ch}px; padding:0; overflow:hidden;">
+      <img src="{b.img_src(FIGMA / "card-continuar-daqui.png")}" style="width:100%; height:100%; display:block;" />
+      </div>'''
+
+    def inner(box):
+        x, y, w, h = box
+        return (card_left + x * card_scale, card_top + y * card_scale, w * card_scale, h * card_scale)
+
+    onde = inner(ONDE)
+    prox = inner(PROX)
+    botao = inner(BOTAO_RETOMAR)
+
+    hand_size = 60
+    body += b.icon_badge(
+        botao[1] + botao[3] - hand_size / 2, botao[0] + botao[2] - hand_size / 2,
+        hand_size, "hand-click", b.ROSA, "#FFFFFF", 30,
+    )
+
+    label_x = card_left + cw + 50
+
+    def callout(box, text, color):
+        x, y, w, h = box
+        cy = y + h / 2
+        out = b.dashed_line_between(card_left + cw - 6, cy, label_x - 16, cy, color, width=3)
+        out += f'''<div style="position:absolute; top:{cy - 22}px; left:{label_x}px; width:300px;
+          font-family:'Lexend'; font-weight:700; font-size:30px; color:{color}; line-height:1.2;">{text}</div>'''
+        return out
+
+    body += callout(onde, "Onde parei", "#FFFFFF")
+    body += callout(prox, "Próximo passo", "#FFFFFF")
+    body += callout(botao, "Retomar — 1 toque", b.ROSA)
+
+    body += b.sparkle(140, 1800, 30, b.ESTRELA)
+    body += b.sparkle(960, 1750, 24, b.ROSA)
+    body += b.sparkle(980, 160, 22, "#FFFFFF")
+
+    render(body, OUT_DIR / "continuar-daqui-slide-completo.png")
+
+
 if __name__ == "__main__":
     build_celular_continuar()
     build_balao()
     build_nova_sessao()
+    build_slide_continuar_completo()
