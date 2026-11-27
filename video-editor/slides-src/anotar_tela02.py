@@ -1,11 +1,14 @@
-"""Gera duas imagens explicativas (nao-slide) a partir da tela 02 - Inicio:
-1) o celular com o card 'Continuar daqui' destacado
-2) o card 'Continuar daqui' ampliado, com setas pra 'Onde parei' / 'Proximo
-   passo' e um icone de clique no botao Retomar
+"""Gera 3 imagens explicativas (nao-slide) no MESMO estilo visual do slide-06
+("Vamos ver na pratica" - fundo noite, celular rotacionado, card-float com
+borda rosa, estrelinhas) a partir da tela 02 - Inicio:
+
+1) tela-02-inicio-destaque.png  — celular com o card 'Continuar daqui' destacado
+2) continuar-daqui-balao.png    — o card 'Continuar daqui' ampliado, com setas
+                                   pra 'Onde parei' / 'Proximo passo' e um
+                                   icone de clique no botao Retomar
+3) nova-sessao-destaque.png     — celular com o botao 'Nova sessão' destacado
 
 Uso: python anotar_tela02.py
-Saida: docs/screenshots/tela-02-inicio-destaque.png
-       docs/screenshots/continuar-daqui-balao.png
 """
 from pathlib import Path
 from playwright.sync_api import sync_playwright
@@ -15,26 +18,54 @@ import build as b
 ROOT = b.ROOT
 PROJ = b.PROJ
 FIGMA = b.FIGMA
+SCREENSHOTS = b.SCREENSHOTS
 OUT_DIR = PROJ / "docs" / "screenshots"
 
-# Posicao do Card/ContinuarDaqui dentro da tela nativa (do get_metadata, node 43:11)
-CARD_X, CARD_Y, CARD_W, CARD_H = 24, 128, 342, 175
+W, H = 1920, 1080
 
-# Posicoes internas do card (do get_metadata, node 49:29)
-ONDE_X0, ONDE_Y0, ONDE_W0, ONDE_H0 = 17.5, 46.5, 307, 21
-PROX_X0, PROX_Y0, PROX_W0, PROX_H0 = 17.5, 75.5, 307, 21
-BTN_X0, BTN_Y0, BTN_W0, BTN_H0 = 17.5, 104.5, 109, 53
+# Posicoes nativas (do get_metadata, node 43:11 / 49:29 do Figma, frame 390x844)
+NATIVE_W, NATIVE_H = 390, 844
+CARD = (24, 128, 342, 175)          # Card/ContinuarDaqui
+NOVA_SESSAO = (24, 319, 342, 56)    # Botão "Nova sessão"
+ONDE = (17.5, 46.5, 307, 21)        # dentro do card
+PROX = (17.5, 75.5, 307, 21)
+BOTAO_RETOMAR = (17.5, 104.5, 109, 53)
+
+# Mesmos parametros de celular do slide 6 (build.slide_06)
+PHONE_TOP, PHONE_LEFT, PHONE_HEIGHT, PHONE_ROTATE = 120, 1200, 860, 4
+PHONE_BORDER = 14
+PHONE_WIDTH = int(PHONE_HEIGHT * NATIVE_W / NATIVE_H)
+_c_w = PHONE_WIDTH - 2 * PHONE_BORDER
+_c_h = PHONE_HEIGHT - 2 * PHONE_BORDER
+_scale = _c_h / NATIVE_H
+_rendered_w = NATIVE_W * _scale
+_crop_x = (_rendered_w - _c_w) / 2
 
 
-def render(body, w, h, out_path):
+def to_box(x, y, w, h):
+    """Converte coordenada nativa (frame 390x844) pra coordenada dentro do
+    conteudo do .phone (que usa object-fit:cover e corta um pouco as laterais)."""
+    return (x * _scale - _crop_x, y * _scale, w * _scale, h * _scale)
+
+
+def phone_with_highlight(src_path, hi_box, hi_color=None):
+    hi_color = hi_color or b.ROSA
+    hx, hy, hw, hh = hi_box
+    return f'''<div class="phone" style="top:{PHONE_TOP}px; left:{PHONE_LEFT}px; width:{PHONE_WIDTH}px;
+      height:{PHONE_HEIGHT}px; transform: rotate({PHONE_ROTATE}deg);">
+      <img src="{b.img_src(src_path)}" />
+      <div style="position:absolute; top:{hy}px; left:{hx}px; width:{hw}px; height:{hh}px;
+        border-radius:16px; border:4px solid {hi_color}; box-shadow:0 0 0 6px rgba(236,111,168,0.22);"></div>
+      </div>'''
+
+
+def render(body, out_path):
     html = f"""<!doctype html>
 <html><head><meta charset="utf-8">
-<style>{b.STYLE_CSS}
-html, body {{ width: {w}px !important; height: {h}px !important; }}
-</style>
+<style>{b.STYLE_CSS}</style>
 </head>
 <body>
-<div class="slide bg-creme" style="width:{w}px; height:{h}px;">
+<div class="slide bg-noite">
 {body}
 </div>
 </body></html>"""
@@ -42,7 +73,7 @@ html, body {{ width: {w}px !important; height: {h}px !important; }}
     html_path.write_text(html, encoding="utf-8")
     with sync_playwright() as p:
         browser = p.chromium.launch()
-        page = browser.new_page(viewport={"width": w, "height": h})
+        page = browser.new_page(viewport={"width": W, "height": H})
         page.goto(b.img_src(html_path))
         page.wait_for_timeout(150)
         page.screenshot(path=str(out_path))
@@ -52,86 +83,86 @@ html, body {{ width: {w}px !important; height: {h}px !important; }}
 
 
 # ---------------------------------------------------------------------------
-# Imagem 1: celular com o card destacado
+# 1) Celular com o card "Continuar daqui" destacado
 # ---------------------------------------------------------------------------
 
-def build_celular():
-    scale = 1.2
-    phone_w, phone_h = 390 * scale, 844 * scale
-    left, top = 130, 150
-    w, h = int(phone_w + left * 2), int(phone_h + top + 100)
-
-    hi_left = left + CARD_X * scale
-    hi_top = top + CARD_Y * scale
-    hi_w = CARD_W * scale
-    hi_h = CARD_H * scale
-
-    body = ""
-    body += f'''<div style="position:absolute; top:48px; left:{left}px; font-family:'Lexend'; font-weight:700;
-      font-size:38px; color:{b.TEXTO};">Tela 02 — Início</div>'''
-    body += f'''<div style="position:absolute; top:{top}px; left:{left}px; width:{phone_w}px; height:{phone_h}px;
-      border-radius:{48 * scale}px; border:{12 * scale}px solid #0F0D2E;
-      box-shadow:0 50px 100px -20px rgba(15,13,46,.45), 0 20px 40px rgba(15,13,46,.25);
-      overflow:hidden; background:#000;">
-      <img src="{b.img_src(FIGMA / 'tela-02-inicio-cheia.png')}" style="width:100%; height:100%; object-fit:cover; display:block;" />
-      </div>'''
-    body += f'''<div style="position:absolute; top:{hi_top}px; left:{hi_left}px; width:{hi_w}px; height:{hi_h}px;
-      border-radius:{14 * scale}px; border:4px solid {b.ROSA}; box-shadow:0 0 0 6px rgba(236,111,168,0.22);"></div>'''
-
-    render(body, w, h, OUT_DIR / "tela-02-inicio-destaque.png")
+def build_celular_continuar():
+    body = b.header("NA PRÁTICA", "eyebrow-estrela", "Continuar<br>daqui", "noite")
+    body += b.bg_circle(150, 1080, 700, b.FORMA_NOITE, 0.7)
+    body += phone_with_highlight(SCREENSHOTS / "tela-02-inicio.png", to_box(*CARD))
+    body += b.sparkle(120, 1850, 26, b.ESTRELA)
+    body += b.sparkle(980, 1150, 22, "#FFFFFF")
+    render(body, OUT_DIR / "tela-02-inicio-destaque.png")
 
 
 # ---------------------------------------------------------------------------
-# Imagem 2: balao "Continuar daqui" ampliado, com setas e icone de clique
+# 2) Balao "Continuar daqui" ampliado, com setas e icone de clique
 # ---------------------------------------------------------------------------
 
 def build_balao():
-    card_scale = 2.4
-    pad = 24
-    card_img_w, card_img_h = CARD_W * card_scale, CARD_H * card_scale
-    wrap_w, wrap_h = card_img_w + pad * 2, card_img_h + pad * 2
-    wrap_left, wrap_top = 40, 50
-    img_left, img_top = wrap_left + pad, wrap_top + pad
+    body = b.header("NA PRÁTICA", "eyebrow-estrela", "Onde parei e<br>próximo passo", "noite")
 
-    def rel(x0, y0, w0, h0):
-        return (img_left + x0 * card_scale, img_top + y0 * card_scale, w0 * card_scale, h0 * card_scale)
+    card_scale = 1.85
+    cw, ch = CARD[2] * card_scale, CARD[3] * card_scale
+    card_left, card_top = 980, 320
 
-    onde_x, onde_y, onde_w, onde_h = rel(ONDE_X0, ONDE_Y0, ONDE_W0, ONDE_H0)
-    prox_x, prox_y, prox_w, prox_h = rel(PROX_X0, PROX_Y0, PROX_W0, PROX_H0)
-    btn_x, btn_y, btn_w, btn_h = rel(BTN_X0, BTN_Y0, BTN_W0, BTN_H0)
+    body += b.bg_circle(-150, 1550, 650, b.FORMA_NOITE, 0.6)
 
-    label_x = wrap_left + wrap_w + 70
-    label_w = 420
-    w = int(label_x + label_w + 50)
-    h = int(wrap_top + wrap_h + 50)
+    body += f'''<div class="card-float borda-rosa" style="top:{card_top}px; left:{card_left}px;
+      width:{cw}px; height:{ch}px; padding:0; overflow:hidden;">
+      <img src="{b.img_src(FIGMA / "card-continuar-daqui.png")}" style="width:100%; height:100%; display:block;" />
+      </div>'''
 
-    body = ""
-    body += f'''<div style="position:absolute; top:{wrap_top}px; left:{wrap_left}px; width:{wrap_w}px; height:{wrap_h}px;
-      background:#FFFFFF; border-radius:28px; box-shadow:0 24px 48px -16px rgba(27,24,70,.28);"></div>'''
-    body += f'''<img src="{b.img_src(FIGMA / "card-continuar-daqui.png")}" style="position:absolute; top:{img_top}px; left:{img_left}px;
-      width:{card_img_w}px; height:{card_img_h}px; border-radius:10px;" />'''
+    def inner(box):
+        x, y, w, h = box
+        return (card_left + x * card_scale, card_top + y * card_scale, w * card_scale, h * card_scale)
 
-    hand_size = 72
+    onde = inner(ONDE)
+    prox = inner(PROX)
+    botao = inner(BOTAO_RETOMAR)
+
+    hand_size = 56
     body += b.icon_badge(
-        btn_y + btn_h - hand_size / 2, btn_x + btn_w - hand_size / 2,
-        hand_size, "hand-click", b.ROSA, "#FFFFFF", 34,
+        botao[1] + botao[3] - hand_size / 2, botao[0] + botao[2] - hand_size / 2,
+        hand_size, "hand-click", b.ROSA, "#FFFFFF", 28,
     )
 
-    def callout(row_y, row_h, text, color=None):
-        color = color or b.INDIGO
-        cy = row_y + row_h / 2
-        out = b.dashed_line_between(wrap_left + wrap_w - 10, cy, label_x - 20, cy, color, width=3)
-        out += f'''<div style="position:absolute; top:{cy - 24}px; left:{label_x}px; width:{label_w}px;
-          font-family:'Lexend'; font-weight:700; font-size:32px; color:{color}; line-height:1.15;">{text}</div>'''
+    label_x = card_left + cw + 40
+
+    def callout(box, text, color):
+        x, y, w, h = box
+        cy = y + h / 2
+        out = b.dashed_line_between(card_left + cw - 6, cy, label_x - 16, cy, color, width=3)
+        out += f'''<div style="position:absolute; top:{cy - 22}px; left:{label_x}px; width:260px;
+          font-family:'Lexend'; font-weight:700; font-size:27px; color:{color}; line-height:1.2;">{text}</div>'''
         return out
 
-    body += callout(onde_y, onde_h, "Onde parei")
-    body += callout(prox_y, prox_h, "Próximo passo")
-    body += callout(btn_y, btn_h, "Retomar — 1 toque", color=b.ROSA)
+    body += callout(onde, "Onde parei", "#FFFFFF")
+    body += callout(prox, "Próximo passo", "#FFFFFF")
+    body += callout(botao, "Retomar — 1 toque", b.ROSA)
 
-    render(body, w, h, OUT_DIR / "continuar-daqui-balao.png")
+    body += b.sparkle(220, 1780, 30, b.ESTRELA)
+    body += b.sparkle(860, 1120, 24, "#FFFFFF")
+    body += b.sparkle(900, 1850, 22, b.ROSA)
+
+    render(body, OUT_DIR / "continuar-daqui-balao.png")
+
+
+# ---------------------------------------------------------------------------
+# 3) Celular com o botao "Nova sessão" destacado
+# ---------------------------------------------------------------------------
+
+def build_nova_sessao():
+    body = b.header("NA PRÁTICA", "eyebrow-rosa", "Começar uma<br>tarefa nova", "noite")
+    body += b.bg_circle(150, 1080, 700, b.FORMA_NOITE, 0.7)
+    body += phone_with_highlight(SCREENSHOTS / "tela-02-inicio.png", to_box(*NOVA_SESSAO))
+    body += b.card(500, 960, "Nova sessão →", rotate_deg=-3, extra_class="borda-rosa")
+    body += b.sparkle(120, 1850, 26, b.ESTRELA)
+    body += b.sparkle(980, 1150, 22, "#FFFFFF")
+    render(body, OUT_DIR / "nova-sessao-destaque.png")
 
 
 if __name__ == "__main__":
-    build_celular()
+    build_celular_continuar()
     build_balao()
+    build_nova_sessao()
