@@ -367,7 +367,7 @@ def build_slide_lembrar_depois():
 # ---------------------------------------------------------------------------
 
 def build_slide_sessao_concluida():
-    phone_h = 950
+    phone_h = 1140
     phone_w = phone_geometry(phone_h)[0]
     phone_left = (W - phone_w) // 2
 
