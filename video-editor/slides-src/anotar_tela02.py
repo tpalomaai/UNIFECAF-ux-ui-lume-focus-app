@@ -373,7 +373,7 @@ def build_slide_sessao_concluida():
 
     border = PHONE_BORDER
     scale = (phone_h - 2 * border) / NATIVE_H
-    crop_native_y = 580  # logo depois do campo "Proximo passo" (termina em y=557)
+    crop_native_y = 610  # ~1cm a mais depois do campo "Proximo passo" (termina em y=557)
     phone_top = int(H - border - crop_native_y * scale)
 
     body = ""
