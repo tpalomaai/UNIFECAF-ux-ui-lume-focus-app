@@ -43,13 +43,11 @@ MARGIN = 36
 COL_W = (W - 2 * MARGIN) / len(STEPS)
 PHONE_H = 480
 PHONE_W = int(PHONE_H * 390 / 844)
-PHONE_TOP = 190
+PHONE_TOP = 140
 
 body = ""
-body += f'''<div style="position:absolute; top:26px; left:{MARGIN}px; font-family:'Lexend'; font-weight:700;
-  font-size:30px; color:{INDIGO};">A Jornada do Usuário</div>'''
-body += f'''<div style="position:absolute; top:66px; left:{MARGIN}px; width:{W - 2 * MARGIN}px; font-family:'Lexend';
-  font-weight:400; font-size:14px; color:{TEXTO_SEC};">Sete etapas, da desconfiança do primeiro acesso à confiança de quem volta no dia seguinte.</div>'''
+body += f'''<div style="position:absolute; top:34px; left:0px; width:{W}px; text-align:center; font-family:'Lexend';
+  font-weight:500; font-size:22px; color:{TEXTO_SEC};">Sete etapas, da desconfiança do primeiro acesso à confiança de quem volta no dia seguinte.</div>'''
 
 for i, (num, title, src, action, emoji) in enumerate(STEPS):
     cx = MARGIN + COL_W * i + COL_W / 2
@@ -67,12 +65,12 @@ for i, (num, title, src, action, emoji) in enumerate(STEPS):
 
     title_html = title.replace(chr(10), "<br>")
     action_html = action.replace(chr(10), "<br>")
-    body += f'''<div style="position:absolute; top:{PHONE_TOP + PHONE_H + 20}px; left:{MARGIN + COL_W * i + 4}px; width:{COL_W - 8}px;
-      text-align:center; font-family:'Lexend'; font-weight:600; font-size:14px; color:{TEXTO}; line-height:1.3;">{title_html}</div>'''
-    body += f'''<div style="position:absolute; top:{PHONE_TOP + PHONE_H + 74}px; left:{MARGIN + COL_W * i + 4}px; width:{COL_W - 8}px;
-      text-align:center; font-family:'Lexend'; font-weight:400; font-size:12.5px; color:{TEXTO_SEC}; line-height:1.3;">{action_html}</div>'''
-    body += f'''<div style="position:absolute; top:{PHONE_TOP + PHONE_H + 122}px; left:{MARGIN + COL_W * i}px; width:{COL_W}px;
-      text-align:center; font-size:25px;">{emoji}</div>'''
+    body += f'''<div style="position:absolute; top:{PHONE_TOP + PHONE_H + 22}px; left:{MARGIN + COL_W * i + 2}px; width:{COL_W - 4}px;
+      text-align:center; font-family:'Lexend'; font-weight:700; font-size:18px; color:{TEXTO}; line-height:1.3;">{title_html}</div>'''
+    body += f'''<div style="position:absolute; top:{PHONE_TOP + PHONE_H + 86}px; left:{MARGIN + COL_W * i + 2}px; width:{COL_W - 4}px;
+      text-align:center; font-family:'Lexend'; font-weight:500; font-size:16px; color:{TEXTO_SEC}; line-height:1.3;">{action_html}</div>'''
+    body += f'''<div style="position:absolute; top:{PHONE_TOP + PHONE_H + 146}px; left:{MARGIN + COL_W * i}px; width:{COL_W}px;
+      text-align:center; font-size:28px;">{emoji}</div>'''
 
     if i < len(STEPS) - 1:
         arrow_left = MARGIN + COL_W * (i + 1) - 9
