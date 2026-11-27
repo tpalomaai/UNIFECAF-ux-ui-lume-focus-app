@@ -164,8 +164,9 @@ def big_card(top, left, width, height, bg_color, html, rotate_deg=0):
       </div>'''
 
 
-def logo_lume(top, left, size=220, color=ESTRELA):
-    return f'''<div style="position:absolute; top:{top}px; left:{left}px; font-family:'Sniglet',sans-serif; font-weight:800; font-size:{size}px; color:{color}; line-height:1;">Lume</div>'''
+def logo_lume(top, left, size=220, color=ESTRELA, font="Sniglet"):
+    weight = 800 if font == "Sniglet" else 400
+    return f'''<div style="position:absolute; top:{top}px; left:{left}px; font-family:'{font}',sans-serif; font-weight:{weight}; font-size:{size}px; color:{color}; line-height:1;">Lume</div>'''
 
 
 import random as _random
@@ -338,7 +339,7 @@ def slide_09(preview):
 
 def slide_11(preview):
     body = ""
-    body += logo_lume(230, 150, 170, ESTRELA)
+    body += logo_lume(230, 150, 167, ESTRELA, font="More Sugar")
     body += f'<span style="position:absolute; top:255px; left:620px;">{icon("star-filled", ESTRELA, 70)}</span>'
     body += f'<div class="subtitle subtitle-noite" style="position:absolute; top:400px; left:158px; font-size:36px;">no seu ritmo</div>'
     body += big_card(540, 150, 560, 130, "#FFFFFF", (
