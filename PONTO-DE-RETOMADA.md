@@ -3,6 +3,9 @@
 > Última atualização: **26/11/2026**. Leia este arquivo primeiro; ele tem o histórico completo. Para o dia a dia (próxima ação, cronograma), use `PROJECT_OVERVIEW.md`.
 > Arquivo Figma: [Lume — UX/UI](https://www.figma.com/design/z7C1XSWQhlIpYry549Ba3Q)
 
+## ⚠️ Atenção: o deck do Canva divergiu do pipeline local
+Em 27/11, ao tentar atualizar a página 11 do deck do Canva (`DAHb_Q3KpO4`), descobri que ele não tem mais 11 páginas — tem **14**. As páginas 7, 8 e 9 agora são os novos fundos gerados localmente (Tarefas recentes, Lembrar depois, Sessão concluída), e as páginas 1–4 e a 14 (a antiga "Lume" final) têm uma arte ilustrada (estilo anime, com uma personagem) que **não veio do `build.py`** — provavelmente editada direto no Canva pela Paloma. **Não assuma mais que o índice de página do Canva bate com a numeração dos slides locais (slide-01.png … slide-11.png).** Antes de editar qualquer página do Canva, confira os thumbnails de todas as páginas primeiro (`read-design` com `thumbnail_pages`) pra achar o índice certo. A pedido da Paloma, a troca de fonte do "Lume" (More Sugar, 167px) foi feita só no `slide-11.png` local — o Canva não foi tocado.
+
 ## 🧭 Onde parei exatamente
 **F4, F5 e F6 concluídas (falta só Paloma cronometrar o roteiro). Animação do mascote e os 11 slides do vídeo pitch testados e aprovados — vira o padrão pro vídeo pitch.** As 7 telas e o protótipo estão prontos e aprovados, com link público gerado. A F5 (acessibilidade) fechou: contraste corrigido, toque mínimo corrigido, docs 1.4/1.5 escritos. Na F6, o README está completo (com 3 screenshots das telas) e o roteiro do vídeo está escrito e calibrado pros 4 minutos.
 
