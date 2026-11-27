@@ -253,59 +253,48 @@ def build_slide_continuar_completo():
 # 5) Tela 03 - Escolher tarefa: tarefas recentes + indicadores de tempo
 # ---------------------------------------------------------------------------
 
-# Posicoes nativas da tela 03 (do get_metadata, node 43:31 / 50:43)
-LISTA_RECENTES = (24, 283, 342, 252)       # frame "Lista — Tarefas recentes" (3 cards)
-TEMPO_ROWS = [                               # linha "última vez: X min" em cada card
-    (41, 325, 308, 17),
-    (41, 413, 308, 17),
-    (41, 501, 308, 17),
-]
+# Posicoes nativas da tela 03 (do get_metadata, node 43:31 / 50:43), 1o card da lista
+CARD1 = (24, 283, 342, 76)       # Card/Tarefa "Estatística — cap. 3" (destaque)
+NOME_ROW = (41, 300, 308, 21)    # texto do nome da tarefa, dentro do card
+TEMPO_ROW = (41, 325, 308, 17)   # texto "última vez: X min", dentro do card
 
 
 def build_slide_tarefas_recentes():
-    phone_h = 740
-    phone_left, phone_top = 170, 270
-    phone_w = phone_geometry(phone_h)[0]
+    # layout igual ao slide-06: titulo na coluna esquerda, celular a direita
+    body = b.header("NA PRÁTICA", "eyebrow-estrela", "Tarefas<br>recentes", "noite")
+    body += b.bg_circle(150, 1080, 700, b.FORMA_NOITE, 0.7)
 
-    body = ""
-    body += b.bg_circle(-200, 1500, 750, b.FORMA_NOITE, 0.55)
-
-    body += f'''<div style="position:absolute; top:52px; left:{phone_left}px; font-family:'Lexend'; font-weight:600;
-      font-size:28px; letter-spacing:0.1em; text-transform:uppercase; color:{b.ESTRELA};">NA PRÁTICA</div>'''
-    body += f'''<div style="position:absolute; top:92px; left:{phone_left}px; font-family:'Lexend'; font-weight:700;
-      font-size:72px; color:#FFFFFF;">Tarefas recentes</div>'''
-    body += f'''<div style="position:absolute; top:186px; left:{phone_left}px; width:600px; font-family:'Lexend'; font-weight:400;
-      font-size:30px; color:#D9D6FF;">O tempo da última vez aparece em cada uma</div>'''
-
-    hi_box = to_box(*LISTA_RECENTES, height=phone_h)
+    hi_box = to_box(*CARD1)
     body += phone_with_highlight(
-        FIGMA / "tela-03-escolher-tarefa.png", hi_box,
-        hi_color=b.ESTRELA, top=phone_top, left=phone_left, height=phone_h,
+        FIGMA / "tela-03-escolher-tarefa.png", hi_box, hi_color="#FFFFFF",
     )
 
-    phone_right = phone_left + phone_w
-    bracket_x = phone_right + 90
-    label_x = bracket_x + 50
+    nome_x, nome_y, nome_w, nome_h = to_box(*NOME_ROW)
+    nome_target = (PHONE_LEFT + nome_x, PHONE_TOP + nome_y + nome_h / 2)
+    tempo_x, tempo_y, tempo_w, tempo_h = to_box(*TEMPO_ROW)
+    tempo_target = (PHONE_LEFT + tempo_x, PHONE_TOP + tempo_y + tempo_h / 2)
 
-    row_centers = []
-    for (x, y, w, h) in TEMPO_ROWS:
-        bx, by, bw, bh = to_box(x, y, w, h, height=phone_h)
-        cy = phone_top + by + bh / 2
-        row_centers.append(cy)
-        tick_start = phone_left + bx + bw
-        body += b.dashed_line_between(tick_start, cy, bracket_x, cy, b.ESTRELA, width=3)
+    # indicador 1: nome da tarefa
+    label1_left, label1_top, label1_w = 130, 430, 360
+    label1_cy = label1_top + 20
+    body += b.dashed_line_between(label1_left + label1_w, label1_cy, *nome_target, "#FFFFFF", width=3)
+    body += f'''<div style="position:absolute; top:{label1_top}px; left:{label1_left}px; width:{label1_w}px;
+      font-family:'Lexend'; font-weight:700; font-size:34px; color:#FFFFFF;">Nome da tarefa</div>'''
 
-    # "chave" ligando as 3 linhas a uma unica explicacao
-    body += b.dashed_line_between(bracket_x, row_centers[0], bracket_x, row_centers[-1], b.ESTRELA, width=3)
-    mid_y = row_centers[1]
-    body += b.dashed_line_between(bracket_x, mid_y, label_x - 16, mid_y, b.ESTRELA, width=3)
-    body += f'''<div style="position:absolute; top:{mid_y - 60}px; left:{label_x}px; width:420px;
-      font-family:'Lexend'; font-weight:700; font-size:32px; color:{b.ESTRELA}; line-height:1.25;">
-      Tempo da última vez<br><span style="font-weight:400; font-size:24px; color:#D9D6FF;">pra não digitar de novo</span></div>'''
+    # indicador 2: tempo que levou da ultima vez
+    label2_left, label2_top, label2_w = 130, 560, 460
+    label2_cy = label2_top + 35
+    body += b.dashed_line_between(label2_left + label2_w, label2_cy, *tempo_target, b.ESTRELA, width=3)
+    body += f'''<div style="position:absolute; top:{label2_top}px; left:{label2_left}px; width:{label2_w}px;
+      font-family:'Lexend'; font-weight:700; font-size:28px; color:{b.ESTRELA}; line-height:1.3;">
+      Tempo que levou para executar na última vez</div>'''
 
-    body += b.sparkle(160, 1800, 30, b.ESTRELA)
-    body += b.sparkle(980, 1800, 22, "#FFFFFF")
-    body += b.sparkle(960, 160, 24, b.ROSA)
+    # balao a parte, sem seta, so uma observacao flutuante (igual ao "Retomar →" do slide-06)
+    body += b.card(750, 170, b.icon("history", b.ROSA, 30) + "Não precisa digitar novamente",
+                   rotate_deg=-3, extra_class="borda-rosa", width=460)
+
+    body += b.sparkle(120, 1850, 26, b.ESTRELA)
+    body += b.sparkle(980, 1150, 22, "#FFFFFF")
 
     render(body, OUT_DIR / "tela-03-tarefas-recentes-slide.png")
 
